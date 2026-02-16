@@ -1,0 +1,2 @@
+# Plotly interactive charts — treat as binary to reduce diff noise
+experiments/*/report/assets/figures/**/*.html binary

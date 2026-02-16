@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appendix</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav><ul><li><a href="../../../index.html"><span data-lang="zh">專案主頁</span><span data-lang="en">Project Home</span></a></li><li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li><li><a href="introduction.html"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li><li><a href="methodology.html"><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></a></li><li><a href="results.html"><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></a></li><li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li><li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li><li><a href="appendix.html"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li></ul><button id="lang-toggle" onclick="toggleLang()">Switch to EN</button></nav>
+<div class="container">
+
+    <h1><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></h1>
+
+    <h2><span data-lang="zh">A. 穩健性分析</span><span data-lang="en">A. Robustness Analysis</span></h2>
+    <div data-lang="zh"><p>為確認主要結論不受交易成本假設影響，本研究進行了兩組穩健性測試：</p><ul><li><strong>含最低手續費 20 元：</strong>小額投資（每月 10,000 元）的實際手續費率為 0.20%（高於官方 0.1425%）。結果：0050 7Y 勝率 nan%，與主分析幾乎無差異。最低手續費的影響微乎其微。</li><li><strong>不含息報酬（僅價格報酬）：</strong>使用 close 而非 adj_close，排除股息再投入效果。結果：0050 7Y 勝率降至 nan%（vs 主分析 100%），平均 XIRR 降至約 nan%。0056 7Y 勝率降至 nan%。<strong>結論：股息對 DCA 績效的貢獻巨大</strong>——不含息的情況下，勝率和報酬率均大幅下降。這強調了選擇含息再投資（而非領取現金股利）的重要性。</li></ul></div><div data-lang="en"><p>To confirm conclusions are robust to cost assumptions, two robustness tests were conducted:</p><ul><li><strong>Minimum 20 TWD commission:</strong> Small investments (10,000 TWD/month) face 0.20% effective rate (vs 0.1425% official). Result: 0050 7Y win rate nan%, virtually identical to main analysis. Minimum commission impact is negligible.</li><li><strong>Price-only returns (no dividends):</strong> Using close instead of adj_close, excluding dividend reinvestment. Result: 0050 7Y win rate drops to nan% (vs 100% main), mean XIRR ~nan%. 0056 7Y drops to nan%. <strong>Conclusion: dividends are crucial for DCA performance</strong> — without reinvestment, win rates and returns drop significantly. This underscores the importance of dividend reinvestment over taking cash dividends.</li></ul></div>
+
+    <h2><span data-lang="zh">B. 0056 報酬分佈</span><span data-lang="en">B. 0056 Return Distributions</span></h2>
+    <img data-lang="zh" src="../results/figures/zh/fig04_dist_0056.png" alt=""><img data-lang="en" src="../results/figures/en/fig04_dist_0056.png" alt="">
+    <div data-lang="zh"><p>0056 的 DCA 報酬分佈與 0050 趨勢一致（隨期間增長右移、收窄），但整體略偏左（報酬較低），反映高股息 ETF 在全面再投資情境下的資本成長較慢。1Y 分佈的左尾（最差情境 -64.6%）與 0050 相近，但右尾較短——0056 的上行空間有限，這與高股息策略「犧牲成長換取穩定」的本質一致。</p></div><div data-lang="en"><p>0056 DCA return distributions show the same trend as 0050 (rightward shift and narrowing with period), but shifted slightly left overall, reflecting slower capital growth under full reinvestment. 1Y left tail (worst case -64.6%) is similar to 0050, but the right tail is shorter — 0056's upside is limited, consistent with high-dividend strategies trading growth for stability.</p></div>
+
+    <h2><span data-lang="zh">C. 0056 進場年份分析</span><span data-lang="en">C. 0056 Vintage Year Analysis</span></h2>
+    <img data-lang="zh" src="../results/figures/zh/fig06_vintage_0056.png" alt=""><img data-lang="en" src="../results/figures/en/fig06_vintage_0056.png" alt="">
+    <div data-lang="zh"><p>0056 的 vintage year 分析顯示與 0050 類似的趨勢，但因數據期間較短（2007 年起），長期（10Y、15Y）的可用進場年份較少。2008-2009 年進場的短期 DCA 表現同樣最差，但長期持有後亦回歸正報酬。</p></div><div data-lang="en"><p>0056 vintage year analysis shows similar trends to 0050, but with fewer available entry years for long periods (data starts 2007). 2008-2009 short-term entries also performed worst, but long-term holding recovers to positive returns.</p></div>
+
+    <h2><span data-lang="zh">D. 0056 XIRR 熱力圖</span><span data-lang="en">D. 0056 XIRR Heatmap</span></h2>
+    <img data-lang="zh" src="../results/figures/zh/fig08_heatmap_0056.png" alt=""><img data-lang="en" src="../results/figures/en/fig08_heatmap_0056.png" alt="">
+    <div data-lang="zh"><p>0056 的熱力圖整體顏色較 0050 偏黃（中等報酬），深綠色格子較少，反映 0056 較低的成長性。但紅色格子（虧損）的分佈與 0050 類似，集中在短期 + 2008/2022 年入場的組合。長期列仍為全綠，支持「長期 DCA 0056 也有效」的結論。</p></div><div data-lang="en"><p>0056's heatmap is overall more yellow (moderate returns) with fewer deep green cells, reflecting lower growth. But red cells (losses) distribute similarly to 0050, concentrated in short-term + 2008/2022 entries. Long-term rows remain all green, supporting 'long-term DCA into 0056 also works.'</p></div>
+
+    <h2><span data-lang="zh">E. 0056 滾動 5 年 DCA</span><span data-lang="en">E. 0056 Rolling 5Y DCA</span></h2>
+    <div class="chart-container" data-lang="zh"><iframe src="assets/figures/zh/plotly_rolling_5y_0056.html" height="500"></iframe></div><div class="chart-container" data-lang="en"><iframe src="assets/figures/en/plotly_rolling_5y_0056.html" height="500"></iframe></div>
+    <div data-lang="zh"><p>0056 的滾動 5Y DCA 走勢與 0050 形態相似，但整體水位略低約 1-3 個百分點。兩者的波動節奏基本同步（因台灣市場整體行情驅動），但 0050 的峰值更高、谷底恢復更快。</p></div><div data-lang="en"><p>0056 rolling 5Y DCA follows a similar pattern to 0050 but at ~1-3 pp lower levels overall. Both fluctuate in sync (driven by Taiwan's overall market), but 0050 reaches higher peaks and recovers from troughs faster.</p></div>
+    
+<footer><span data-lang="zh">V-002 研究報告 | Python 自動生成</span><span data-lang="en">V-002 Research Report | Generated by Python</span></footer>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>附錄</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav><ul><li><a href="../../../index.html"><span data-lang="zh">專案主頁</span><span data-lang="en">Project Home</span></a></li><li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li><li><a href="introduction.html"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li><li><a href="methodology.html"><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></a></li><li><a href="results.html"><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></a></li><li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li><li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li><li><a href="appendix.html"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li></ul><button id="lang-toggle" onclick="toggleLang()">Switch to EN</button></nav>
+<div class="container">
+
+    <h1><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></h1>
+
+    <h2><span data-lang="zh">A.1 各策略累積報酬走勢</span><span data-lang="en">A.1 Cumulative Returns</span></h2>
+    <div data-lang="zh"><p>包含不含成本版本的所有策略累積報酬，以及 Buy & Hold 基準線。</p></div><div data-lang="en"><p>Cumulative returns for all strategies (before costs) with Buy & Hold benchmark.</p></div>
+    <img data-lang="zh" src="../results/figures/zh/fig01_cumulative.png" alt=""><img data-lang="en" src="../results/figures/en/fig01_cumulative.png" alt="">
+
+    <h2><span data-lang="zh">A.2 回撤比較</span><span data-lang="en">A.2 Drawdown Comparison</span></h2>
+    <div data-lang="zh"><p>各策略的回撤走勢。技術分析策略在空倉期間可避開部分回撤，但也錯失了後續反彈。</p></div><div data-lang="en"><p>Drawdown curves for all strategies. TA strategies avoid some drawdowns during cash periods but also miss subsequent rebounds.</p></div>
+    <img data-lang="zh" src="../results/figures/zh/fig03_drawdown.png" alt=""><img data-lang="en" src="../results/figures/en/fig03_drawdown.png" alt="">
+
+    <h2><span data-lang="zh">A.3 年度訊號頻率</span><span data-lang="en">A.3 Annual Signal Frequency</span></h2>
+    <div data-lang="zh"><p>各策略每年產生的交易訊號數量。短期策略（MA(5,20)、MACD）訊號最頻繁。</p></div><div data-lang="en"><p>Annual signal counts by strategy. Short-term strategies (MA(5,20), MACD) generate the most signals.</p></div>
+    <img data-lang="zh" src="../results/figures/zh/fig08_signal_frequency.png" alt=""><img data-lang="en" src="../results/figures/en/fig08_signal_frequency.png" alt="">
+
+    <h2><span data-lang="zh">A.4 統計檢定完整結果</span><span data-lang="en">A.4 Complete Statistical Test Results</span></h2>
+    <div data-lang="zh"><p>所有策略的 Permutation Test、Bootstrap CI、Cohen's d 完整表格。</p></div><div data-lang="en"><p>Complete Permutation Test, Bootstrap CI, and Cohen's d results for all strategies.</p></div>
+    <table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>strategy</th>
+      <th>excess_return_ann</th>
+      <th>perm_p_value</th>
+      <th>adjusted_p_value</th>
+      <th>bootstrap_ci_low</th>
+      <th>bootstrap_ci_high</th>
+      <th>cohens_d</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MA_5_20</td>
+      <td>-0.0544</td>
+      <td>0.4391</td>
+      <td>1.0000</td>
+      <td>-0.1332</td>
+      <td>0.0159</td>
+      <td>-0.0253</td>
+    </tr>
+    <tr>
+      <td>MA_10_50</td>
+      <td>-0.0406</td>
+      <td>0.2747</td>
+      <td>1.0000</td>
+      <td>-0.1168</td>
+      <td>0.0294</td>
+      <td>-0.0202</td>
+    </tr>
+    <tr>
+      <td>MA_20_60</td>
+      <td>-0.0462</td>
+      <td>0.3854</td>
+      <td>1.0000</td>
+      <td>-0.1185</td>
+      <td>0.0215</td>
+      <td>-0.0228</td>
+    </tr>
+    <tr>
+      <td>MA_50_200</td>
+      <td>-0.0568</td>
+      <td>0.7187</td>
+      <td>1.0000</td>
+      <td>-0.1267</td>
+      <td>0.0070</td>
+      <td>-0.0282</td>
+    </tr>
+    <tr>
+      <td>KD_9_3_3</td>
+      <td>-0.1048</td>
+      <td>0.7912</td>
+      <td>0.7912</td>
+      <td>-0.1784</td>
+      <td>-0.0370</td>
+      <td>-0.0479</td>
+    </tr>
+    <tr>
+      <td>MACD_12_26_9</td>
+      <td>-0.0408</td>
+      <td>0.1478</td>
+      <td>1.0000</td>
+      <td>-0.1179</td>
+      <td>0.0307</td>
+      <td>-0.0201</td>
+    </tr>
+    <tr>
+      <td>RSI_14</td>
+      <td>-0.0607</td>
+      <td>0.2868</td>
+      <td>1.0000</td>
+      <td>-0.1270</td>
+      <td>0.0011</td>
+      <td>-0.0309</td>
+    </tr>
+    <tr>
+      <td>BB_20_2</td>
+      <td>-0.0804</td>
+      <td>0.6439</td>
+      <td>1.0000</td>
+      <td>-0.1444</td>
+      <td>-0.0204</td>
+      <td>-0.0407</td>
+    </tr>
+  </tbody>
+</table>
+
+    <h2><span data-lang="zh">A.5 子期間績效表</span><span data-lang="en">A.5 Sub-Period Performance Table</span></h2>
+    <div data-lang="zh"><p>各策略在不同子期間的年化報酬與超額報酬。</p></div><div data-lang="en"><p>Annualized returns and excess returns for each strategy across sub-periods.</p></div>
+    <img data-lang="zh" src="../results/figures/zh/fig07_subperiod.png" alt=""><img data-lang="en" src="../results/figures/en/fig07_subperiod.png" alt="">
+    
+<footer><div data-lang="zh"><p>V-004 技術分析能預測股價？ | 用數據說話：投資策略回測研究</p></div><div data-lang="en"><p>V-004 Can Technical Analysis Predict Stock Prices? | Let Data Speak: Investment Strategy Backtesting</p></div></footer>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

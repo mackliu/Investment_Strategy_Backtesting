@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>附錄</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+    <ul><li><a href="../../../index.html"><span data-lang="zh">專案主頁</span><span data-lang="en">Project Home</span></a></li><li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li><li><a href="introduction.html"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li><li><a href="methodology.html"><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></a></li><li><a href="results.html"><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></a></li><li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li><li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li><li><a href="appendix.html" class="active"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li></ul>
+    <button id="lang-toggle" onclick="toggleLang()">Switch to EN</button>
+</nav>
+<div class="container">
+
+<h1><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></h1>
+
+<h2><span data-lang="zh">A.1 Block Bootstrap 信賴區間</span><span data-lang="en">A.1 Block Bootstrap Confidence Intervals</span></h2>
+<div data-lang="zh"><p>Block Bootstrap（區塊大小 12 個月，10,000 次重抽）計算的 95% 信賴區間。當基準值落在 CI 之外時，表示該持有期間的報酬均值在統計上與基準值有顯著差異。</p></div><div data-lang="en"><p>Block Bootstrap (block size 12 months, 10,000 iterations) 95% confidence intervals. When the benchmark falls outside the CI, the mean return for that holding period is statistically different from the benchmark.</p></div>
+<div data-lang="zh"><table><tr><th>窗口</th><th>類型</th><th>均值</th><th>CI 下限</th><th>CI 上限</th><th>基準</th><th>基準在 CI 內</th></tr><tr><td>10年</td><td>nominal_total</td><td>9.32%</td><td>8.50%</td><td>10.13%</td><td>10%</td><td>Yes</td></tr><tr><td>10年</td><td>real_total</td><td>6.92%</td><td>6.08%</td><td>7.71%</td><td>7%</td><td>Yes</td></tr><tr><td>20年</td><td>nominal_total</td><td>9.24%</td><td>8.72%</td><td>9.81%</td><td>10%</td><td>No</td></tr><tr><td>20年</td><td>real_total</td><td>6.64%</td><td>6.15%</td><td>7.13%</td><td>7%</td><td>Yes</td></tr><tr><td>30年</td><td>nominal_total</td><td>9.46%</td><td>9.08%</td><td>9.85%</td><td>10%</td><td>No</td></tr><tr><td>30年</td><td>real_total</td><td>6.65%</td><td>6.36%</td><td>6.93%</td><td>7%</td><td>No</td></tr></table></div><div data-lang="en"><table><tr><th>Window</th><th>Type</th><th>Mean</th><th>CI Low</th><th>CI High</th><th>Bench</th><th>In CI</th></tr><tr><td>10yr</td><td>nominal_total</td><td>9.32%</td><td>8.50%</td><td>10.13%</td><td>10%</td><td>Yes</td></tr><tr><td>10yr</td><td>real_total</td><td>6.92%</td><td>6.08%</td><td>7.71%</td><td>7%</td><td>Yes</td></tr><tr><td>20yr</td><td>nominal_total</td><td>9.24%</td><td>8.72%</td><td>9.81%</td><td>10%</td><td>No</td></tr><tr><td>20yr</td><td>real_total</td><td>6.64%</td><td>6.15%</td><td>7.13%</td><td>7%</td><td>Yes</td></tr><tr><td>30yr</td><td>nominal_total</td><td>9.46%</td><td>9.08%</td><td>9.85%</td><td>10%</td><td>No</td></tr><tr><td>30yr</td><td>real_total</td><td>6.65%</td><td>6.36%</td><td>6.93%</td><td>7%</td><td>No</td></tr></table></div>
+
+<h2><span data-lang="zh">A.2 歷年年度報酬</span><span data-lang="en">A.2 Annual Returns by Year</span></h2>
+<div data-lang="zh"><p>完整的歷年年度報酬柱狀圖，正報酬以綠色表示，負報酬以紅色表示。10% 基準線以虛線標示。</p></div><div data-lang="en"><p>Complete annual returns bar chart. Positive returns in green, negative in red. 10% benchmark shown as dashed line.</p></div>
+<img data-lang="zh" src="../results/figures/zh/fig02_annual_returns.png" alt="fig02_annual_returns.png" class="chart-img"><img data-lang="en" src="../results/figures/en/fig02_annual_returns.png" alt="fig02_annual_returns.png" class="chart-img">
+
+<h2><span data-lang="zh">A.3 月報酬分佈</span><span data-lang="en">A.3 Monthly Return Distribution</span></h2>
+<img data-lang="zh" src="../results/figures/zh/fig10_return_distribution.png" alt="fig10_return_distribution.png" class="chart-img"><img data-lang="en" src="../results/figures/en/fig10_return_distribution.png" alt="fig10_return_distribution.png" class="chart-img">
+
+<h2><span data-lang="zh">A.4 國際比較走勢圖</span><span data-lang="en">A.4 International Comparison Chart</span></h2>
+<img data-lang="zh" src="../results/figures/zh/fig07_international.png" alt="fig07_international.png" class="chart-img"><img data-lang="en" src="../results/figures/en/fig07_international.png" alt="fig07_international.png" class="chart-img">
+
+<h2><span data-lang="zh">A.5 名目 vs 實質累積報酬</span><span data-lang="en">A.5 Nominal vs Real Cumulative Returns</span></h2>
+<img data-lang="zh" src="../results/figures/zh/fig01_nominal_vs_real.png" alt="fig01_nominal_vs_real.png" class="chart-img"><img data-lang="en" src="../results/figures/en/fig01_nominal_vs_real.png" alt="fig01_nominal_vs_real.png" class="chart-img">
+
+<footer>V-005 US Stock Long-term Return | Generated by Python + Claude</footer>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>V-004：技術分析能預測股價？</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav><ul><li><a href="../../../index.html"><span data-lang="zh">專案主頁</span><span data-lang="en">Project Home</span></a></li><li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li><li><a href="introduction.html"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li><li><a href="methodology.html"><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></a></li><li><a href="results.html"><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></a></li><li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li><li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li><li><a href="appendix.html"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li></ul><button id="lang-toggle" onclick="toggleLang()">Switch to EN</button></nav>
+<div class="container">
+
+    <h1><span data-lang="zh">V-004：技術分析能預測股價？</span><span data-lang="en">V-004: Can Technical Analysis Predict Stock Prices?</span></h1>
+    <div class="highlight">
+    <p data-lang="zh"><strong>研究問題：</strong>技術分析（均線、KD、MACD 等指標）能否預測股價走勢？依據技術訊號操作，能否打敗單純的買進持有策略？</p><p data-lang="en"><strong>Research Question:</strong> Can technical analysis indicators (moving averages, KD, MACD, etc.) predict stock price movements? Can trading based on technical signals beat a simple buy-and-hold strategy?</p>
+    </div>
+
+    <h2><span data-lang="zh">摘要</span><span data-lang="en">Abstract</span></h2>
+    <div data-lang="zh"><p>本研究以 0050（元大台灣50 ETF）為標的，測試 8 個常見技術分析策略（MA 交叉 × 4、KD、MACD、RSI、布林通道）在 2004-2025 年間（約 21 年）的績效表現。</p><p>核心發現：<strong>所有 8 個策略均無法打敗買進持有</strong>。Buy & Hold 年化報酬 12.20%，最佳策略 MA 10 50 僅 8.14%（不含成本），最差策略 KD 9 3 3 僅 1.72%。Permutation Test 顯示 0/8 個策略在多重比較校正後達到統計顯著（即無一顯著）。</p><p>計入交易成本後，所有策略的績效進一步惡化。交易頻率最高的策略（如 MA(5,20) 年均 16 次交易）受成本拖累最嚴重。本研究的結論是：對於 0050 這類市場指數 ETF，技術分析策略不具有統計上可靠的預測力。</p></div><div data-lang="en"><p>This study tests 8 common technical analysis strategies (4 MA crossovers, KD, MACD, RSI, Bollinger Bands) on 0050 (Yuanta Taiwan 50 ETF) over 2004-2025 (~21 years).</p><p>Key finding: <strong>All 8 strategies fail to beat Buy & Hold</strong>. B&H annualized return is 12.20%, best strategy MA 10 50 achieves only 8.14% (before costs), worst KD 9 3 3 only 1.72%. Permutation tests show 0/8 strategies are significant after multiple comparison correction (i.e., none).</p><p>After transaction costs, all strategies deteriorate further. High-frequency strategies (e.g., MA(5,20) averaging 16 trades/year) suffer the most. The conclusion: for market-index ETFs like 0050, technical analysis strategies lack statistically reliable predictive power.</p></div>
+    <div class="chart-container" data-lang="zh"><iframe src="assets/figures/zh/plotly_cumulative.html" height="500"></iframe></div><div class="chart-container" data-lang="en"><iframe src="assets/figures/en/plotly_cumulative.html" height="500"></iframe></div>
+    <div data-lang="zh"><p class='highlight'>上圖呈現所有策略與買進持有的累積報酬走勢。深色粗線為 Buy & Hold，所有技術分析策略均落後於買進持有。技術分析策略因頻繁空倉而錯失了市場的長期上漲。</p></div><div data-lang="en"><p class='highlight'>The chart shows cumulative returns of all strategies vs Buy & Hold. The dark thick line is B&H; all technical strategies lag behind. These strategies miss long-term market gains due to frequent cash positions.</p></div>
+    
+<footer><div data-lang="zh"><p>V-004 技術分析能預測股價？ | 用數據說話：投資策略回測研究</p></div><div data-lang="en"><p>V-004 Can Technical Analysis Predict Stock Prices? | Let Data Speak: Investment Strategy Backtesting</p></div></footer>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

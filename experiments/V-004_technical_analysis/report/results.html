@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>實證結果</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav><ul><li><a href="../../../index.html"><span data-lang="zh">專案主頁</span><span data-lang="en">Project Home</span></a></li><li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li><li><a href="introduction.html"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li><li><a href="methodology.html"><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></a></li><li><a href="results.html"><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></a></li><li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li><li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li><li><a href="appendix.html"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li></ul><button id="lang-toggle" onclick="toggleLang()">Switch to EN</button></nav>
+<div class="container">
+
+    <h1><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></h1>
+
+    <h2><span data-lang="zh">3.1 績效總覽</span><span data-lang="en">3.1 Performance Overview</span></h2>
+    <div data-lang="zh"><p>下表列出 Buy & Hold 與 8 個技術分析策略（不含成本）的績效比較。Buy & Hold 以年化 12.20% 的報酬率和 0.61 的夏普比率領先所有策略。最佳技術策略 MA 10 50 年化僅 8.14%，落後 B&H 4.06 個百分點。</p></div><div data-lang="en"><p>The table below compares Buy & Hold with 8 technical strategies (before costs). B&H leads all strategies with 12.20% annualized return and 0.61 Sharpe ratio. Best technical strategy MA 10 50 achieves only 8.14%, trailing B&H by 4.06 pp.</p></div>
+    <table>
+    <tr><th><span data-lang="zh">策略</span><span data-lang="en">Strategy</span></th><th><span data-lang="zh">年化報酬</span><span data-lang="en">Ann. Return</span></th><th><span data-lang="zh">波動率</span><span data-lang="en">Volatility</span></th><th>Sharpe</th><th><span data-lang="zh">最大回撤</span><span data-lang="en">Max DD</span></th><th><span data-lang="zh">交易次數</span><span data-lang="en">Trades</span></th><th><span data-lang="zh">持倉比</span><span data-lang="en">Hold%</span></th></tr>
+    <tr><td>Buy & Hold</td><td>12.20%</td><td>19.9%</td><td>0.61</td><td>-55.7%</td><td>0</td><td>100%</td></tr><tr><td>MA 5 20</td><td>6.76%</td><td>12.7%</td><td>0.53</td><td>-38.3%</td><td>169</td><td>58%</td></tr><tr><td>MA 10 50</td><td>8.14%</td><td>13.1%</td><td>0.62</td><td>-24.5%</td><td>72</td><td>61%</td></tr><tr><td>MA 20 60</td><td>7.58%</td><td>13.7%</td><td>0.55</td><td>-24.8%</td><td>47</td><td>62%</td></tr><tr><td>MA 50 200</td><td>6.52%</td><td>14.5%</td><td>0.45</td><td>-28.3%</td><td>15</td><td>70%</td></tr><tr><td>KD 9 3 3</td><td>1.72%</td><td>14.0%</td><td>0.12</td><td>-42.3%</td><td>75</td><td>31%</td></tr><tr><td>MACD 12 26 9</td><td>8.12%</td><td>12.9%</td><td>0.63</td><td>-45.3%</td><td>212</td><td>52%</td></tr><tr><td>RSI 14</td><td>6.13%</td><td>15.1%</td><td>0.41</td><td>-52.4%</td><td>24</td><td>44%</td></tr><tr><td>BB 20 2</td><td>4.16%</td><td>15.3%</td><td>0.27</td><td>-53.3%</td><td>56</td><td>45%</td></tr>
+    </table>
+
+    <div class="chart-container" data-lang="zh"><iframe src="assets/figures/zh/plotly_cumulative.html" height="500"></iframe></div><div class="chart-container" data-lang="en"><iframe src="assets/figures/en/plotly_cumulative.html" height="500"></iframe></div>
+    <div data-lang="zh"><p>累積報酬圖清楚顯示：Buy & Hold 的深色粗線始終位於最上方。技術分析策略因為在部分時間空倉（等待訊號），錯過了市場的長期上漲趨勢。持倉比例越低的策略（如 KD 僅 31%），報酬損失越大。</p></div><div data-lang="en"><p>The cumulative return chart clearly shows B&H (dark thick line) consistently leads. Technical strategies miss long-term market gains by sitting in cash while waiting for signals. Lower holding ratios (e.g., KD at 31%) result in greater return losses.</p></div>
+
+    <h2><span data-lang="zh">3.2 交易成本的影響</span><span data-lang="en">3.2 Transaction Cost Impact</span></h2>
+    <div class="chart-container" data-lang="zh"><iframe src="assets/figures/zh/plotly_cost_impact.html" height="500"></iframe></div><div class="chart-container" data-lang="en"><iframe src="assets/figures/en/plotly_cost_impact.html" height="500"></iframe></div>
+    <div data-lang="zh"><p>計入交易成本後，所有策略的績效進一步惡化。交易頻率最高的 MACD（年均 10 次交易）和 MA(5,20)（年均 8 次）受影響最大。MA(5,20) 的成本拖累高達 3.28 個百分點。</p><p>這反映了一個重要的實務問題：即使某個策略在不含成本下有微弱的正超額報酬，交易成本也會輕易抹去這個優勢。</p></div><div data-lang="en"><p>After costs, all strategies deteriorate further. The highest-frequency MACD (avg 10 trades/year) and MA(5,20) (avg 8) are hit hardest. MA(5,20)'s cost drag is 3.28 pp.</p><p>This highlights a critical practical issue: even if a strategy has marginal positive excess returns before costs, transaction costs easily eliminate the advantage.</p></div>
+    <img data-lang="zh" src="../results/figures/zh/fig02_cost_impact.png" alt=""><img data-lang="en" src="../results/figures/en/fig02_cost_impact.png" alt="">
+
+    <h2><span data-lang="zh">3.3 統計檢定結果</span><span data-lang="en">3.3 Statistical Test Results</span></h2>
+    <div data-lang="zh"><p>Permutation Test 結果：所有 8 個策略在不含成本下均無法拒絕虛無假說（p 值範圍 0.1478 ~ 0.7912），Holm-Bonferroni 校正後 p 值全部 = 1.000。無一策略的超額報酬達到統計顯著。</p><p>Bootstrap 95% CI 結果：多數策略的信賴區間包含 0 或完全為負，進一步確認無顯著超額報酬。Cohen's d 效果量均 < 0.05（微小效果），表示即使有差異，實際意義也極為有限。</p></div><div data-lang="en"><p>Permutation Test results: All 8 strategies (before costs) fail to reject the null hypothesis (p-values range 0.1478 ~ 0.7912). After Holm-Bonferroni correction, all adjusted p-values = 1.000. No strategy achieves statistically significant excess returns.</p><p>Bootstrap 95% CI: Most strategies' CIs include 0 or are entirely negative, further confirming no significant excess returns. Cohen's d effect sizes are all < 0.05 (trivial), meaning even if differences exist, their practical significance is negligible.</p></div>
+    <img data-lang="zh" src="../results/figures/zh/fig05_permutation.png" alt=""><img data-lang="en" src="../results/figures/en/fig05_permutation.png" alt="">
+
+    <h2><span data-lang="zh">3.4 持倉比例分析</span><span data-lang="en">3.4 Holding Ratio Analysis</span></h2>
+    <div data-lang="zh"><p>技術分析策略的一大隱性成本是「空倉時間」。在多頭市場中，空倉意味著錯過上漲。以下分析各策略的持倉比例及空倉期間市場報酬。</p></div><div data-lang="en"><p>A hidden cost of technical strategies is "time out of market." In bull markets, being in cash means missing gains. The analysis below shows holding ratios and market returns during cash periods.</p></div>
+    <img data-lang="zh" src="../results/figures/zh/fig04_holding_ratio.png" alt=""><img data-lang="en" src="../results/figures/en/fig04_holding_ratio.png" alt="">
+
+    <h2><span data-lang="zh">3.5 訊號範例</span><span data-lang="en">3.5 Signal Example</span></h2>
+    <div data-lang="zh"><p>下圖以 MA(10,50) 為範例，展示近期的買賣訊號在股價圖上的分佈。綠色三角形為買進訊號，紅色倒三角為賣出訊號。</p></div><div data-lang="en"><p>The chart below uses MA(10,50) as an example, showing recent buy/sell signals overlaid on price. Green triangles = buy, red inverted triangles = sell.</p></div>
+    <img data-lang="zh" src="../results/figures/zh/fig06_signal_overlay.png" alt=""><img data-lang="en" src="../results/figures/en/fig06_signal_overlay.png" alt="">
+
+    <h2><span data-lang="zh">3.6 子期間穩健性</span><span data-lang="en">3.6 Sub-Period Robustness</span></h2>
+    <div data-lang="zh"><p>將分析期間分為兩組子期間（等分：2004-2013 / 2014-2025；結構斷點：2004-2016 / 2017-2025），檢驗策略績效是否在不同市場環境下穩健。結果顯示所有策略在各子期間均無法打敗 Buy & Hold。</p></div><div data-lang="en"><p>The analysis period is split into two sub-period sets (equal: 2004-2013/2014-2025; structural break: 2004-2016/2017-2025) to test strategy robustness across market environments. All strategies fail to beat B&H in every sub-period.</p></div>
+    <img data-lang="zh" src="../results/figures/zh/fig07_subperiod.png" alt=""><img data-lang="en" src="../results/figures/en/fig07_subperiod.png" alt="">
+    
+<footer><div data-lang="zh"><p>V-004 技術分析能預測股價？ | 用數據說話：投資策略回測研究</p></div><div data-lang="en"><p>V-004 Can Technical Analysis Predict Stock Prices? | Let Data Speak: Investment Strategy Backtesting</p></div></footer>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

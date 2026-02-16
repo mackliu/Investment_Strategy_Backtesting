@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>緒論</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+    <ul><li><a href="../../../index.html"><span data-lang="zh">專案主頁</span><span data-lang="en">Project Home</span></a></li><li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li><li><a href="introduction.html" class="active"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li><li><a href="methodology.html"><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></a></li><li><a href="results.html"><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></a></li><li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li><li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li><li><a href="appendix.html"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li></ul>
+    <button id="lang-toggle" onclick="toggleLang()">Switch to EN</button>
+</nav>
+<div class="container">
+
+<h1><span data-lang="zh">1. 緒論</span><span data-lang="en">1. Introduction</span></h1>
+
+<h2><span data-lang="zh">1.1 研究背景</span><span data-lang="en">1.1 Background</span></h2>
+<div data-lang="zh"><p>「美股長期年化報酬 10%」是投資界最廣為流傳的數字之一。在 YouTube、Podcast 和各類投資課程中，
+    這個數字被反覆引用，經常伴隨著「只要長期持有美股，就能穩定獲得 10% 的年化報酬」的暗示。
+    這個說法的根源是 S&P 500 指數自 1926 年以來的歷史表現。</p>
+    <p>然而，這個看似簡單的「10%」背後隱藏著多個重要的細節：它是名目報酬還是實質報酬？
+    是否包含股息再投入？起始年份的選擇如何影響結果？對於非美國投資人，匯率風險又如何？</p>
+    <p>更根本的問題是：以美國這個 20 世紀最成功的經濟體為樣本，推論「股市長期報酬 10%」，
+    是否存在嚴重的存活偏差（Survivorship Bias）？</p></div><div data-lang="en"><p>"US stocks return 10% annually over the long term" is one of the most widely cited figures in investing.
+    Across YouTube, podcasts, and investment courses, this number is repeatedly referenced, often implying
+    that simply holding US stocks long-term guarantees ~10% annualized returns. The origin traces to the
+    S&P 500's historical performance since 1926.</p>
+    <p>However, several critical details hide behind this simple "10%": Is it nominal or real? Does it
+    include dividend reinvestment? How does the starting year affect results? For non-US investors,
+    what about currency risk?</p>
+    <p>More fundamentally: Using the most successful 20th-century economy as a sample to claim
+    "stocks return 10% long-term" — does this suffer from serious survivorship bias?</p></div>
+
+<h2><span data-lang="zh">1.2 文獻回顧</span><span data-lang="en">1.2 Literature Review</span></h2>
+<div data-lang="zh"><p><strong>Siegel (2014)</strong>《Stocks for the Long Run》研究美股 1802-2012 的數據，
+    發現實質年化報酬約 6.6%，而非名目的 10%。通膨的長期侵蝕使得「10%」的購買力遠不如表面數字。</p>
+    <p><strong>Dimson, Marsh & Staunton (2002)</strong>《Triumph of the Optimists》分析全球 16 國 1900-2000 年
+    的股市表現，發現實質報酬中位數約 5%，美國位居前列。這意味著以美國為代表來推論「全球股市」有嚴重偏差。</p>
+    <p><strong>Robert Shiller</strong> 的 CAPE 數據集提供了 1871 年至今的月頻數據，
+    包含價格、股息、盈餘與 CPI，是驗證美股長期報酬最完整的公開數據源。</p></div><div data-lang="en"><p><strong>Siegel (2014)</strong> in "Stocks for the Long Run" studied US stock data from 1802-2012,
+    finding real annualized returns of approximately 6.6%, not the nominal 10%. Long-term inflation erosion
+    means the purchasing power of "10%" is far less than the headline number suggests.</p>
+    <p><strong>Dimson, Marsh & Staunton (2002)</strong> in "Triumph of the Optimists" analyzed stock markets
+    in 16 countries from 1900-2000, finding median real returns of approximately 5%, with the US near the top.
+    This implies significant bias in using the US as representative of "global stock markets."</p>
+    <p><strong>Robert Shiller's</strong> CAPE dataset provides monthly data from 1871 to present,
+    including price, dividends, earnings, and CPI — the most comprehensive public data source
+    for verifying US long-term stock returns.</p></div>
+
+<h2><span data-lang="zh">1.3 研究假說</span><span data-lang="en">1.3 Research Hypotheses</span></h2>
+<div data-lang="zh"><table>
+    <tr><th>假說</th><th>H0 (虛無)</th><th>H1 (對立)</th></tr>
+    <tr><td>Q1 名目報酬</td><td>名目含息年化報酬 &le; 10%</td><td>&gt; 10%</td></tr>
+    <tr><td>Q2 實質報酬</td><td>實質含息年化報酬 &le; 7%</td><td>&gt; 7%</td></tr>
+    <tr><td>Q3 匯率風險</td><td>TWD 報酬 &ge; USD 報酬</td><td>TWD &lt; USD</td></tr>
+    <tr><td>Q4 存活偏差</td><td>美國 = 其他國家</td><td>美國 &gt; 其他</td></tr>
+    <tr><td>Q5 持有期效果</td><td>報酬離散度不隨持有期遞減</td><td>離散度遞減</td></tr>
+    </table></div><div data-lang="en"><table>
+    <tr><th>Hypothesis</th><th>H0 (Null)</th><th>H1 (Alternative)</th></tr>
+    <tr><td>Q1 Nominal</td><td>Nominal total ann. return &le; 10%</td><td>&gt; 10%</td></tr>
+    <tr><td>Q2 Real</td><td>Real total ann. return &le; 7%</td><td>&gt; 7%</td></tr>
+    <tr><td>Q3 FX Risk</td><td>TWD return &ge; USD return</td><td>TWD &lt; USD</td></tr>
+    <tr><td>Q4 Survivorship</td><td>US = other countries</td><td>US &gt; others</td></tr>
+    <tr><td>Q5 Holding Period</td><td>Return dispersion does not decrease</td><td>Dispersion decreases</td></tr>
+    </table></div>
+
+<footer>V-005 US Stock Long-term Return | Generated by Python + Claude</footer>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

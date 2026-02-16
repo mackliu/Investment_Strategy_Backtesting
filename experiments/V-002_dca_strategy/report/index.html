@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>V-002</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav><ul><li><a href="../../../index.html"><span data-lang="zh">專案主頁</span><span data-lang="en">Project Home</span></a></li><li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li><li><a href="introduction.html"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li><li><a href="methodology.html"><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></a></li><li><a href="results.html"><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></a></li><li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li><li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li><li><a href="appendix.html"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li></ul><button id="lang-toggle" onclick="toggleLang()">Switch to EN</button></nav>
+<div class="container">
+
+    <h1><span data-lang="zh">V-002：定期定額必勝論驗證</span><span data-lang="en">V-002: Does Dollar-Cost Averaging Always Win?</span></h1>
+    <div class="highlight">
+    <div data-lang="zh"><p><strong>研究問題：</strong>每月定期定額投資台灣 ETF（0050/0056），長期下來是否一定賺錢？與銀行定存相比，績效差異有多大？0050 與 0056 哪個更適合定期定額？</p></div><div data-lang="en"><p><strong>Research Question:</strong> Does monthly dollar-cost averaging (DCA) into Taiwan ETFs (0050/0056) always yield positive returns over the long term? How does it compare to bank deposits? Which ETF is more suitable for DCA?</p></div>
+    </div>
+
+    <h2><span data-lang="zh">摘要</span><span data-lang="en">Abstract</span></h2>
+    <div data-lang="zh"><p>本研究以每月定額 10,000 元投入 0050 或 0056 的定期定額策略，使用 2003-2025 年的完整歷史數據進行滾動回測。共計模擬 2,384 組不同起始月份與投資期間的組合，以 XIRR（擴展內部報酬率）計算年化報酬，並與同期銀行一年期定儲機動利率做嚴格配對比較。</p><p><strong>核心發現：</strong></p><ul><li><strong>長期 DCA 幾近「必勝」：</strong>0050 持有 7 年以上的正報酬率達 100%，平均年化 XIRR 約 10.8%。0056 同樣在 7 年以上達到 100% 勝率。</li><li><strong>DCA 大幅優於定存：</strong>所有投資期間的 DCA-定存差值均為統計顯著（Holm-Bonferroni 校正後 p &lt; 0.001），平均超額報酬達 8-11 個百分點。</li><li><strong>短期仍有風險：</strong>持有 1 年的最差 XIRR 為 -61.9%，勝率僅 76%——約有 24% 的機率虧損。</li><li><strong>0050 長期優於 0056：</strong>在 3 年以上的 DCA 情境下，0050 平均超額報酬約 3 個百分點，統計顯著。</li></ul><p><strong>結論：</strong>「定期定額一定賺」的論述在長期（7 年以上）大致成立，但「一定」二字過於絕對。更精確的表述是：「歷史上，長期定期定額台灣 ETF 有非常高的獲利機率，且顯著優於定存。」</p></div><div data-lang="en"><p>This study backtests a monthly DCA strategy investing 10,000 TWD into 0050 or 0056, using complete historical data from 2003-2025. A total of 2,384 scenario combinations (varying start month and investment period) were simulated. Returns are annualized via XIRR (Extended Internal Rate of Return) and compared against the prevailing 1-year time savings floating rate.</p><p><strong>Key Findings:</strong></p><ul><li><strong>Long-term DCA is near-certain to profit:</strong> 0050 achieves 100% win rate at 7+ years, mean XIRR ~10.8%. 0056 also reaches 100% at 7+ years.</li><li><strong>DCA vastly outperforms deposits:</strong> All DCA-deposit differences are statistically significant (Holm-Bonferroni adjusted p &lt; 0.001), with 8-11 pp average excess returns.</li><li><strong>Short-term risk exists:</strong> 1Y worst-case XIRR is -61.9%, win rate only 76% — about 24% chance of loss.</li><li><strong>0050 beats 0056 long-term:</strong> For 3Y+ DCA, 0050 averages ~3 pp higher XIRR, statistically significant.</li></ul><p><strong>Conclusion:</strong> The claim 'DCA always profits' is largely supported at 7+ year horizons, but the word 'always' overstates. A more accurate statement: 'Historically, long-term DCA into Taiwan ETFs has had a very high probability of profit and significantly outperforms deposits.'</p></div>
+
+    <h2><span data-lang="zh">研究方法概要</span><span data-lang="en">Methodology Overview</span></h2>
+    <div data-lang="zh"><p>本研究採用<strong>滾動窗口回測法</strong>，對每一個可能的起始月份進行 DCA 模擬，投資期間涵蓋 1、2、3、5、7、10、15 年。統計推論使用 Newey-West HAC t 檢定（處理重疊樣本的自相關）、Cohen's d 效果量、Block Bootstrap 信賴區間，並以 Holm-Bonferroni 方法校正多重比較。穩健性分析包含不同交易成本情境與不含息報酬。</p></div><div data-lang="en"><p>This study employs a <strong>rolling-window backtest</strong>, simulating DCA for every possible starting month across investment periods of 1, 2, 3, 5, 7, 10, and 15 years. Statistical inference uses Newey-West HAC t-tests (for overlapping sample autocorrelation), Cohen's d effect sizes, Block Bootstrap confidence intervals, and Holm-Bonferroni correction for multiple comparisons. Robustness checks include alternative cost scenarios and price-only returns.</p></div>
+
+    <h2><span data-lang="zh">主要發現</span><span data-lang="en">Key Findings</span></h2>
+    <div class="chart-container" data-lang="zh"><iframe src="assets/figures/zh/plotly_winrate.html" height="500"></iframe></div><div class="chart-container" data-lang="en"><iframe src="assets/figures/en/plotly_winrate.html" height="500"></iframe></div>
+    <div data-lang="zh"><p class='highlight'>上圖呈現 0050 與 0056 的 DCA 勝率隨投資期間的變化。左圖為正報酬比例，右圖為勝過定存的比例。兩者均隨投資期間遞增，在 7 年以上達到 100%。0050 和 0056 的勝率曲線幾乎重疊——差異不在「能否獲利」，而在「獲利多少」。</p></div><div data-lang="en"><p class='highlight'>The charts above show DCA win rates by investment period for 0050 and 0056. Left: positive return rate. Right: rate of beating deposits. Both increase with period length and reach 100% at 7+ years. 0050 and 0056 win rate curves nearly overlap — the difference lies not in 'whether' to profit but in 'how much'.</p></div>
+
+    <h2><span data-lang="zh">章節導覽</span><span data-lang="en">Navigation</span></h2>
+    <div data-lang="zh"><ul><li><a href='introduction.html'>緒論</a> — 研究背景、文獻回顧、假說</li><li><a href='methodology.html'>研究方法</a> — 數據來源、DCA 模擬設計、統計方法</li><li><a href='results.html'>實證結果</a> — 績效摘要、勝率分析、假說檢定、圖表解讀</li><li><a href='discussion.html'>討論</a> — 發現解讀、注意事項、實務建議</li><li><a href='conclusion.html'>結論</a> — 核心結論、研究限制、未來方向</li><li><a href='appendix.html'>附錄</a> — 穩健性分析、0056 補充圖表</li></ul></div><div data-lang="en"><ul><li><a href='introduction.html'>Introduction</a> — Background, literature, hypotheses</li><li><a href='methodology.html'>Methodology</a> — Data, DCA simulation, statistics</li><li><a href='results.html'>Results</a> — Performance, win rates, hypothesis tests, chart analysis</li><li><a href='discussion.html'>Discussion</a> — Interpretation, caveats, practical advice</li><li><a href='conclusion.html'>Conclusion</a> — Core findings, limitations, future work</li><li><a href='appendix.html'>Appendix</a> — Robustness analysis, 0056 supplementary charts</li></ul></div>
+    
+<footer><span data-lang="zh">V-002 研究報告 | Python 自動生成</span><span data-lang="en">V-002 Research Report | Generated by Python</span></footer>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

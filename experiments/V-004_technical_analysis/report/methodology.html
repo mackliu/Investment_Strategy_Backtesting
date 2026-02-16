@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>研究方法</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav><ul><li><a href="../../../index.html"><span data-lang="zh">專案主頁</span><span data-lang="en">Project Home</span></a></li><li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li><li><a href="introduction.html"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li><li><a href="methodology.html"><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></a></li><li><a href="results.html"><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></a></li><li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li><li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li><li><a href="appendix.html"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li></ul><button id="lang-toggle" onclick="toggleLang()">Switch to EN</button></nav>
+<div class="container">
+
+    <h1><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></h1>
+
+    <h2><span data-lang="zh">2.1 數據與標的</span><span data-lang="en">2.1 Data and Target</span></h2>
+    <div data-lang="zh"><p>本研究以 0050（元大台灣50 ETF）為標的，使用 5264 個交易日的日線數據（OHLCV + adj_close），涵蓋 2004-07-01 至 2025-11-25（等待最長均線 SMA(200) 暖機後）。數據來源為本地資料庫（經 V-001 完整驗證），使用 adj_close 計算日報酬率以含入股息再投入。</p><p>選擇 0050 的理由：(1) 與前序實驗一致 (2) 流動性充足、價差小，接近理想交易條件 (3) 若技術分析連在指數 ETF 都無效，在個股上的表現更難歸因於指標本身。</p><p><strong>研究定位：</strong>本研究旨在提供一般民眾具有科學審視的觀點，協助大眾採用多元角度看待投資論點，而非進行極度嚴謹的學術驗證。</p></div><div data-lang="en"><p>This study uses 0050 (Yuanta Taiwan 50 ETF) with 5264 trading days of daily OHLCV + adj_close data, covering 2004-07-01 to 2025-11-25 (after SMA(200) warm-up). Data source: local database (fully validated in V-001). Returns calculated using adj_close to include dividend reinvestment.</p><p>Reasons for choosing 0050: (1) Consistency with prior experiments (2) High liquidity, narrow spreads—near-ideal trading conditions (3) If technical analysis fails even on an index ETF, results on individual stocks would be harder to attribute to the indicators.</p><p><strong>Study positioning:</strong> This research aims to provide the general public with a scientifically informed perspective, helping people view investment claims from multiple angles, rather than serving as an extremely rigorous academic verification.</p></div>
+
+    <h2><span data-lang="zh">2.2 測試策略</span><span data-lang="en">2.2 Tested Strategies</span></h2>
+    <div data-lang="zh"><p>共測試 8 個策略，使用業界標準參數（非最佳化），涵蓋趨勢跟隨和震盪指標兩大類：</p></div><div data-lang="en"><p>8 strategies tested using industry-standard parameters (not optimized), covering trend-following and oscillator categories:</p></div>
+    <table>
+    <tr><th>#</th><th><span data-lang="zh">策略</span><span data-lang="en">Strategy</span></th><th><span data-lang="zh">買進</span><span data-lang="en">Buy</span></th><th><span data-lang="zh">賣出</span><span data-lang="en">Sell</span></th></tr>
+    <tr><td>1</td><td>MA(5,20)</td><td>SMA5 > SMA20</td><td>SMA5 < SMA20</td></tr>
+    <tr><td>2</td><td>MA(10,50)</td><td>SMA10 > SMA50</td><td>SMA10 < SMA50</td></tr>
+    <tr><td>3</td><td>MA(20,60)</td><td>SMA20 > SMA60</td><td>SMA20 < SMA60</td></tr>
+    <tr><td>4</td><td>MA(50,200)</td><td>SMA50 > SMA200</td><td>SMA50 < SMA200</td></tr>
+    <tr><td>5</td><td>KD(9,3,3)</td><td>K&lt;20, K&gt;D</td><td>K&gt;80, K&lt;D</td></tr>
+    <tr><td>6</td><td>MACD(12,26,9)</td><td>MACD > Signal</td><td>MACD < Signal</td></tr>
+    <tr><td>7</td><td>RSI(14)</td><td>RSI > 30 (up)</td><td>RSI < 70 (down)</td></tr>
+    <tr><td>8</td><td>BB(20,2)</td><td>Close < Lower</td><td>Close > Upper</td></tr>
+    </table>
+
+    <h2><span data-lang="zh">2.3 回測設計</span><span data-lang="en">2.3 Backtest Design</span></h2>
+    <div data-lang="zh"><ul><li><strong>訊號產生：</strong>T 日收盤後根據技術指標產生買/賣訊號</li><li><strong>執行時點：</strong>T+1 日收盤價執行（避免前視偏差）</li><li><strong>部位管理：</strong>全倉買入/全倉賣出（二元持倉）</li><li><strong>報酬計算：</strong>使用 adj_close（含股息再投入），空倉期間報酬 = 0%</li><li><strong>交易成本：</strong>買入手續費 0.1425% + 賣出手續費 0.1425% + 交易稅 0.1%（ETF）= 來回 0.385%</li></ul></div><div data-lang="en"><ul><li><strong>Signal generation:</strong> Buy/sell signals generated after T-day close based on indicators</li><li><strong>Execution:</strong> T+1 closing price (avoiding look-ahead bias)</li><li><strong>Position:</strong> All-in / all-out (binary position)</li><li><strong>Returns:</strong> Using adj_close (including dividend reinvestment), cash periods = 0%</li><li><strong>Costs:</strong> Buy commission 0.1425% + sell commission 0.1425% + ETF tax 0.1% = 0.385% round-trip</li></ul></div>
+
+    <h2><span data-lang="zh">2.4 統計方法</span><span data-lang="en">2.4 Statistical Methods</span></h2>
+    <div data-lang="zh"><ul><li><strong>Permutation Test（主要）：</strong>隨機打亂持倉日 10,000 次，計算隨機策略的年化超額報酬分佈。若真實策略的超額報酬在分佈右側 5% 之外 → 顯著</li><li><strong>Holm-Bonferroni 校正：</strong>控制 8 個策略同時檢定的 Family-Wise Error Rate</li><li><strong>Bootstrap CI：</strong>10,000 次重抽樣，估計年化超額報酬的 95% 信賴區間</li><li><strong>Cohen's d：</strong>超額日報酬的效果量</li></ul></div><div data-lang="en"><ul><li><strong>Permutation Test (primary):</strong> Randomly shuffle holding days 10,000 times to build excess return distribution. If real excess return exceeds 95th percentile → significant</li><li><strong>Holm-Bonferroni correction:</strong> Controls Family-Wise Error Rate across 8 simultaneous tests</li><li><strong>Bootstrap CI:</strong> 10,000 resamples for 95% confidence interval of annualized excess return</li><li><strong>Cohen's d:</strong> Effect size of daily excess returns</li></ul></div>
+    
+<footer><div data-lang="zh"><p>V-004 技術分析能預測股價？ | 用數據說話：投資策略回測研究</p></div><div data-lang="en"><p>V-004 Can Technical Analysis Predict Stock Prices? | Let Data Speak: Investment Strategy Backtesting</p></div></footer>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

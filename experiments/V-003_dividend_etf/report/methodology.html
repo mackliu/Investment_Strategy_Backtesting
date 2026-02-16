@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>研究方法</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav><ul><li><a href="../../../index.html"><span data-lang="zh">專案主頁</span><span data-lang="en">Project Home</span></a></li><li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li><li><a href="introduction.html"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li><li><a href="methodology.html"><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></a></li><li><a href="results.html"><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></a></li><li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li><li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li><li><a href="appendix.html"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li></ul><button id="lang-toggle" onclick="toggleLang()">Switch to EN</button></nav>
+<div class="container">
+
+    <h1><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></h1>
+
+    <h2><span data-lang="zh">2.1 數據來源與品質</span><span data-lang="en">2.1 Data Sources and Quality</span></h2>
+    <div data-lang="zh"><p>本研究使用以下數據：</p><ul><li><strong>0050 日線數據：</strong>5517 個交易日（2003-06-30 ~ 2025-11-25），含收盤價與還原價。數據來源為本地資料庫（經 V-001 完整驗證），並以 yfinance 交叉驗證。</li><li><strong>0056 日線數據：</strong>4403 個交易日（2007-12-26 ~ 2025-11-25），含收盤價與還原價。</li><li><strong>除權息明細：</strong>FinMind API（0050: 21 配息年, 0056: 16 配息年）</li><li><strong>台灣 CPI：</strong>主計處月度/年度資料（1981~2026）</li></ul><p>所有數據經過缺漏值檢查、日報酬率異常值篩查（>10%）、交易日連續性檢查。0050 於 2025 年 6 月進行約 4:1 股票分割，本研究已針對此事件進行拆股調整（split_adj_close），確保跨期間比較的一致性。</p></div><div data-lang="en"><p>This study uses the following data:</p><ul><li><strong>0050 daily prices:</strong> 5517 trading days (2003-06-30 ~ 2025-11-25), including close and adjusted close. Source: local database (fully validated in V-001), cross-validated with yfinance.</li><li><strong>0056 daily prices:</strong> 4403 trading days (2007-12-26 ~ 2025-11-25), including close and adjusted close.</li><li><strong>Dividend records:</strong> FinMind API (0050: 21 dividend years, 0056: 16 dividend years)</li><li><strong>Taiwan CPI:</strong> DGBAS monthly/annual data (1981-2026)</li></ul><p>All data underwent missing value checks, daily return outlier screening (>10%), and trading day continuity checks. 0050 underwent an approximately 4:1 stock split in June 2025; this study applies split adjustment (split_adj_close) to ensure consistent cross-period comparisons.</p></div>
+
+    <h2><span data-lang="zh">2.2 分析維度</span><span data-lang="en">2.2 Analysis Dimensions</span></h2>
+    <div data-lang="zh"><p>本研究從以下七個維度分析股息品質：</p><ol><li><strong>年度殖利率：</strong>年度配息 / 年初股價</li><li><strong>股息成長率：</strong>年度配息的 YoY 變化</li><li><strong>股息穩定性：</strong>變異係數（CV）= 標準差 / 平均值</li><li><strong>除息日效果：</strong>股價跌幅 vs 配息金額的比率（drop ratio）</li><li><strong>填息分析：</strong>除息後股價回復到除息前水準的天數</li><li><strong>總報酬分解：</strong>價格報酬 vs 股息報酬的貢獻比</li><li><strong>實質殖利率：</strong>名目殖利率 - 通膨率</li></ol></div><div data-lang="en"><p>This study analyzes dividend quality across seven dimensions:</p><ol><li><strong>Annual dividend yield:</strong> Annual dividends / Year-start price</li><li><strong>Dividend growth rate:</strong> YoY change in annual dividends</li><li><strong>Dividend stability:</strong> Coefficient of variation (CV) = std / mean</li><li><strong>Ex-dividend day effect:</strong> Price drop / dividend ratio (drop ratio)</li><li><strong>Fill-gap analysis:</strong> Days for price to recover to pre-ex-dividend level</li><li><strong>Total return decomposition:</strong> Price return vs dividend return contribution</li><li><strong>Real dividend yield:</strong> Nominal yield - inflation rate</li></ol></div>
+
+    <h2><span data-lang="zh">2.3 統計方法</span><span data-lang="en">2.3 Statistical Methods</span></h2>
+    <div data-lang="zh"><ul><li><strong>配對 t 檢定 + Wilcoxon：</strong>比較 0050 vs 0056 殖利率差異（需要配對因為同一年份的觀測有相關性）</li><li><strong>單樣本 t 檢定：</strong>檢驗 drop ratio 是否等於 1.0</li><li><strong>Fisher's exact test：</strong>比較填息率（二元變數）</li><li><strong>Mann-Whitney U：</strong>比較填息天數（非常態分佈）</li><li><strong>Levene's test：</strong>比較股息變異程度</li><li><strong>Bootstrap 信賴區間：</strong>10,000 次重抽樣，提供穩健的區間估計</li><li><strong>Cohen's d：</strong>效果量指標，判斷差異的實際意義</li></ul></div><div data-lang="en"><ul><li><strong>Paired t-test + Wilcoxon:</strong> Compare 0050 vs 0056 yields (paired because same-year observations are correlated)</li><li><strong>One-sample t-test:</strong> Test whether drop ratio equals 1.0</li><li><strong>Fisher's exact test:</strong> Compare fill rates (binary variable)</li><li><strong>Mann-Whitney U:</strong> Compare fill-gap days (non-normal distribution)</li><li><strong>Levene's test:</strong> Compare dividend variability</li><li><strong>Bootstrap CI:</strong> 10,000 resamples for robust interval estimation</li><li><strong>Cohen's d:</strong> Effect size metric for practical significance</li></ul></div>
+
+    <h2><span data-lang="zh">2.4 退休模擬設計</span><span data-lang="en">2.4 Retirement Simulation Design</span></h2>
+    <div data-lang="zh"><p>投入 1,000,000 元，比較兩種策略：</p><ul><li><strong>策略 A（0056 領息）：</strong>持有 0056，每年領取股息作為現金流，不賣出任何持股</li><li><strong>策略 B（0050 賣股）：</strong>持有 0050，每年賣出等同 0056 年均配息金額的股票</li></ul><p>比較指標：累計現金收入 + 期末剩餘市值。為測試穩健性，對多個起始年份（2008~2015）各模擬 10 年。</p></div><div data-lang="en"><p>Starting with NT$1,000,000, we compare two strategies:</p><ul><li><strong>Strategy A (0056 dividends):</strong> Hold 0056, collect annual dividends as cash flow, never sell shares</li><li><strong>Strategy B (0050 sell):</strong> Hold 0050, sell shares equivalent to 0056's average annual dividend</li></ul><p>Comparison metric: cumulative cash received + remaining portfolio value. For robustness, we simulate 10 years from multiple start years (2008-2015).</p></div>
+    
+<footer><div data-lang="zh"><p>V-003 高股息 ETF 是退休首選？ | 用數據說話：投資策略回測研究</p></div><div data-lang="en"><p>V-003 Are High-Dividend ETFs Best for Retirement? | Let Data Speak: Investment Strategy Backtesting</p></div></footer>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>附錄</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav><ul><li><a href="../../../index.html"><span data-lang="zh">專案主頁</span><span data-lang="en">Project Home</span></a></li><li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li><li><a href="introduction.html"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li><li><a href="methodology.html"><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></a></li><li><a href="results.html"><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></a></li><li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li><li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li><li><a href="appendix.html"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li></ul><button id="lang-toggle" onclick="toggleLang()">Switch to EN</button></nav>
+<div class="container">
+
+    <h1><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></h1>
+
+    <h2><span data-lang="zh">A.1 股息穩定性比較</span><span data-lang="en">A.1 Dividend Stability Comparison</span></h2>
+    <div data-lang="zh"><p>下表比較 0050 與 0056 的股息穩定性指標。變異係數（CV）越低表示股息越穩定。</p></div><div data-lang="en"><p>The table below compares dividend stability metrics for 0050 and 0056. Lower CV indicates more stable dividends.</p></div>
+    <table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ticker</th>
+      <th>cv</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>max</th>
+      <th>n_years</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>50</td>
+      <td>0.4369</td>
+      <td>2.6171</td>
+      <td>1.1435</td>
+      <td>0.8500</td>
+      <td>5.0000</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td>56</td>
+      <td>0.4855</td>
+      <td>1.8157</td>
+      <td>0.8815</td>
+      <td>0.8500</td>
+      <td>3.8720</td>
+      <td>16</td>
+    </tr>
+  </tbody>
+</table>
+
+    <h2><span data-lang="zh">A.2 年度配息明細</span><span data-lang="en">A.2 Annual Dividend Details</span></h2>
+    <img data-lang="zh" src="../results/figures/zh/fig01_annual_dividends.png" alt=""><img data-lang="en" src="../results/figures/en/fig01_annual_dividends.png" alt="">
+    <img data-lang="zh" src="../results/figures/zh/fig03_dividend_growth.png" alt=""><img data-lang="en" src="../results/figures/en/fig03_dividend_growth.png" alt="">
+
+    <h2><span data-lang="zh">A.3 殖利率時序</span><span data-lang="en">A.3 Dividend Yield Time Series</span></h2>
+    <img data-lang="zh" src="../results/figures/zh/fig02_yield_comparison.png" alt=""><img data-lang="en" src="../results/figures/en/fig02_yield_comparison.png" alt="">
+
+    <h2><span data-lang="zh">A.4 含息 vs 不含息走勢</span><span data-lang="en">A.4 Total Return vs Price Return</span></h2>
+    <div data-lang="zh"><p>下圖比較含息（adj_close）與不含息（close, 拆股調整後）的走勢，視覺化股息在長期累積中的貢獻。兩線之間的差距代表股息再投入的累積效果。</p></div><div data-lang="en"><p>The chart below compares total return (adj_close) vs price-only return (split-adjusted close), visualizing dividend contribution to long-term accumulation. The gap between the two lines represents the cumulative effect of dividend reinvestment.</p></div>
+    <img data-lang="zh" src="../results/figures/zh/fig10_close_vs_adj.png" alt=""><img data-lang="en" src="../results/figures/en/fig10_close_vs_adj.png" alt="">
+
+    <h2><span data-lang="zh">A.5 稅務情境完整表格</span><span data-lang="en">A.5 Complete Tax Scenario Table</span></h2>
+    <div data-lang="zh"><p>下表列出三種稅務情境（免稅、退休族、高所得）下的詳細報酬比較。</p></div><div data-lang="en"><p>The table below shows detailed return comparisons across three tax scenarios (tax-free, retiree, high income).</p></div>
+    <table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>scenario</th>
+      <th>ticker</th>
+      <th>ann_gross_return</th>
+      <th>ann_after_tax_return</th>
+      <th>tax_amount</th>
+      <th>tax_drag_ann</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>tax_free</td>
+      <td>50</td>
+      <td>0.1154</td>
+      <td>0.1154</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <td>tax_free</td>
+      <td>56</td>
+      <td>0.0524</td>
+      <td>0.0524</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <td>retiree</td>
+      <td>50</td>
+      <td>0.1154</td>
+      <td>0.1148</td>
+      <td>64,895</td>
+      <td>0.0006</td>
+    </tr>
+    <tr>
+      <td>retiree</td>
+      <td>56</td>
+      <td>0.0524</td>
+      <td>0.0518</td>
+      <td>23,806</td>
+      <td>0.0006</td>
+    </tr>
+    <tr>
+      <td>high_income</td>
+      <td>50</td>
+      <td>0.1154</td>
+      <td>0.1066</td>
+      <td>926,060</td>
+      <td>0.0087</td>
+    </tr>
+    <tr>
+      <td>high_income</td>
+      <td>56</td>
+      <td>0.0524</td>
+      <td>0.0438</td>
+      <td>339,711</td>
+      <td>0.0086</td>
+    </tr>
+  </tbody>
+</table>
+
+    <h2><span data-lang="zh">A.6 多起始年份退休模擬</span><span data-lang="en">A.6 Multi-Start Retirement Simulation</span></h2>
+    <div data-lang="zh"><p>下表列出各起始年份的 10 年退休模擬結果，比較 0056 領息與 0050 賣股策略的最終合計金額。</p></div><div data-lang="en"><p>The table below shows 10-year retirement simulation results for each start year, comparing 0056 dividend strategy vs 0050 sell strategy total values.</p></div>
+    <table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>start_year</th>
+      <th>div_strategy_total</th>
+      <th>sell_strategy_total</th>
+      <th>div_cumulative_income</th>
+      <th>sell_cumulative_income</th>
+      <th>div_final_portfolio</th>
+      <th>sell_final_portfolio</th>
+      <th>sell_wins</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2008</td>
+      <td>1,382,524</td>
+      <td>1,177,799</td>
+      <td>411,650</td>
+      <td>411,650</td>
+      <td>970,874</td>
+      <td>766,148</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>2009</td>
+      <td>2,585,489</td>
+      <td>2,024,499</td>
+      <td>865,661</td>
+      <td>865,661</td>
+      <td>1,719,828</td>
+      <td>1,158,838</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>2010</td>
+      <td>1,737,021</td>
+      <td>1,471,883</td>
+      <td>504,255</td>
+      <td>504,255</td>
+      <td>1,232,766</td>
+      <td>967,627</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>2011</td>
+      <td>1,545,034</td>
+      <td>1,619,714</td>
+      <td>478,818</td>
+      <td>478,818</td>
+      <td>1,066,216</td>
+      <td>1,140,896</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>2012</td>
+      <td>2,131,170</td>
+      <td>2,418,797</td>
+      <td>596,435</td>
+      <td>596,435</td>
+      <td>1,534,735</td>
+      <td>1,822,362</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>2013</td>
+      <td>1,710,240</td>
+      <td>1,816,256</td>
+      <td>603,486</td>
+      <td>603,486</td>
+      <td>1,106,754</td>
+      <td>1,212,770</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>2014</td>
+      <td>2,278,042</td>
+      <td>1,967,784</td>
+      <td>658,294</td>
+      <td>658,294</td>
+      <td>1,619,749</td>
+      <td>1,309,490</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>2015</td>
+      <td>2,257,143</td>
+      <td>2,194,880</td>
+      <td>738,302</td>
+      <td>738,302</td>
+      <td>1,518,841</td>
+      <td>1,456,578</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+
+    <h2><span data-lang="zh">A.7 統計檢定彙整</span><span data-lang="en">A.7 Statistical Tests Summary</span></h2>
+    <div data-lang="zh"><p>所有假說檢定結果彙整於下表。包含 t 統計量、p 值、效果量（Cohen's d）及 Bootstrap 信賴區間。</p></div><div data-lang="en"><p>All hypothesis test results are summarized below, including t-statistics, p-values, effect sizes (Cohen's d), and Bootstrap confidence intervals.</p></div>
+
+    <h2><span data-lang="zh">A.8 子期間報酬比較表</span><span data-lang="en">A.8 Sub-Period Return Comparison</span></h2>
+    <div data-lang="zh"><p>下表分別列出 2008-2016（科技股暴漲前）、2017-2025（暴漲後）及全期間的年化報酬率、股息報酬、價格報酬分解。此分析用於評估 0050 vs 0056 比較結論的制度依賴性。</p></div><div data-lang="en"><p>The table below shows annualized returns, dividend returns, and price return decomposition for pre-2017, post-2017, and full periods. This analysis assesses the regime dependence of the 0050 vs 0056 comparison.</p></div>
+    <table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>period</th>
+      <th>ticker</th>
+      <th>years</th>
+      <th>ann_return</th>
+      <th>price_return</th>
+      <th>dividend_return</th>
+      <th>dividend_contribution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pre_break</td>
+      <td>50</td>
+      <td>9.0000</td>
+      <td>0.0521</td>
+      <td>-1.1443</td>
+      <td>1.7238</td>
+      <td>2.9746</td>
+    </tr>
+    <tr>
+      <td>pre_break</td>
+      <td>56</td>
+      <td>9.0000</td>
+      <td>0.0340</td>
+      <td>-0.5977</td>
+      <td>0.9485</td>
+      <td>2.7036</td>
+    </tr>
+    <tr>
+      <td>post_break</td>
+      <td>50</td>
+      <td>8.9000</td>
+      <td>0.1841</td>
+      <td>2.1625</td>
+      <td>1.3312</td>
+      <td>0.3810</td>
+    </tr>
+    <tr>
+      <td>post_break</td>
+      <td>56</td>
+      <td>8.9000</td>
+      <td>0.1245</td>
+      <td>0.9726</td>
+      <td>0.8667</td>
+      <td>0.4712</td>
+    </tr>
+    <tr>
+      <td>full</td>
+      <td>50</td>
+      <td>17.9</td>
+      <td>0.1158</td>
+      <td>3.0533</td>
+      <td>3.0550</td>
+      <td>0.5001</td>
+    </tr>
+    <tr>
+      <td>full</td>
+      <td>56</td>
+      <td>17.9</td>
+      <td>0.0781</td>
+      <td>1.0264</td>
+      <td>1.8152</td>
+      <td>0.6388</td>
+    </tr>
+  </tbody>
+</table>
+    <img data-lang="zh" src="../results/figures/zh/fig11_subperiod_returns.png" alt=""><img data-lang="en" src="../results/figures/en/fig11_subperiod_returns.png" alt="">
+
+    <h2><span data-lang="zh">A.9 子期間退休模擬比較</span><span data-lang="en">A.9 Sub-Period Retirement Simulation</span></h2>
+    <div data-lang="zh"><p>分別以 2008 和 2017 為起點進行退休模擬，驗證「0050 一定比 0056 好」的結論是否在所有市場制度下成立。結果顯示，2008-2016 年 0056 領息策略合計 1,270,680 元，勝過 0050 賣股策略的 1,074,719 元。</p></div><div data-lang="en"><p>Retirement simulations starting from 2008 and 2017 respectively test whether '0050 always beats 0056' holds across all market regimes. Results show in 2008-2016, 0056 dividend strategy totaled NT$1,270,680, outperforming 0050 sell strategy's NT$1,074,719.</p></div>
+    <img data-lang="zh" src="../results/figures/zh/fig13_subperiod_retirement.png" alt=""><img data-lang="en" src="../results/figures/en/fig13_subperiod_retirement.png" alt="">
+
+    <h2><span data-lang="zh">A.10 「左手換右手」長期追蹤</span><span data-lang="en">A.10 "Left Hand to Right Hand" Long-Term Tracking</span></h2>
+    <div data-lang="zh"><p>下圖追蹤 0056 自 2008 年以來的實際收盤價、假設龐氏情境（初始價格逐次扣除累計配息）以及含息總價值。若配息真為「左手換右手」（本金侵蝕型），灰色虛線應反映實際走勢。事實是 0056 累計配出 29.05 元（為初始股價的 113%），但股價仍正成長，含息總價值更達 64.20 元。</p></div><div data-lang="en"><p>The chart tracks 0056's actual close, hypothetical Ponzi scenario (initial price minus cumulative dividends), and total value (close + cumulative dividends) since 2008. If dividends were truly 'left hand to right hand' (principal erosion), the gray dashed line should reflect reality. In fact, 0056 distributed 29.05 per share (113% of initial price), yet price still grew, and total value reached 64.20.</p></div>
+    <img data-lang="zh" src="../results/figures/zh/fig12_nav_trajectory.png" alt=""><img data-lang="en" src="../results/figures/en/fig12_nav_trajectory.png" alt="">
+    
+<footer><div data-lang="zh"><p>V-003 高股息 ETF 是退休首選？ | 用數據說話：投資策略回測研究</p></div><div data-lang="en"><p>V-003 Are High-Dividend ETFs Best for Retirement? | Let Data Speak: Investment Strategy Backtesting</p></div></footer>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

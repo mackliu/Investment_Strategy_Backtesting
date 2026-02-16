@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>結論</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav><ul><li><a href="../../../index.html"><span data-lang="zh">專案主頁</span><span data-lang="en">Project Home</span></a></li><li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li><li><a href="introduction.html"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li><li><a href="methodology.html"><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></a></li><li><a href="results.html"><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></a></li><li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li><li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li><li><a href="appendix.html"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li></ul><button id="lang-toggle" onclick="toggleLang()">Switch to EN</button></nav>
+<div class="container">
+
+    <h1><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></h1>
+
+    <h2><span data-lang="zh">5.1 核心結論</span><span data-lang="en">5.1 Core Conclusions</span></h2>
+    <div data-lang="zh"><ol><li><strong>技術分析無法打敗 Buy & Hold：</strong>8 個策略無一在統計上顯著優於 B&H（Permutation p 值全部 > 0.14，校正後 = 1.000）。</li><li><strong>空倉損失 > 擇時收益：</strong>技術策略的報酬損失主要來自空倉期間錯失的市場上漲。持倉比例越低（如 KD 僅 31%），損失越大。</li><li><strong>交易成本加劇劣勢：</strong>含成本後所有策略的超額報酬進一步惡化。高頻策略（年交易 16-20 次）的成本拖累約 3-4 個百分點。</li><li><strong>「技術分析能預測股價」的論點不被數據支持：</strong>至少在 0050（台灣大盤 ETF）上，使用標準參數的技術分析策略不具有統計上可靠的預測力。</li></ol></div><div data-lang="en"><ol><li><strong>TA cannot beat Buy & Hold:</strong> None of the 8 strategies significantly outperform B&H (all Permutation p > 0.14, adjusted = 1.000).</li><li><strong>Cash drag > timing gains:</strong> Strategy underperformance primarily comes from missing market gains during cash periods. Lower holding ratios (KD at 31%) mean greater losses.</li><li><strong>Costs worsen the disadvantage:</strong> After costs, all excess returns deteriorate further. High-frequency strategies (16-20 trades/year) suffer ~3-4 pp cost drag.</li><li><strong>"TA can predict stock prices" is not supported by data:</strong> At least for 0050 (Taiwan market ETF), standard-parameter TA strategies lack statistically reliable predictive power.</li></ol></div>
+
+    <h2><span data-lang="zh">5.2 研究限制</span><span data-lang="en">5.2 Limitations</span></h2>
+    <div class="warning">
+    <div data-lang="zh"><ul><li>僅測試 0050 一檔標的，不代表技術分析在所有市場上都無效</li><li>僅使用標準參數，最佳化後的結果可能不同（但面臨過擬合風險）</li><li>僅測試純機械式策略，不包含主觀判斷或多指標複合策略</li><li>分析期間（2004-2025）涵蓋一個主要的多頭趨勢，在持續盤整的市場中結果可能不同</li><li>T+1 收盤價執行的假設可能略偏保守或樂觀，取決於實際執行情況</li></ul></div><div data-lang="en"><ul><li>Only 0050 tested; TA may work differently in other markets</li><li>Only standard parameters used; optimized results may differ (but face overfitting risk)</li><li>Only pure mechanical strategies; excludes subjective judgment or composite indicators</li><li>Analysis period (2004-2025) covers a predominantly bullish trend; results may differ in range-bound markets</li><li>T+1 close execution assumption may be slightly conservative or optimistic depending on actual execution</li></ul></div>
+    </div>
+
+    <h2><span data-lang="zh">5.3 未來研究方向</span><span data-lang="en">5.3 Future Research</span></h2>
+    <div data-lang="zh"><ul><li>在個股（如台積電 2330）或國際市場上測試相同策略</li><li>測試複合策略（如 MA + KD 雙重確認）是否能提升績效</li><li>使用機器學習方法取代固定規則，測試非線性技術模式</li><li>分析不同市場環境（多頭/空頭/盤整）下技術分析的條件式績效</li><li>將策略從「純擇時」擴展為「部位調整」（如根據 RSI 調整持倉比例）</li></ul></div><div data-lang="en"><ul><li>Test same strategies on individual stocks (e.g., TSMC 2330) or international markets</li><li>Test composite strategies (e.g., MA + KD dual confirmation)</li><li>Use machine learning to replace fixed rules, testing nonlinear patterns</li><li>Analyze conditional performance across different market regimes (bull/bear/range)</li><li>Extend from pure timing to position sizing (e.g., adjusting allocation based on RSI)</li></ul></div>
+    
+<footer><div data-lang="zh"><p>V-004 技術分析能預測股價？ | 用數據說話：投資策略回測研究</p></div><div data-lang="en"><p>V-004 Can Technical Analysis Predict Stock Prices? | Let Data Speak: Investment Strategy Backtesting</p></div></footer>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

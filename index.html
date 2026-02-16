@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用數據說話：投資策略回測研究 | Let Data Speak: Investment Strategy Backtesting</title>
+    <link rel="stylesheet" href="css/portal.css">
+</head>
+<body>
+
+<nav>
+    <span class="nav-brand">
+        <span data-lang="zh">用數據說話</span>
+        <span data-lang="en">Let Data Speak</span>
+    </span>
+    <button id="lang-toggle" onclick="toggleLang()">Switch to EN</button>
+</nav>
+
+<section class="hero">
+    <h1>
+        <span data-lang="zh">用數據說話：投資策略回測研究</span>
+        <span data-lang="en">Let Data Speak: Investment Strategy Backtesting</span>
+    </h1>
+    <p class="subtitle">
+        <span data-lang="zh">以嚴謹的回測分析與統計檢定，針對「存股必勝」「定期定額一定賺」「技術分析能預測股價」等常見投資論點進行客觀、可重現的實證研究。</span>
+        <span data-lang="en">Rigorous backtesting and statistical analysis to objectively verify common investment claims such as "buy-and-hold always wins," "DCA never loses," and "technical analysis predicts prices."</span>
+    </p>
+</section>
+
+<div class="container">
+    <h2 class="section-title">
+        <span data-lang="zh">研究實驗</span>
+        <span data-lang="en">Experiments</span>
+    </h2>
+
+    <div class="cards">
+
+        <!-- V-001 -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-id">V-001</div>
+                <h3>
+                    <span data-lang="zh">長期持有是否一定獲利？</span>
+                    <span data-lang="en">Does Long-Term Buy-and-Hold Always Profit?</span>
+                </h3>
+            </div>
+            <div class="card-body">
+                <p class="summary">
+                    <span data-lang="zh">驗證「只要長期持有就一定賺」的論點，以台灣 0050 ETF 回測 1-20 年持有期的勝率與報酬分布。</span>
+                    <span data-lang="en">Tests the claim "long-term holding always profits" using 0050 ETF with 1-20 year holding periods.</span>
+                </p>
+                <div class="findings">
+                    <span data-lang="zh">0050 持有 7 年以上達 100% 勝率；1 年勝率 75%，最差 -52.6%；Cohen's d 0.60 ~ 1.37</span>
+                    <span data-lang="en">0050 reaches 100% win rate at 7+ years; 1Y win rate 75%, worst -52.6%; Cohen's d 0.60-1.37</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="badge badge-complete">
+                    <span data-lang="zh">已完成</span>
+                    <span data-lang="en">Complete</span>
+                </span>
+                <a class="card-link" href="experiments/V-001_long_term_hold/report/index.html">
+                    <span data-lang="zh">查看報告 &rarr;</span>
+                    <span data-lang="en">View Report &rarr;</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- V-002 -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-id">V-002</div>
+                <h3>
+                    <span data-lang="zh">定期定額必勝論驗證</span>
+                    <span data-lang="en">Does Dollar-Cost Averaging Always Win?</span>
+                </h3>
+            </div>
+            <div class="card-body">
+                <p class="summary">
+                    <span data-lang="zh">驗證「定期定額投資一定會賺」的論點，以 0050/0056 月定額回測 1-15 年累積期的 XIRR 與勝率。</span>
+                    <span data-lang="en">Tests the claim "DCA investing always wins" using 0050/0056 monthly contributions over 1-15 year periods.</span>
+                </p>
+                <div class="findings">
+                    <span data-lang="zh">0050 月定額 7 年以上 100% 勝率，平均 XIRR 10.8%，超額報酬 8-11pp (p&lt;0.001)；1 年最差 -61.9%</span>
+                    <span data-lang="en">0050 DCA 7+ years 100% win rate, mean XIRR 10.8%, excess return 8-11pp (p&lt;0.001); 1Y worst -61.9%</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="badge badge-complete">
+                    <span data-lang="zh">已完成</span>
+                    <span data-lang="en">Complete</span>
+                </span>
+                <a class="card-link" href="experiments/V-002_dca_strategy/report/index.html">
+                    <span data-lang="zh">查看報告 &rarr;</span>
+                    <span data-lang="en">View Report &rarr;</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- V-003 -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-id">V-003</div>
+                <h3>
+                    <span data-lang="zh">高股息 ETF 是退休首選？</span>
+                    <span data-lang="en">Are High-Dividend ETFs Best for Retirement?</span>
+                </h3>
+            </div>
+            <div class="card-body">
+                <p class="summary">
+                    <span data-lang="zh">比較高股息 ETF (0056) 與市值型 ETF (0050) 的總報酬、殖利率與除息填息行為，驗證「退休就買高股息」論點。</span>
+                    <span data-lang="en">Compares high-dividend ETF (0056) vs market-cap ETF (0050) on total return, yield, and ex-dividend behavior.</span>
+                </p>
+                <div class="findings">
+                    <span data-lang="zh">0056 殖利率 6.9% vs 0050 3.4%，但總報酬 284% vs 611%；除息跌幅比 ~1.0 支持「左手換右手」</span>
+                    <span data-lang="en">0056 yield 6.9% vs 0050 3.4%, but total return 284% vs 611%; ex-div drop ratio ~1.0 supports "dividend as wealth transfer"</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="badge badge-complete">
+                    <span data-lang="zh">已完成</span>
+                    <span data-lang="en">Complete</span>
+                </span>
+                <a class="card-link" href="experiments/V-003_dividend_etf/report/index.html">
+                    <span data-lang="zh">查看報告 &rarr;</span>
+                    <span data-lang="en">View Report &rarr;</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- V-004 -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-id">V-004</div>
+                <h3>
+                    <span data-lang="zh">技術分析能預測股價？</span>
+                    <span data-lang="en">Can Technical Analysis Predict Stock Prices?</span>
+                </h3>
+            </div>
+            <div class="card-body">
+                <p class="summary">
+                    <span data-lang="zh">以 8 種常見技術分析策略（均線、RSI、MACD 等）回測 0050，比較是否能打敗買進持有策略。</span>
+                    <span data-lang="en">Backtests 8 common technical strategies (MA, RSI, MACD, etc.) on 0050 against buy-and-hold benchmark.</span>
+                </p>
+                <div class="findings">
+                    <span data-lang="zh">8 種策略均無法打敗 B&H (12.20% vs 最佳 8.14%)；Permutation Test 0/8 顯著；加交易成本後更差</span>
+                    <span data-lang="en">All 8 strategies fail to beat B&H (12.20% vs best 8.14%); Permutation test 0/8 significant; worse with costs</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="badge badge-complete">
+                    <span data-lang="zh">已完成</span>
+                    <span data-lang="en">Complete</span>
+                </span>
+                <a class="card-link" href="experiments/V-004_technical_analysis/report/index.html">
+                    <span data-lang="zh">查看報告 &rarr;</span>
+                    <span data-lang="en">View Report &rarr;</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- V-005 -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-id">V-005</div>
+                <h3>
+                    <span data-lang="zh">「美股長期年化報酬 10%」</span>
+                    <span data-lang="en">US Stock 10% Annual Return</span>
+                </h3>
+            </div>
+            <div class="card-body">
+                <p class="summary">
+                    <span data-lang="zh">驗證「美股長期年化報酬 10%」的論點，以 S&P 500 超過 150 年歷史數據分析名目與實質報酬、存活偏差。</span>
+                    <span data-lang="en">Tests the "US stocks return 10% annually" claim using 150+ years of S&P 500 data, analyzing nominal/real returns and survivorship bias.</span>
+                </p>
+                <div class="findings">
+                    <span data-lang="zh">S&P 500 名目含息年化 9.2%（僅 39% 的 10 年期達 10%）；實質 6.9%；日經 225 僅 2.6% 顯示存活偏差</span>
+                    <span data-lang="en">S&P 500 nominal total return 9.2% (only 39% of 10Y periods hit 10%); real 6.9%; Nikkei 2.6% shows survivorship bias</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="badge badge-complete">
+                    <span data-lang="zh">已完成</span>
+                    <span data-lang="en">Complete</span>
+                </span>
+                <a class="card-link" href="experiments/V-005_us_stock_return/report/index.html">
+                    <span data-lang="zh">查看報告 &rarr;</span>
+                    <span data-lang="en">View Report &rarr;</span>
+                </a>
+            </div>
+        </div>
+
+    </div><!-- .cards -->
+</div><!-- .container -->
+
+<footer>
+    <p>
+        <span data-lang="zh">用數據說話：投資策略回測研究 &mdash; 以數據與科學方法檢驗常見投資觀點</span>
+        <span data-lang="en">Let Data Speak: Investment Strategy Backtesting &mdash; Evidence-based analysis of common investment beliefs</span>
+    </p>
+    <p style="margin-top:0.5rem;">
+        <a href="https://github.com/" target="_blank">GitHub</a>
+    </p>
+</footer>
+
+<script src="js/portal.js"></script>
+</body>
+</html>

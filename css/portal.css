@@ -1,0 +1,207 @@
+/* Portal - 專案主頁樣式 */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', 'Microsoft JhengHei', sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Language toggle (same mechanism as experiment reports) --- */
+[data-lang="en"] { display: none; }
+body.lang-en [data-lang="zh"] { display: none !important; }
+body.lang-en span[data-lang="en"] { display: inline !important; }
+body.lang-en div[data-lang="en"],
+body.lang-en p[data-lang="en"],
+body.lang-en li[data-lang="en"],
+body.lang-en h1[data-lang="en"],
+body.lang-en h2[data-lang="en"],
+body.lang-en h3[data-lang="en"] { display: block !important; }
+
+/* --- Navigation --- */
+nav {
+    background: #2c3e50;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+nav .nav-brand {
+    color: #ecf0f1;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.8rem 0;
+    text-decoration: none;
+}
+nav .nav-brand:hover { color: #3498db; }
+#lang-toggle {
+    background: transparent;
+    color: #ecf0f1;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.2s;
+}
+#lang-toggle:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* --- Hero --- */
+.hero {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: #ecf0f1;
+    text-align: center;
+    padding: 3rem 2rem 2.5rem;
+}
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+.hero .subtitle {
+    font-size: 1.1rem;
+    opacity: 0.85;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* --- Container --- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.section-title {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+}
+
+/* --- Experiment Cards --- */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.card-header {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 1rem 1.2rem;
+}
+.card-header .card-id {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.card-header h3 {
+    font-size: 1.1rem;
+    margin-top: 0.3rem;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 1.2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.card-body .summary {
+    font-size: 0.92rem;
+    color: #555;
+    margin-bottom: 1rem;
+    flex: 1;
+}
+.card-body .findings {
+    background: #e8f4fd;
+    border-left: 3px solid #3498db;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-radius: 0 4px 4px 0;
+}
+
+.card-footer {
+    padding: 0 1.2rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+.badge-complete {
+    background: #d4edda;
+    color: #155724;
+}
+.badge-wip {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.card-link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+.card-link:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #999;
+    font-size: 0.85rem;
+    border-top: 1px solid #eee;
+    margin-top: 2rem;
+}
+footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+footer a:hover { text-decoration: underline; }
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+    .hero h1 { font-size: 1.5rem; }
+    .cards { grid-template-columns: 1fr; }
+    nav { padding: 0 1rem; }
+}
