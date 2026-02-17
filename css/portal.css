@@ -40,7 +40,8 @@ nav .nav-brand {
     text-decoration: none;
 }
 nav .nav-brand:hover { color: #3498db; }
-#lang-toggle {
+#lang-toggle,
+#github-link {
     background: transparent;
     color: #ecf0f1;
     border: 1px solid rgba(255,255,255,0.3);
@@ -50,7 +51,8 @@ nav .nav-brand:hover { color: #3498db; }
     font-size: 0.85rem;
     transition: background 0.2s;
 }
-#lang-toggle:hover {
+#lang-toggle:hover,
+#github-link:hover {
     background: rgba(255,255,255,0.1);
 }
 
