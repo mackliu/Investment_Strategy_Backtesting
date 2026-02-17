@@ -1,78 +1,397 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>實證結果</title>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>實證結果</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<nav><ul><li><a href="../../../index.html"><span data-lang="zh">專案主頁</span><span data-lang="en">Project Home</span></a></li><li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li><li><a href="introduction.html"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li><li><a href="methodology.html"><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></a></li><li><a href="results.html"><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></a></li><li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li><li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li><li><a href="appendix.html"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li></ul><button id="lang-toggle" onclick="toggleLang()">Switch to EN</button></nav>
-<div class="container">
+    <nav>
+        <ul>
+            <li><a href="../../../index.html"><span data-lang="zh">專案主頁</span><span data-lang="en">Project Home</span></a></li>
+            <li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li>
+            <li><a href="introduction.html"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li>
+            <li><a href="methodology.html"><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></a></li>
+            <li><a href="results.html"><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></a></li>
+            <li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li>
+            <li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li>
+            <li><a href="appendix.html"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li>
+        </ul><button id="lang-toggle" onclick="toggleLang()">Switch to EN</button>
+    </nav>
+    <div class="container">
 
-<h1><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></h1>
+        <h1><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></h1>
 
-<div data-lang="zh"><p>以下依序呈現房地產與股市的多面向比較結果。每張圖表之後附有詳細解讀，幫助讀者理解數據的含義及其對研究問題的啟示。建議從 3.1 開始依序閱讀，因為後面的分析建立在前面的基礎之上。</p></div><div data-lang="en"><p>Below we present multi-dimensional comparison results between real estate and the stock market. Each chart is followed by detailed interpretation to help readers understand the data and its implications. We recommend reading from 3.1 onward, as later analyses build on earlier foundations.</p></div>
+        <div data-lang="zh">
+            <p>以下依序呈現房地產與股市的多面向比較結果。每張圖表之後附有詳細解讀，幫助讀者理解數據的含義及其對研究問題的啟示。建議從 3.1 開始依序閱讀，因為後面的分析建立在前面的基礎之上。</p>
+        </div>
+        <div data-lang="en">
+            <p>Below we present multi-dimensional comparison results between real estate and the stock market. Each
+                chart is followed by detailed interpretation to help readers understand the data and its implications.
+                We recommend reading from 3.1 onward, as later analyses build on earlier foundations.</p>
+        </div>
 
-<h2><span data-lang="zh">3.1 價格指數比較</span><span data-lang="en">3.1 Price Index Comparison</span></h2>
-<div data-lang="zh"><p>這張互動圖是本研究最核心的圖表之一，它以對數尺度呈現各資產從分析起點至今的累積成長。為什麼用對數尺度？因為它讓「漲一倍」和「再漲一倍」在圖上的距離相同，更適合比較不同量級的成長（房價漲 2 倍 vs 股票漲 10 倍）。</p></div><div data-lang="en"><p>This interactive chart is one of the most important in this study, showing cumulative growth on a log scale. Why log scale? It makes "doubling" and "doubling again" equal distances, better for comparing different magnitudes of growth (housing 2x vs stocks 10x).</p></div>
+        <h2><span data-lang="zh">3.1 價格指數比較</span><span data-lang="en">3.1 Price Index Comparison</span></h2>
+        <div data-lang="zh">
+            <p>這張互動圖是本研究最核心的圖表之一，它以對數尺度呈現各資產從分析起點至今的累積成長。為什麼用對數尺度？因為它讓「漲一倍」和「再漲一倍」在圖上的距離相同，更適合比較不同量級的成長（房價漲 2 倍 vs 股票漲
+                10 倍）。</p>
+        </div>
+        <div data-lang="en">
+            <p>This interactive chart is one of the most important in this study, showing cumulative growth on a log
+                scale. Why log scale? It makes "doubling" and "doubling again" equal distances, better for comparing
+                different magnitudes of growth (housing 2x vs stocks 10x).</p>
+        </div>
 
-<div class="chart-container" data-lang="zh"><iframe src="assets/figures/zh/plotly_cumulative.html" height="500"></iframe></div><div class="chart-container" data-lang="en"><iframe src="assets/figures/en/plotly_cumulative.html" height="500"></iframe></div>
+        <div class="chart-container" data-lang="zh"><iframe src="assets/figures/zh/plotly_cumulative.html"
+                height="500"></iframe></div>
+        <div class="chart-container" data-lang="en"><iframe src="assets/figures/en/plotly_cumulative.html"
+                height="500"></iframe></div>
 
-<div data-lang="zh"><p><strong>關鍵觀察：</strong>(1) 0050 ETF（含息再投資）的累積成長遠遠超過任何房價指數，整段期間 0050 年化約 11.3%，全國房價僅約 6.6%。(2) 房價指數的走勢呈現明顯的「S 形」——2003-2014 年快速上升，2015-2018 年高檔盤整，2019 年後在低利率和資金行情推動下再度上漲。(3) CPI（通膨）的成長幅度與房價指數相去不遠，暗示房地產的「實質」報酬（扣除通膨）其實相當有限。這個結果和 Shiller (2015) 的長期觀察一致：房價長期漲幅大部分只是反映通膨。</p></div><div data-lang="en"><p><strong>Key observations:</strong> (1) 0050 ETF (dividends reinvested) far exceeds any housing index, annualizing ~11.3% vs housing at ~6.6%. (2) Housing follows an S-curve — rapid rise 2003-2014, consolidation 2015-2018, renewed rise post-2019 driven by low rates. (3) CPI growth is not far from housing, suggesting modest real (inflation-adjusted) returns. Consistent with Shiller (2015): long-run housing gains largely reflect inflation.</p></div>
+        <div data-lang="zh">
+            <p><strong>關鍵觀察：</strong>(1) 0050 ETF（含息再投資）的累積成長遠遠超過任何房價指數，整段期間 0050 年化約 11.3%，全國房價僅約 6.6%。(2)
+                房價指數的走勢呈現明顯的「S 形」——2003-2014 年快速上升，2015-2018 年高檔盤整，2019 年後在低利率和資金行情推動下再度上漲。(3)
+                CPI（通膨）的成長幅度與房價指數相去不遠，暗示房地產的「實質」報酬（扣除通膨）其實相當有限。這個結果和 Shiller (2015) 的長期觀察一致：房價長期漲幅大部分只是反映通膨。</p>
+        </div>
+        <div data-lang="en">
+            <p><strong>Key observations:</strong> (1) 0050 ETF (dividends reinvested) far exceeds any housing index,
+                annualizing ~11.3% vs housing at ~6.6%. (2) Housing follows an S-curve — rapid rise 2003-2014,
+                consolidation 2015-2018, renewed rise post-2019 driven by low rates. (3) CPI growth is not far from
+                housing, suggesting modest real (inflation-adjusted) returns. Consistent with Shiller (2015): long-run
+                housing gains largely reflect inflation.</p>
+        </div>
 
-<h2><span data-lang="zh">3.2 年度報酬比較</span><span data-lang="en">3.2 Annual Return Comparison</span></h2>
-<div data-lang="zh"><p>累積報酬圖告訴你「終點」，年度報酬圖則告訴你「沿途的風景」——每一年的漲跌幅。這張圖可以幫你回答一個關鍵問題：你能承受多大的短期波動？</p></div><div data-lang="en"><p>The cumulative chart shows the "destination"; annual returns show the "journey" — each year's gain or loss. This chart helps answer a key question: how much short-term volatility can you tolerate?</p></div>
+        <h2><span data-lang="zh">3.2 年度報酬比較</span><span data-lang="en">3.2 Annual Return Comparison</span></h2>
+        <div data-lang="zh">
+            <p>累積報酬圖告訴你「終點」，年度報酬圖則告訴你「沿途的風景」——每一年的漲跌幅。這張圖可以幫你回答一個關鍵問題：你能承受多大的短期波動？</p>
+        </div>
+        <div data-lang="en">
+            <p>The cumulative chart shows the "destination"; annual returns show the "journey" — each year's gain or
+                loss. This chart helps answer a key question: how much short-term volatility can you tolerate?</p>
+        </div>
 
-<img data-lang="zh" src="../results/figures/zh/fig02_annual_return.png" alt=""><img data-lang="en" src="../results/figures/en/fig02_annual_return.png" alt="">
+        <img data-lang="zh" src="../results/figures/zh/fig02_annual_return.png" alt=""><img data-lang="en"
+            src="../results/figures/en/fig02_annual_return.png" alt="">
 
-<div data-lang="zh"><p><strong>關鍵觀察：</strong>(1) 房價的年度報酬相對平穩——很少有大漲大跌的年份，大多數年份在正負 5% 之間。這正是房地產給人「穩定」印象的原因。(2) 0050 的年度報酬則像雲霄飛車——好的年份可以漲超過 30%，差的年份可能跌 20% 以上。如果你無法承受帳面上一年虧損 20%（即使長期會回來），那你可能確實不適合全部投入股市。(3) 但也請注意：房價的「穩定」有一部分是因為數據本身是季度計算、交易量低，自然比每天都有大量交易的股市看起來平穩。真正要賣房時的價格波動，可能比指數顯示的更劇烈。</p></div><div data-lang="en"><p><strong>Key observations:</strong> (1) Housing annual returns are relatively stable — rarely large swings, mostly within +/-5%. This is why housing feels "safe." (2) 0050 is a rollercoaster — great years can exceed +30%, bad years may drop 20%+. If you cannot tolerate a 20% paper loss in a year (even knowing it recovers), all-in stocks may not suit you. (3) But note: housing "stability" partly reflects quarterly data and low transaction volume, appearing smoother than the daily-traded stock market. Actual selling prices may be more volatile than the index suggests.</p></div>
+        <div data-lang="zh">
+            <p><strong>關鍵觀察：</strong>(1) 房價的年度報酬相對平穩——很少有大漲大跌的年份，大多數年份在正負 5% 之間。這正是房地產給人「穩定」印象的原因。(2) 0050
+                的年度報酬則像雲霄飛車——好的年份可以漲超過 30%，差的年份可能跌 20% 以上。如果你無法承受帳面上一年虧損 20%（即使長期會回來），那你可能確實不適合全部投入股市。(3)
+                但也請注意：房價的「穩定」有一部分是因為數據本身是季度計算、交易量低，自然比每天都有大量交易的股市看起來平穩。真正要賣房時的價格波動，可能比指數顯示的更劇烈。</p>
+        </div>
+        <div data-lang="en">
+            <p><strong>Key observations:</strong> (1) Housing annual returns are relatively stable — rarely large
+                swings, mostly within +/-5%. This is why housing feels "safe." (2) 0050 is a rollercoaster — great years
+                can exceed +30%, bad years may drop 20%+. If you cannot tolerate a 20% paper loss in a year (even
+                knowing it recovers), all-in stocks may not suit you. (3) But note: housing "stability" partly reflects
+                quarterly data and low transaction volume, appearing smoother than the daily-traded stock market. Actual
+                selling prices may be more volatile than the index suggests.</p>
+        </div>
 
-<h2><span data-lang="zh">3.3 持有成本影響</span><span data-lang="en">3.3 Impact of Holding Costs</span></h2>
-<div data-lang="zh"><p>持有成本是房地產投資最常被忽略的因素，也是本研究最想凸顯的重點。下面兩張圖分別呈現淨報酬的比較和敏感度分析。</p></div><div data-lang="en"><p>Holding costs are the most overlooked factor in real estate investing, and the key point this study aims to highlight. The two charts below show net return comparison and sensitivity analysis.</p></div>
+        <h2><span data-lang="zh">3.3 持有成本影響</span><span data-lang="en">3.3 Impact of Holding Costs</span></h2>
+        <div data-lang="zh">
+            <p>持有成本是房地產投資最常被忽略的因素，也是本研究最想凸顯的重點。下面兩張圖分別呈現淨報酬的比較和敏感度分析。</p>
+        </div>
+        <div data-lang="en">
+            <p>Holding costs are the most overlooked factor in real estate investing, and the key point this study aims
+                to highlight. The two charts below show net return comparison and sensitivity analysis.</p>
+        </div>
 
-<img data-lang="zh" src="../results/figures/zh/fig03_net_return.png" alt=""><img data-lang="en" src="../results/figures/en/fig03_net_return.png" alt="">
+        <img data-lang="zh" src="../results/figures/zh/fig03_net_return.png" alt=""><img data-lang="en"
+            src="../results/figures/en/fig03_net_return.png" alt="">
 
-<div data-lang="zh"><p><strong>淨報酬比較：</strong>基準情境下，每年 1.5% 的持有成本將名目報酬 6.6% 降至淨報酬 5.1%，降幅約 1.6 個百分點。用之前的比喻來說：果汁杯裡有三分之一是冰塊（持有成本），你以為喝到了一整杯果汁（名目報酬），實際上只喝到三分之二（淨報酬）。相比之下，0050 的持有成本幾乎可以忽略——管理費每年僅約 0.43%。</p></div><div data-lang="en"><p><strong>Net return comparison:</strong> At baseline 1.5% annual costs, nominal 6.6% drops to net 5.1%, a 1.6 percentage point reduction. Like a glass one-third full of ice (holding costs) — you think you drank a full glass (nominal return) but actually got only two-thirds (net return). By contrast, 0050 holding costs are negligible — management fee ~0.43%/year.</p></div>
+        <div data-lang="zh">
+            <p><strong>淨報酬比較：</strong>基準情境下，每年 1.5% 的持有成本將名目報酬 6.6% 降至淨報酬 5.1%，降幅約 1.6
+                個百分點。用之前的比喻來說：果汁杯裡有三分之一是冰塊（持有成本），你以為喝到了一整杯果汁（名目報酬），實際上只喝到三分之二（淨報酬）。相比之下，0050 的持有成本幾乎可以忽略——管理費每年僅約 0.43%。
+            </p>
+        </div>
+        <div data-lang="en">
+            <p><strong>Net return comparison:</strong> At baseline 1.5% annual costs, nominal 6.6% drops to net 5.1%, a
+                1.6 percentage point reduction. Like a glass one-third full of ice (holding costs) — you think you drank
+                a full glass (nominal return) but actually got only two-thirds (net return). By contrast, 0050 holding
+                costs are negligible — management fee ~0.43%/year.</p>
+        </div>
 
-<img data-lang="zh" src="../results/figures/zh/fig07_sensitivity.png" alt=""><img data-lang="en" src="../results/figures/en/fig07_sensitivity.png" alt="">
+        <img data-lang="zh" src="../results/figures/zh/fig07_sensitivity.png" alt=""><img data-lang="en"
+            src="../results/figures/en/fig07_sensitivity.png" alt="">
 
-<div data-lang="zh"><p><strong>敏感度分析：</strong>上方圖清楚展示了一個令人警醒的趨勢——隨著持有成本假設從 1% 增加到 2.5%，房地產淨報酬從「勉強還行」下降到「明顯不如通膨」。藍色虛線代表 0050 的年化報酬，可以看到在所有持有成本假設下，房地產淨報酬都低於 0050。即使你是全台灣最會省錢的房東（持有成本壓到最低 1%），你的房產報酬仍然追不上被動指數投資。這個結論相當穩健，不會因為假設的微調而改變。</p></div><div data-lang="en"><p><strong>Sensitivity analysis:</strong> A sobering trend — as holding costs rise from 1% to 2.5%, net housing returns drop from "barely acceptable" to "clearly below inflation." The blue dashed line (0050 return) sits above housing returns at all cost assumptions. Even the most frugal landlord in Taiwan (1% costs) cannot match passive index investing. This conclusion is robust across all reasonable cost assumptions.</p></div>
+        <div data-lang="zh">
+            <p><strong>敏感度分析：</strong>上方圖清楚展示了一個令人警醒的趨勢——隨著持有成本假設從 1% 增加到 2.5%，房地產淨報酬從「勉強還行」下降到「明顯不如通膨」。藍色虛線代表 0050
+                的年化報酬，可以看到在所有持有成本假設下，房地產淨報酬都低於 0050。即使你是全台灣最會省錢的房東（持有成本壓到最低 1%），你的房產報酬仍然追不上被動指數投資。這個結論相當穩健，不會因為假設的微調而改變。
+            </p>
+        </div>
+        <div data-lang="en">
+            <p><strong>Sensitivity analysis:</strong> A sobering trend — as holding costs rise from 1% to 2.5%, net
+                housing returns drop from "barely acceptable" to "clearly below inflation." The blue dashed line (0050
+                return) sits above housing returns at all cost assumptions. Even the most frugal landlord in Taiwan (1%
+                costs) cannot match passive index investing. This conclusion is robust across all reasonable cost
+                assumptions.</p>
+        </div>
 
-<h2><span data-lang="zh">3.4 槓桿效應</span><span data-lang="en">3.4 Leverage Effect</span></h2>
-<div data-lang="zh"><p>這張圖是拆穿「買房穩賺」迷思的關鍵證據。它將房地產報酬分解為「未槓桿報酬」和「槓桿後報酬」，清楚顯示槓桿在報酬放大中扮演的角色。</p></div><div data-lang="en"><p>This chart is key evidence dismantling the "buy and always win" myth. It decomposes housing returns into "unleveraged" and "leveraged," clearly showing leverage's role in return amplification.</p></div>
+        <h2><span data-lang="zh">3.4 槓桿效應</span><span data-lang="en">3.4 Leverage Effect</span></h2>
+        <div data-lang="zh">
+            <p>這張圖是拆穿「買房穩賺」迷思的關鍵證據。它將房地產報酬分解為「未槓桿報酬」和「槓桿後報酬」，清楚顯示槓桿在報酬放大中扮演的角色。</p>
+        </div>
+        <div data-lang="en">
+            <p>This chart is key evidence dismantling the "buy and always win" myth. It decomposes housing returns into
+                "unleveraged" and "leveraged," clearly showing leverage's role in return amplification.</p>
+        </div>
 
-<img data-lang="zh" src="../results/figures/zh/fig04_leverage.png" alt=""><img data-lang="en" src="../results/figures/en/fig04_leverage.png" alt="">
+        <img data-lang="zh" src="../results/figures/zh/fig04_leverage.png" alt=""><img data-lang="en"
+            src="../results/figures/en/fig04_leverage.png" alt="">
 
-<div data-lang="zh"><p><strong>關鍵觀察：</strong>多數人買房使用房貸，相當於 3.3 倍槓桿。槓桿將房價名目報酬從 6.6% 放大至 17.4%。這就是為什麼你的親朋好友會說「我十年前買的房子現在翻倍了」——因為他們用 20% 的錢撬動了 100% 的資產，如果房價漲 20%，對他們的頭期款來說等於賺了 100%。</p><p>但請想像一下：如果你也能用 5 倍槓桿買 0050（理論上，不考慮融資成本和追繳風險），那 0050 的 11.3% 年化報酬放大後就是 56.7%——遠超過房地產。當然，實務上不可能這樣做（融資利率太高、追繳保證金風險），但這個思想實驗清楚說明了一件事：<strong>房地產的「高報酬」主要來自槓桿，而非房價本身漲得多。</strong></p></div><div data-lang="en"><p><strong>Key observation:</strong> Most buyers use mortgages = 3.3x leverage. This amplifies nominal returns from 6.6% to 17.4%. That is why relatives say "my house doubled in 10 years" — 20% down on a 20% gain = 100% return on equity.</p><p>But imagine: if you could buy 0050 at 5x leverage (theoretically, ignoring margin costs and calls), 11.3% would amplify to 56.7% — dwarfing real estate. Impractical in reality (high margin rates, margin call risk), but the thought experiment demonstrates: <strong>housing "high returns" come mainly from leverage, not intrinsic price growth.</strong></p></div>
+        <div data-lang="zh">
+            <p><strong>關鍵觀察：</strong>多數人買房使用房貸，相當於 3.3 倍槓桿。槓桿將房價名目報酬從 6.6% 放大至
+                17.4%。這就是為什麼你的親朋好友會說「我十年前買的房子現在翻倍了」——因為他們用 20% 的錢撬動了 100% 的資產，如果房價漲 20%，對他們的頭期款來說等於賺了 100%。</p>
+            <p>但請想像一下：如果你也能用 5 倍槓桿買 0050（理論上，不考慮融資成本和追繳風險），那 0050 的 11.3% 年化報酬放大後就是
+                56.7%——遠超過房地產。當然，實務上不可能這樣做（融資利率太高、追繳保證金風險），但這個思想實驗清楚說明了一件事：<strong>房地產的「高報酬」主要來自槓桿，而非房價本身漲得多。</strong>
+            </p>
+        </div>
+        <div data-lang="en">
+            <p><strong>Key observation:</strong> Most buyers use mortgages = 3.3x leverage. This amplifies nominal
+                returns from 6.6% to 17.4%. That is why relatives say "my house doubled in 10 years" — 20% down on a 20%
+                gain = 100% return on equity.</p>
+            <p>But imagine: if you could buy 0050 at 5x leverage (theoretically, ignoring margin costs and calls), 11.3%
+                would amplify to 56.7% — dwarfing real estate. Impractical in reality (high margin rates, margin call
+                risk), but the thought experiment demonstrates: <strong>housing "high returns" come mainly from
+                    leverage, not intrinsic price growth.</strong></p>
+        </div>
 
-<h2><span data-lang="zh">3.5 租 vs 買比較</span><span data-lang="en">3.5 Rent vs Buy Comparison</span></h2>
-<div data-lang="zh"><p>這是讓很多人最感興趣的分析——到底應該買房還是租房？我們模擬了每個可能的起始時點，觀察持有 10 年和 20 年後，買房和租房+投資哪個財富較高。</p></div><div data-lang="en"><p>This is the analysis most people are interested in — should you buy or rent? We simulated every possible starting quarter, comparing wealth after 10 and 20 years.</p></div>
+        <h2><span data-lang="zh">3.5 租 vs 買比較</span><span data-lang="en">3.5 Rent vs Buy Comparison</span></h2>
+        <div data-lang="zh">
+            <p>這是讓很多人最感興趣的分析——到底應該買房還是租房？我們模擬了每個可能的起始時點，觀察持有 10 年和 20 年後，買房和租房+投資哪個財富較高。</p>
+        </div>
+        <div data-lang="en">
+            <p>This is the analysis most people are interested in — should you buy or rent? We simulated every possible
+                starting quarter, comparing wealth after 10 and 20 years.</p>
+        </div>
 
-<img data-lang="zh" src="../results/figures/zh/fig05_rent_vs_buy.png" alt=""><img data-lang="en" src="../results/figures/en/fig05_rent_vs_buy.png" alt="">
+        <img data-lang="zh" src="../results/figures/zh/fig05_rent_vs_buy.png" alt=""><img data-lang="en"
+            src="../results/figures/en/fig05_rent_vs_buy.png" alt="">
 
-<div data-lang="zh"><p><strong>柱狀圖解讀：</strong>10 年期買房勝率為 55%，20 年期為 44%。勝率超過 50% 意味著在多數起始時點，買房的長期財富確實高於租房+投資。但這裡有一個重要的細節：勝率高不代表勝出的金額大。有些時點買房只贏一點點（例如 3%），但輸的時點可能輸很多（例如 -15%）。因此，除了勝率之外，還要看平均勝出幅度和最差情境。</p></div><div data-lang="en"><p><strong>Bar chart reading:</strong> 10-year buy win rate: 55%, 20-year: 44%. Above 50% means buying produces higher wealth in most starting periods. But an important nuance: high win rate does not mean large winning margins. Some periods buying wins by only 3%, while losing periods might lose by 15%. Beyond win rate, consider average win margin and worst-case scenarios.</p></div>
+        <div data-lang="zh">
+            <p><strong>柱狀圖解讀：</strong>10 年期買房勝率為 55%，20 年期為 44%。勝率超過 50%
+                意味著在多數起始時點，買房的長期財富確實高於租房+投資。但這裡有一個重要的細節：勝率高不代表勝出的金額大。有些時點買房只贏一點點（例如 3%），但輸的時點可能輸很多（例如
+                -15%）。因此，除了勝率之外，還要看平均勝出幅度和最差情境。</p>
+        </div>
+        <div data-lang="en">
+            <p><strong>Bar chart reading:</strong> 10-year buy win rate: 55%, 20-year: 44%. Above 50% means buying
+                produces higher wealth in most starting periods. But an important nuance: high win rate does not mean
+                large winning margins. Some periods buying wins by only 3%, while losing periods might lose by 15%.
+                Beyond win rate, consider average win margin and worst-case scenarios.</p>
+        </div>
 
-<div class="chart-container" data-lang="zh"><iframe src="assets/figures/zh/plotly_rent_vs_buy.html" height="500"></iframe></div><div class="chart-container" data-lang="en"><iframe src="assets/figures/en/plotly_rent_vs_buy.html" height="500"></iframe></div>
+        <div class="chart-container" data-lang="zh"><iframe src="assets/figures/zh/plotly_rent_vs_buy.html"
+                height="500"></iframe></div>
+        <div class="chart-container" data-lang="en"><iframe src="assets/figures/en/plotly_rent_vs_buy.html"
+                height="500"></iframe></div>
 
-<div data-lang="zh"><p>互動版讓你可以拖曳選取特定時段放大觀察。嘗試觀察 2008-2010 年的起始時點——在金融海嘯後低點買房，隨後的房價大漲使得買房幾乎在所有情境下勝出。但如果在 2014 年高點買房，接下來幾年的盤整則讓買房的優勢大幅縮小。這告訴我們：「何時買」和「買不買」一樣重要。</p></div><div data-lang="en"><p>The interactive version lets you zoom into specific periods. Try starting points around 2008-2010 — buying near the post-crisis low, with subsequent price surges, buying wins almost every scenario. But buying at the 2014 peak, with years of consolidation ahead, greatly reduces the buying advantage. This tells us: "when to buy" matters as much as "whether to buy."</p></div>
+        <div data-lang="zh">
+            <p>互動版讓你可以拖曳選取特定時段放大觀察。嘗試觀察 2008-2010 年的起始時點——在金融海嘯後低點買房，隨後的房價大漲使得買房幾乎在所有情境下勝出。但如果在 2014
+                年高點買房，接下來幾年的盤整則讓買房的優勢大幅縮小。這告訴我們：「何時買」和「買不買」一樣重要。</p>
+        </div>
+        <div data-lang="en">
+            <p>The interactive version lets you zoom into specific periods. Try starting points around 2008-2010 —
+                buying near the post-crisis low, with subsequent price surges, buying wins almost every scenario. But
+                buying at the 2014 peak, with years of consolidation ahead, greatly reduces the buying advantage. This
+                tells us: "when to buy" matters as much as "whether to buy."</p>
+        </div>
 
-<h2><span data-lang="zh">3.6 風險比較</span><span data-lang="en">3.6 Risk Comparison</span></h2>
-<div data-lang="zh"><p>投資決策不能只看報酬，還要看風險。下面的回撤圖和風險-報酬圖，從不同角度衡量房地產和股市的風險特徵。</p></div><div data-lang="en"><p>Investment decisions must consider risk, not just returns. The drawdown chart and risk-return scatter below measure risk characteristics from different angles.</p></div>
+        <h2><span data-lang="zh">3.6 風險比較</span><span data-lang="en">3.6 Risk Comparison</span></h2>
+        <div data-lang="zh">
+            <p>投資決策不能只看報酬，還要看風險。下面的回撤圖和風險-報酬圖，從不同角度衡量房地產和股市的風險特徵。</p>
+        </div>
+        <div data-lang="en">
+            <p>Investment decisions must consider risk, not just returns. The drawdown chart and risk-return scatter
+                below measure risk characteristics from different angles.</p>
+        </div>
 
-<img data-lang="zh" src="../results/figures/zh/fig10_drawdown.png" alt=""><img data-lang="en" src="../results/figures/en/fig10_drawdown.png" alt="">
+        <img data-lang="zh" src="../results/figures/zh/fig10_drawdown.png" alt=""><img data-lang="en"
+            src="../results/figures/en/fig10_drawdown.png" alt="">
 
-<div data-lang="zh"><p><strong>回撤分析：</strong>回撤（drawdown）衡量的是「從高點到低谷的最大跌幅」，是最直覺的風險指標——它告訴你在最糟糕的情況下，你的資產會縮水多少。房價最大回撤為 -12.9%（以季度計），0050 為 -47.9%。乍看之下房地產風險更低，但有兩個重要的「但是」：(1) 房價指數是季度數據，天生就比日頻的股價看起來平穩——就像用月均溫和每日氣溫比較，月均溫當然波動比較小；(2) 房地產的流動性極差，如果你在房價下跌時需要急賣，可能要以更低的價格成交，而這個「折價」不會反映在指數裡。</p></div><div data-lang="en"><p><strong>Drawdown analysis:</strong> Drawdown measures "peak to trough maximum decline" — the most intuitive risk metric showing worst-case asset shrinkage. Housing max drawdown: -12.9% (quarterly), vs 0050 at -47.9%. Housing appears safer, but two big caveats: (1) quarterly data is inherently smoother than daily stock prices — like comparing monthly average temperature vs daily readings; (2) real estate has poor liquidity — if you must sell during a downturn, actual sale price may be much lower, but this discount does not appear in the index.</p></div>
+        <div data-lang="zh">
+            <p><strong>回撤分析：</strong>回撤（drawdown）衡量的是「從高點到低谷的最大跌幅」，是最直覺的風險指標——它告訴你在最糟糕的情況下，你的資產會縮水多少。房價最大回撤為
+                -12.9%（以季度計），0050 為 -47.9%。乍看之下房地產風險更低，但有兩個重要的「但是」：(1)
+                房價指數是季度數據，天生就比日頻的股價看起來平穩——就像用月均溫和每日氣溫比較，月均溫當然波動比較小；(2)
+                房地產的流動性極差，如果你在房價下跌時需要急賣，可能要以更低的價格成交，而這個「折價」不會反映在指數裡。</p>
+        </div>
+        <div data-lang="en">
+            <p><strong>Drawdown analysis:</strong> Drawdown measures "peak to trough maximum decline" — the most
+                intuitive risk metric showing worst-case asset shrinkage. Housing max drawdown: -12.9% (quarterly), vs
+                0050 at -47.9%. Housing appears safer, but two big caveats: (1) quarterly data is inherently smoother
+                than daily stock prices — like comparing monthly average temperature vs daily readings; (2) real estate
+                has poor liquidity — if you must sell during a downturn, actual sale price may be much lower, but this
+                discount does not appear in the index.</p>
+        </div>
 
-<img data-lang="zh" src="../results/figures/zh/fig08_risk_return.png" alt=""><img data-lang="en" src="../results/figures/en/fig08_risk_return.png" alt="">
+        <img data-lang="zh" src="../results/figures/zh/fig08_risk_return.png" alt=""><img data-lang="en"
+            src="../results/figures/en/fig08_risk_return.png" alt="">
 
-<div data-lang="zh"><p><strong>風險-報酬散佈圖：</strong>這張圖是投資分析中最經典的工具之一。橫軸是風險（波動度），縱軸是報酬（年化報酬率）。理想的投資位於左上角（低風險、高報酬），最差的位於右下角（高風險、低報酬）。可以觀察到房價位於左下角（低風險、低報酬），0050 位於右上方（較高風險、較高報酬）。從 Sharpe ratio（風險調整後報酬）來看，房地產 Sharpe ratio 為 1.90，0050 為 0.61。Sharpe ratio 越高代表每承擔一單位風險所獲得的報酬越高——就像每花一小時加班，能多賺多少錢。</p></div><div data-lang="en"><p><strong>Risk-return scatter:</strong> A classic analytical tool. X-axis: risk (volatility), Y-axis: return (annualized). Ideal investments sit in the upper-left (low risk, high return). Housing sits lower-left (low risk, low return); 0050 sits upper-right (higher risk, higher return). Housing Sharpe ratio: 1.90, 0050: 0.61. Higher Sharpe means more return per unit of risk — like how much extra you earn per hour of overtime.</p></div>
+        <div data-lang="zh">
+            <p><strong>風險-報酬散佈圖：</strong>這張圖是投資分析中最經典的工具之一。橫軸是風險（波動度），縱軸是報酬（年化報酬率）。理想的投資位於左上角（低風險、高報酬），最差的位於右下角（高風險、低報酬）。可以觀察到房價位於左下角（低風險、低報酬），0050
+                位於右上方（較高風險、較高報酬）。從 Sharpe ratio（風險調整後報酬）來看，房地產 Sharpe ratio 為 1.90，0050 為 0.61。Sharpe ratio
+                越高代表每承擔一單位風險所獲得的報酬越高——就像每花一小時加班，能多賺多少錢。</p>
+        </div>
+        <div data-lang="en">
+            <p><strong>Risk-return scatter:</strong> A classic analytical tool. X-axis: risk (volatility), Y-axis:
+                return (annualized). Ideal investments sit in the upper-left (low risk, high return). Housing sits
+                lower-left (low risk, low return); 0050 sits upper-right (higher risk, higher return). Housing Sharpe
+                ratio: 1.90, 0050: 0.61. Higher Sharpe means more return per unit of risk — like how much extra you earn
+                per hour of overtime.</p>
+        </div>
 
-<h2><span data-lang="zh">3.7 統計檢定結果</span><span data-lang="en">3.7 Statistical Test Results</span></h2>
-<div data-lang="zh"><p>以下表格呈現四項假說的正式統計檢定結果。每項包含 p 值（統計顯著性）和效果量（實際差異大小）。p 值低於 0.05 通常被視為「統計上顯著」，而效果量（Cohen's d）大於 0.8 被視為「大效果」。建議同時參考兩個指標：p 值告訴你差異是否「真的存在」，效果量告訴你這個差異「有多重要」。</p></div><div data-lang="en"><p>The table below shows formal statistical test results for all four hypotheses, including p-values (statistical significance) and effect sizes (practical magnitude). p < 0.05 is typically considered "statistically significant," while Cohen's d > 0.8 indicates a "large effect." Consider both: p-value tells if the difference "really exists," effect size tells "how much it matters."</p></div>
-<div data-lang="zh"><table><tr><th>假說</th><th>描述</th><th>方法</th><th>p 值</th><th>效果量</th><th>結論</th></tr><tr><td>H1</td><td>房地產淨報酬 vs 0050</td><td>Block Bootstrap</td><td>0.0448</td><td>-0.285</td><td>無顯著差異</td></tr><tr><td>H2</td><td>槓桿是否改善風險調整報酬</td><td>Bootstrap Sharpe Difference</td><td>1.0000</td><td>-0.112</td><td>槓桿未顯著改善 Sharpe</td></tr><tr><td>H4_5Y</td><td>5 年買 vs 租</td><td>Binomial Test</td><td>0.0076</td><td>0.167</td><td>買房顯著較優</td></tr><tr><td>H4_10Y</td><td>10 年買 vs 租</td><td>Binomial Test</td><td>0.7754</td><td>0.051</td><td>無顯著差異</td></tr><tr><td>H4_15Y</td><td>15 年買 vs 租</td><td>Binomial Test</td><td>0.7111</td><td>0.052</td><td>無顯著差異</td></tr><tr><td>H4_20Y</td><td>20 年買 vs 租</td><td>Binomial Test</td><td>1.0000</td><td>-0.056</td><td>無顯著差異</td></tr></table></div><div data-lang="en"><table><tr><th>Hypothesis</th><th>Description</th><th>Method</th><th>p-value</th><th>Effect Size</th><th>Conclusion</th></tr><tr><td>H1</td><td>House net return vs 0050</td><td>Block Bootstrap</td><td>0.0448</td><td>-0.285</td><td>No significant difference</td></tr><tr><td>H2</td><td>Does leverage improve risk-adjusted return</td><td>Bootstrap Sharpe Difference</td><td>1.0000</td><td>-0.112</td><td>Leverage does NOT significantly improve Sharpe</td></tr><tr><td>H4_5Y</td><td>5-year buy vs rent</td><td>Binomial Test</td><td>0.0076</td><td>0.167</td><td>Buy significantly better</td></tr><tr><td>H4_10Y</td><td>10-year buy vs rent</td><td>Binomial Test</td><td>0.7754</td><td>0.051</td><td>No significant difference</td></tr><tr><td>H4_15Y</td><td>15-year buy vs rent</td><td>Binomial Test</td><td>0.7111</td><td>0.052</td><td>No significant difference</td></tr><tr><td>H4_20Y</td><td>20-year buy vs rent</td><td>Binomial Test</td><td>1.0000</td><td>-0.056</td><td>No significant difference</td></tr></table></div><div data-lang="zh"><p>上表中值得關注的是：(1) H1 的檢定結果直接回答了「股票是否真的優於房地產」；(2) H3 的敏感度分析顯示，結論在多大範圍的假設下仍然成立；(3) H4 的二項檢定幫助判斷買房勝率是否具有統計意義。整體而言，統計檢定的結果支持我們的核心論點：房地產的「穩賺不賠」需要打上大大的問號。</p></div><div data-lang="en"><p>Key points from the table: (1) H1 directly answers whether stocks truly outperform housing; (2) H3 sensitivity analysis shows how robust conclusions are across assumptions; (3) H4 binomial test determines if the buy win rate is statistically meaningful. Overall, statistical tests support our core thesis: real estate's "guaranteed win" deserves a large question mark.</p></div>
-<footer><div data-lang="zh"><p>V-008 房地產是最好的投資？ | 用數據說話：投資策略回測研究</p></div><div data-lang="en"><p>V-008 Is Real Estate the Best Investment? | Let Data Speak</p></div></footer>
-</div>
-<script src="js/main.js"></script>
+        <h2><span data-lang="zh">3.7 統計檢定結果</span><span data-lang="en">3.7 Statistical Test Results</span></h2>
+        <div data-lang="zh">
+            <p>以下表格呈現四項假說的正式統計檢定結果。每項包含 p 值（統計顯著性）和效果量（實際差異大小）。p 值低於 0.05 通常被視為「統計上顯著」，而效果量（Cohen's d）大於 0.8
+                被視為「大效果」。建議同時參考兩個指標：p 值告訴你差異是否「真的存在」，效果量告訴你這個差異「有多重要」。</p>
+        </div>
+        <div data-lang="en">
+            <p>The table below shows formal statistical test results for all four hypotheses, including p-values
+                (statistical significance) and effect sizes (practical magnitude). p < 0.05 is typically
+                    considered "statistically significant," while Cohen's d> 0.8 indicates a "large effect." Consider
+                    both: p-value tells if the difference "really exists," effect size tells "how much it matters."</p>
+        </div>
+        <div data-lang="zh">
+            <table>
+                <tr>
+                    <th>假說</th>
+                    <th>描述</th>
+                    <th>方法</th>
+                    <th>p 值</th>
+                    <th>效果量</th>
+                    <th>結論</th>
+                </tr>
+                <tr>
+                    <td>H1</td>
+                    <td>房地產淨報酬 vs 0050</td>
+                    <td>Block Bootstrap</td>
+                    <td>0.0448</td>
+                    <td>-0.285</td>
+                    <td>無顯著差異</td>
+                </tr>
+                <tr>
+                    <td>H2</td>
+                    <td>槓桿是否改善風險調整報酬</td>
+                    <td>Bootstrap Sharpe Difference</td>
+                    <td>1.0000</td>
+                    <td>-0.112</td>
+                    <td>槓桿未顯著改善 Sharpe</td>
+                </tr>
+                <tr>
+                    <td>H4_5Y</td>
+                    <td>5 年買 vs 租</td>
+                    <td>Binomial Test</td>
+                    <td>0.0076</td>
+                    <td>0.167</td>
+                    <td>買房顯著較優</td>
+                </tr>
+                <tr>
+                    <td>H4_10Y</td>
+                    <td>10 年買 vs 租</td>
+                    <td>Binomial Test</td>
+                    <td>0.7754</td>
+                    <td>0.051</td>
+                    <td>無顯著差異</td>
+                </tr>
+                <tr>
+                    <td>H4_15Y</td>
+                    <td>15 年買 vs 租</td>
+                    <td>Binomial Test</td>
+                    <td>0.7111</td>
+                    <td>0.052</td>
+                    <td>無顯著差異</td>
+                </tr>
+                <tr>
+                    <td>H4_20Y</td>
+                    <td>20 年買 vs 租</td>
+                    <td>Binomial Test</td>
+                    <td>1.0000</td>
+                    <td>-0.056</td>
+                    <td>無顯著差異</td>
+                </tr>
+            </table>
+        </div>
+        <div data-lang="en">
+            <table>
+                <tr>
+                    <th>Hypothesis</th>
+                    <th>Description</th>
+                    <th>Method</th>
+                    <th>p-value</th>
+                    <th>Effect Size</th>
+                    <th>Conclusion</th>
+                </tr>
+                <tr>
+                    <td>H1</td>
+                    <td>House net return vs 0050</td>
+                    <td>Block Bootstrap</td>
+                    <td>0.0448</td>
+                    <td>-0.285</td>
+                    <td>No significant difference</td>
+                </tr>
+                <tr>
+                    <td>H2</td>
+                    <td>Does leverage improve risk-adjusted return</td>
+                    <td>Bootstrap Sharpe Difference</td>
+                    <td>1.0000</td>
+                    <td>-0.112</td>
+                    <td>Leverage does NOT significantly improve Sharpe</td>
+                </tr>
+                <tr>
+                    <td>H4_5Y</td>
+                    <td>5-year buy vs rent</td>
+                    <td>Binomial Test</td>
+                    <td>0.0076</td>
+                    <td>0.167</td>
+                    <td>Buy significantly better</td>
+                </tr>
+                <tr>
+                    <td>H4_10Y</td>
+                    <td>10-year buy vs rent</td>
+                    <td>Binomial Test</td>
+                    <td>0.7754</td>
+                    <td>0.051</td>
+                    <td>No significant difference</td>
+                </tr>
+                <tr>
+                    <td>H4_15Y</td>
+                    <td>15-year buy vs rent</td>
+                    <td>Binomial Test</td>
+                    <td>0.7111</td>
+                    <td>0.052</td>
+                    <td>No significant difference</td>
+                </tr>
+                <tr>
+                    <td>H4_20Y</td>
+                    <td>20-year buy vs rent</td>
+                    <td>Binomial Test</td>
+                    <td>1.0000</td>
+                    <td>-0.056</td>
+                    <td>No significant difference</td>
+                </tr>
+            </table>
+        </div>
+        <div data-lang="zh">
+            <p>上表中值得關注的是：(1) H1 的檢定結果直接回答了「股票是否真的優於房地產」；(2) H3 的敏感度分析顯示，結論在多大範圍的假設下仍然成立；(3) H4
+                的二項檢定幫助判斷買房勝率是否具有統計意義。整體而言，統計檢定的結果支持我們的核心論點：房地產的「穩賺不賠」需要打上大大的問號。</p>
+        </div>
+        <div data-lang="en">
+            <p>Key points from the table: (1) H1 directly answers whether stocks truly outperform housing; (2) H3
+                sensitivity analysis shows how robust conclusions are across assumptions; (3) H4 binomial test
+                determines if the buy win rate is statistically meaningful. Overall, statistical tests support our core
+                thesis: real estate's "guaranteed win" deserves a large question mark.</p>
+        </div>
+        <footer>
+            <div data-lang="zh">
+                <p>V-008 房地產是最好的投資？ | 用數據說話：投資策略回測研究</p>
+            </div>
+            <div data-lang="en">
+                <p>V-008 Is Real Estate the Best Investment? | Let Data Speak</p>
+            </div>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
 </body>
+
 </html>

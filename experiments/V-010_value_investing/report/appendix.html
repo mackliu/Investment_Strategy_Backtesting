@@ -1,21 +1,119 @@
-<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>附錄 | V-010</title><link rel="stylesheet" href="css/style.css"></head><body><nav><ul><li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li><li><a href="introduction.html"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li><li><a href="methodology.html"><span data-lang="zh">方法</span><span data-lang="en">Methodology</span></a></li><li><a href="results.html"><span data-lang="zh">結果</span><span data-lang="en">Results</span></a></li><li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li><li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li><li><a href="appendix.html"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li></ul><button id="lang-toggle" onclick="toggleLang()">Switch to EN</button></nav><div class="container">
-<h1><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></h1>
-<h2><span data-lang="zh">A.1 互動式圖表</span><span data-lang="en">A.1 Interactive Charts</span></h2>
-<div data-lang="zh"><p>以下互動式圖表支援滑鼠懸停查看數值、縮放特定時段、以及顯示/隱藏特定曲線等功能。這些功能讓讀者可以更深入地探索數據細節，例如查看特定月份各 quintile 的確切報酬。</p></div><div data-lang="en"><p>The interactive charts below support hover-to-view values, zoom into specific periods, and show/hide individual curves. These features allow readers to explore data details more deeply, such as viewing exact quintile returns for specific months.</p></div>
-<div data-lang="zh"><p><strong>Quintile 累積報酬（互動版）：</strong>可拖曳選取特定時段觀察。</p></div><div data-lang="en"><p><strong>Quintile cumulative returns (interactive):</strong> Drag to select specific periods.</p></div>
-<div data-lang="zh" class="chart-container"><iframe src="assets/figures/zh/plotly01_quintile.html" height="500"></iframe></div><div data-lang="en" class="chart-container"><iframe src="assets/figures/en/plotly01_quintile.html" height="500"></iframe></div>
-<div data-lang="zh"><p><strong>HML 時序（互動版）：</strong>將滑鼠懸停在曲線上可查看各指標在該時點的確切 HML 值。</p></div><div data-lang="en"><p><strong>HML time series (interactive):</strong> Hover over curves to view exact HML values at each point.</p></div>
-<div data-lang="zh" class="chart-container"><iframe src="assets/figures/zh/plotly02_hml.html" height="500"></iframe></div><div data-lang="en" class="chart-container"><iframe src="assets/figures/en/plotly02_hml.html" height="500"></iframe></div>
-<div data-lang="zh"><p><strong>滾動溢酬（互動版）：</strong>觀察不同因子的 5 年滾動溢酬變化。</p></div><div data-lang="en"><p><strong>Rolling premium (interactive):</strong> Observe 5-year rolling premium changes across different factors.</p></div>
-<div data-lang="zh" class="chart-container"><iframe src="assets/figures/zh/plotly03_rolling.html" height="500"></iframe></div><div data-lang="en" class="chart-container"><iframe src="assets/figures/en/plotly03_rolling.html" height="500"></iframe></div>
-<div data-lang="zh"><p><strong>Fama-French HML 歷史（互動版）：</strong>涵蓋近百年數據，可縮放觀察各時代的價值因子表現。</p></div><div data-lang="en"><p><strong>Fama-French HML history (interactive):</strong> Covers nearly a century; zoom in to observe value factor performance across eras.</p></div>
-<div data-lang="zh" class="chart-container"><iframe src="assets/figures/zh/plotly04_ff.html" height="500"></iframe></div><div data-lang="en" class="chart-container"><iframe src="assets/figures/en/plotly04_ff.html" height="500"></iframe></div>
-<div data-lang="zh"><p><strong>台灣 vs 美國 HML 比較（互動版）：</strong>兩條曲線是否同步移動？透過互動縮放來比較。</p></div><div data-lang="en"><p><strong>Taiwan vs US HML comparison (interactive):</strong> Do the curves move in sync? Use interactive zoom to compare.</p></div>
-<div data-lang="zh" class="chart-container"><iframe src="assets/figures/zh/plotly05_tw_vs_us.html" height="500"></iframe></div><div data-lang="en" class="chart-container"><iframe src="assets/figures/en/plotly05_tw_vs_us.html" height="500"></iframe></div>
-<h2><span data-lang="zh">A.2 補充圖表</span><span data-lang="en">A.2 Supplementary Charts</span></h2>
-<div data-lang="zh"><p>以下為正文未詳細討論的補充分析圖表。PB quintile 柱狀圖從另一個角度驗證價值效應——如果 PB 排序也能產生類似 PE 的 quintile 報酬差異，代表價值效應在不同衡量方式下仍然一致。</p></div><div data-lang="en"><p>Below are supplementary analysis charts not discussed in detail in the main text. The PB quintile bar chart validates the value effect from another angle — if PB sorting produces similar quintile return differences as PE, the value effect is consistent across metrics.</p></div>
-<img data-lang="zh" src="../results/figures/zh/fig04_pb_quintile.png" alt="fig04_pb_quintile.png"><img data-lang="en" src="../results/figures/en/fig04_pb_quintile.png" alt="fig04_pb_quintile.png">
-<div data-lang="zh"><p>複合因子 Sharpe Ratio 比較圖幫助判斷多因子策略是否值得額外的複雜度。年度 HML 分佈直方圖與風險指標比較圖則提供更完整的風險全貌。</p></div><div data-lang="en"><p>The composite factor Sharpe comparison chart helps judge whether multi-factor strategies are worth the added complexity. The annual HML distribution and risk metrics charts provide a more complete risk profile.</p></div>
-<img data-lang="zh" src="../results/figures/zh/fig05_composite.png" alt="fig05_composite.png"><img data-lang="en" src="../results/figures/en/fig05_composite.png" alt="fig05_composite.png">
-<img data-lang="zh" src="../results/figures/zh/fig10_annual_dist.png" alt="fig10_annual_dist.png"><img data-lang="en" src="../results/figures/en/fig10_annual_dist.png" alt="fig10_annual_dist.png">
-<img data-lang="zh" src="../results/figures/zh/fig11_risk_metrics.png" alt="fig11_risk_metrics.png"><img data-lang="en" src="../results/figures/en/fig11_risk_metrics.png" alt="fig11_risk_metrics.png"><footer>V-010 &copy; 2026</footer></div><script src="js/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>附錄 | V-010</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../../index.html"><span data-lang="zh">專案主頁</span><span data-lang="en">Project Home</span></a></li>
+            <li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li>
+            <li><a href="introduction.html"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li>
+            <li><a href="methodology.html"><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></a></li>
+            <li><a href="results.html"><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></a></li>
+            <li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li>
+            <li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li>
+            <li><a href="appendix.html"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li>
+        </ul><button id="lang-toggle" onclick="toggleLang()">Switch to EN</button>
+    </nav>
+    <div class="container">
+        <h1><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></h1>
+        <h2><span data-lang="zh">A.1 互動式圖表</span><span data-lang="en">A.1 Interactive Charts</span></h2>
+        <div data-lang="zh">
+            <p>以下互動式圖表支援滑鼠懸停查看數值、縮放特定時段、以及顯示/隱藏特定曲線等功能。這些功能讓讀者可以更深入地探索數據細節，例如查看特定月份各 quintile 的確切報酬。</p>
+        </div>
+        <div data-lang="en">
+            <p>The interactive charts below support hover-to-view values, zoom into specific periods, and show/hide
+                individual curves. These features allow readers to explore data details more deeply, such as viewing
+                exact quintile returns for specific months.</p>
+        </div>
+        <div data-lang="zh">
+            <p><strong>Quintile 累積報酬（互動版）：</strong>可拖曳選取特定時段觀察。</p>
+        </div>
+        <div data-lang="en">
+            <p><strong>Quintile cumulative returns (interactive):</strong> Drag to select specific periods.</p>
+        </div>
+        <div data-lang="zh" class="chart-container"><iframe src="assets/figures/zh/plotly01_quintile.html"
+                height="500"></iframe></div>
+        <div data-lang="en" class="chart-container"><iframe src="assets/figures/en/plotly01_quintile.html"
+                height="500"></iframe></div>
+        <div data-lang="zh">
+            <p><strong>HML 時序（互動版）：</strong>將滑鼠懸停在曲線上可查看各指標在該時點的確切 HML 值。</p>
+        </div>
+        <div data-lang="en">
+            <p><strong>HML time series (interactive):</strong> Hover over curves to view exact HML values at each point.
+            </p>
+        </div>
+        <div data-lang="zh" class="chart-container"><iframe src="assets/figures/zh/plotly02_hml.html"
+                height="500"></iframe></div>
+        <div data-lang="en" class="chart-container"><iframe src="assets/figures/en/plotly02_hml.html"
+                height="500"></iframe></div>
+        <div data-lang="zh">
+            <p><strong>滾動溢酬（互動版）：</strong>觀察不同因子的 5 年滾動溢酬變化。</p>
+        </div>
+        <div data-lang="en">
+            <p><strong>Rolling premium (interactive):</strong> Observe 5-year rolling premium changes across different
+                factors.</p>
+        </div>
+        <div data-lang="zh" class="chart-container"><iframe src="assets/figures/zh/plotly03_rolling.html"
+                height="500"></iframe></div>
+        <div data-lang="en" class="chart-container"><iframe src="assets/figures/en/plotly03_rolling.html"
+                height="500"></iframe></div>
+        <div data-lang="zh">
+            <p><strong>Fama-French HML 歷史（互動版）：</strong>涵蓋近百年數據，可縮放觀察各時代的價值因子表現。</p>
+        </div>
+        <div data-lang="en">
+            <p><strong>Fama-French HML history (interactive):</strong> Covers nearly a century; zoom in to observe value
+                factor performance across eras.</p>
+        </div>
+        <div data-lang="zh" class="chart-container"><iframe src="assets/figures/zh/plotly04_ff.html"
+                height="500"></iframe></div>
+        <div data-lang="en" class="chart-container"><iframe src="assets/figures/en/plotly04_ff.html"
+                height="500"></iframe></div>
+        <div data-lang="zh">
+            <p><strong>台灣 vs 美國 HML 比較（互動版）：</strong>兩條曲線是否同步移動？透過互動縮放來比較。</p>
+        </div>
+        <div data-lang="en">
+            <p><strong>Taiwan vs US HML comparison (interactive):</strong> Do the curves move in sync? Use interactive
+                zoom to compare.</p>
+        </div>
+        <div data-lang="zh" class="chart-container"><iframe src="assets/figures/zh/plotly05_tw_vs_us.html"
+                height="500"></iframe></div>
+        <div data-lang="en" class="chart-container"><iframe src="assets/figures/en/plotly05_tw_vs_us.html"
+                height="500"></iframe></div>
+        <h2><span data-lang="zh">A.2 補充圖表</span><span data-lang="en">A.2 Supplementary Charts</span></h2>
+        <div data-lang="zh">
+            <p>以下為正文未詳細討論的補充分析圖表。PB quintile 柱狀圖從另一個角度驗證價值效應——如果 PB 排序也能產生類似 PE 的 quintile 報酬差異，代表價值效應在不同衡量方式下仍然一致。</p>
+        </div>
+        <div data-lang="en">
+            <p>Below are supplementary analysis charts not discussed in detail in the main text. The PB quintile bar
+                chart validates the value effect from another angle — if PB sorting produces similar quintile return
+                differences as PE, the value effect is consistent across metrics.</p>
+        </div>
+        <img data-lang="zh" src="../results/figures/zh/fig04_pb_quintile.png" alt="fig04_pb_quintile.png"><img
+            data-lang="en" src="../results/figures/en/fig04_pb_quintile.png" alt="fig04_pb_quintile.png">
+        <div data-lang="zh">
+            <p>複合因子 Sharpe Ratio 比較圖幫助判斷多因子策略是否值得額外的複雜度。年度 HML 分佈直方圖與風險指標比較圖則提供更完整的風險全貌。</p>
+        </div>
+        <div data-lang="en">
+            <p>The composite factor Sharpe comparison chart helps judge whether multi-factor strategies are worth the
+                added complexity. The annual HML distribution and risk metrics charts provide a more complete risk
+                profile.</p>
+        </div>
+        <img data-lang="zh" src="../results/figures/zh/fig05_composite.png" alt="fig05_composite.png"><img
+            data-lang="en" src="../results/figures/en/fig05_composite.png" alt="fig05_composite.png">
+        <img data-lang="zh" src="../results/figures/zh/fig10_annual_dist.png" alt="fig10_annual_dist.png"><img
+            data-lang="en" src="../results/figures/en/fig10_annual_dist.png" alt="fig10_annual_dist.png">
+        <img data-lang="zh" src="../results/figures/zh/fig11_risk_metrics.png" alt="fig11_risk_metrics.png"><img
+            data-lang="en" src="../results/figures/en/fig11_risk_metrics.png" alt="fig11_risk_metrics.png">
+        <footer>V-010 &copy; 2026</footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

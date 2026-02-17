@@ -1,23 +1,179 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>討論 | V-009</title><link rel="stylesheet" href="css/style.css"></head>
-<body><nav><ul><li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li><li><a href="introduction.html"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li><li><a href="methodology.html"><span data-lang="zh">方法</span><span data-lang="en">Methodology</span></a></li><li><a href="results.html"><span data-lang="zh">結果</span><span data-lang="en">Results</span></a></li><li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li><li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li><li><a href="appendix.html"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li></ul><button id="lang-toggle" onclick="toggleLang()">Switch to EN</button></nav><div class="container">
-<h1><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></h1>
-<h2><span data-lang="zh">4.1 核心發現</span><span data-lang="en">4.1 Core Findings</span></h2>
-<div data-lang="zh"><p><strong>發現一：法人買超有微弱的短期預測力。</strong>三大法人合計淨買超 Q5 在 T+5 日的 CAR 為 0.281%，統計上可能顯著但經濟意義有限。這與 Lu & Chen (2013) 的研究一致：法人羊群交易確實包含部分資訊，但這些資訊的價值非常有限。用日常生活的比喻：這就像天氣預報說「明天降雨機率 55%」——比亂猜好一點，但你不會因此不帶傘。</p><p><strong>發現二：資訊時差是最大障礙。</strong>法人買賣超數據在 T+1 才公布，而超額報酬的大部分在 T+0 就已實現。散戶在 T+1 才得到資訊，等於拿到了一張「過期的入場券」。CAR 在 T+0 到 T+1 之間的衰減正是 Yan & Zhang (2009) 描述的資訊優勢「半衰期」現象。對散戶而言，這意味著即使法人信號在理論上有效，到你能執行的時候，信號已經「用完」了。</p><p><strong>發現三：法人更像是動能追隨者。</strong>Granger 因果分析顯示，法人買賣超與大盤報酬的因果關係不明確——法人可能只是在追漲殺跌。結合 Grinblatt et al. (1995) 的發現（77% 基金是動能投資者），以及牛熊市分析中信號在熊市失效的現象，最合理的解釋是：法人的買超更多是對近期趨勢的反應，而非對未來的預測。</p><p><strong>發現四：散戶是可靠的反向指標。</strong>Q1（法人賣超最多 = 散戶買超最多的推估）的後續報酬最差。Barber et al. (2009) 發現台灣散戶年均損失 3.8%，本研究的 quintile 分析進一步支持了這個發現：散戶集體看多的時候，往往正是市場要反轉的時候。</p></div><div data-lang="en"><p><strong>Finding 1: Weak short-term predictive power.</strong> Total institutional Q5 CAR at T+5 = 0.281%, statistically significant but economically limited. Consistent with Lu & Chen (2013): institutional herding contains partial information, but its value is very limited. In everyday terms: it is like a weather forecast saying '55% chance of rain tomorrow' — slightly better than guessing, but you would still bring an umbrella.</p><p><strong>Finding 2: Information delay is the biggest obstacle.</strong> Institutional data is published at T+1, but most excess returns are realized at T+0. Retail gets the information at T+1, effectively receiving an 'expired ticket.' CAR decay from T+0 to T+1 is exactly the information advantage 'half-life' described by Yan & Zhang (2009). Even if the signal works theoretically, by the time you can execute, the signal is "used up."</p><p><strong>Finding 3: Institutions are likely momentum followers.</strong> Granger analysis shows ambiguous causality — institutions may simply be chasing trends. Combined with Grinblatt et al. (1995) finding (77% momentum investors) and the bull/bear analysis showing signal failure in bear markets, the most plausible explanation: institutional buying is a response to recent trends, not a prediction of the future.</p><p><strong>Finding 4: Retail is a reliable contrarian indicator.</strong> Q1 (most institutional selling = most retail buying, estimated) has the worst forward returns. Barber et al. (2009) found Taiwan retail loses 3.8% annually; our quintile analysis further supports this: when retail collectively turns bullish, the market often reverses.</p></div>
-<h2><span data-lang="zh">4.2 為什麼散戶跟單不可行？</span><span data-lang="en">4.2 Why Retail Copy-Trading Fails</span></h2>
-<div data-lang="zh"><p>綜合以上四項發現，散戶跟單策略失敗的原因可以歸結為一個簡單的數學公式：</p><p class="highlight"><strong>淨報酬 = T+1 CAR - 交易成本 = 0.118% - 0.585% = -0.467%</strong></p><p>即使法人信號在理論上有效（T+0 CAR 確實為正），三個因素的組合使散戶無法從中獲利：</p><ol><li><strong>資訊延遲（-88%）：</strong>超額報酬的 88% 在 T+0 實現，散戶 T+1 才知道。</li><li><strong>交易成本（-0.585%）：</strong>每次來回交易手續費 + 交易稅 = 0.585%，輕易吞噬殘餘的微弱 CAR。</li><li><strong>信號擁擠：</strong>數以萬計的散戶同時跟進相同信號，推高買入價格，進一步壓縮獲利空間。</li></ol><p><strong>行為金融學的視角：</strong>散戶熱衷跟單的心理根源包括：(1) <strong>權威偏誤</strong>——認為法人比散戶「更聰明」、「知道更多」；(2) <strong>羊群效應</strong>——別人都在看法人買賣超，我也應該看；(3) <strong>行動偏誤</strong>——面對不確定性時，「做點什麼」比「什麼都不做」感覺好，即使數據顯示後者（Buy & Hold）績效更好；(4) <strong>確認偏誤</strong>——只記得跟單賺錢的時候，忘了虧錢的時候。</p></div><div data-lang="en"><p>Combining all four findings, the retail copy-trading failure can be summarized in simple math:</p><p class="highlight"><strong>Net return = T+1 CAR - trading cost = 0.118% - 0.585% = -0.467%</strong></p><p>Even if the signal is theoretically valid (T+0 CAR is positive), three factors prevent retail profits:</p><ol><li><strong>Information delay (-88%):</strong> 88% of excess return realized at T+0; retail learns at T+1.</li><li><strong>Transaction costs (-0.585%):</strong> Round-trip commission + tax = 0.585%, easily devouring residual CAR.</li><li><strong>Signal crowding:</strong> Tens of thousands of retail investors following the same signal drive up buy prices, further compressing profits.</li></ol><p><strong>Behavioral finance perspective:</strong> Retail enthusiasm for copy-trading stems from: (1) <strong>authority bias</strong> — believing institutions are "smarter"; (2) <strong>herding</strong> — everyone watches institutional flow, so I should too; (3) <strong>action bias</strong> — "doing something" feels better than "doing nothing" amid uncertainty, even though data shows the latter (Buy & Hold) performs better; (4) <strong>confirmation bias</strong> — remembering profitable trades, forgetting losses.</p></div>
 
-<h2><span data-lang="zh">4.3 外資 vs 投信差異的原因</span><span data-lang="en">4.3 Why Foreign and Trust Differ</span></h2>
-<div data-lang="zh"><p>H2 檢定結果顯示外資（T+5 CAR = 0.365%）優於投信（0.214%），差距雖然不大但統計顯著。可能的原因：</p><p><strong>(1) 研究能力差異：</strong>國際投行和全球基金公司擁有龐大的產業分析師團隊、衛星數據、另類數據等資源，研究深度遠超國內投信。他們的交易決策可能確實包含更多的基本面資訊。</p><p><strong>(2) 投資視野不同：</strong>外資中的長期資金（退休基金、主權基金）以年為單位配置資產，其買超可能反映對台灣經濟的長期看法；投信則受限於季度績效排名，更容易追短線。</p><p><strong>(3) 投信的被動成分：</strong>投信的買賣超有一部分是被動行為——散戶申購基金時被迫買入、散戶贖回時被迫賣出。這些「非自主」的交易降低了投信買賣超的信號純度。</p><p>但重要的是：即使外資的預測力相對最強，其 T+5 CAR 也僅 0.365%，扣除成本後依然為負。「最好的法人」仍然不夠好到讓散戶跟單獲利。</p></div><div data-lang="en"><p>H2 results show foreign (T+5 CAR = 0.365%) outperforms trust (0.214%), a small but statistically significant gap. Possible reasons:</p><p><strong>(1) Research capability:</strong> International investment banks and global fund houses have massive analyst teams, satellite data, alternative data — research depth far exceeding domestic trust companies. Their trades may genuinely contain more fundamental information.</p><p><strong>(2) Investment horizon:</strong> Long-term foreign capital (pension, sovereign) allocates over years, their buying may reflect long-term economic views; trust companies are constrained by quarterly performance rankings.</p><p><strong>(3) Trust passive component:</strong> Some trust buying/selling is passive — forced to buy when retail subscribes, forced to sell when retail redeems. These "involuntary" trades reduce signal purity.</p><p>Critically: even the best institution (foreign) has T+5 CAR of only 0.365%, negative after costs. The "best" institution is still not good enough for retail copy-trading to profit.</p></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>討論 | V-009</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-<h2><span data-lang="zh">4.4 注意事項</span><span data-lang="en">4.4 Important Caveats</span></h2>
-<div class="warning">
-<div data-lang="zh"><ul><li><strong>數據限制：</strong>FinMind 免費版數據可能有遺漏或延遲，部分交易日的法人資料可能不完整。</li><li><strong>交易成本未計：</strong>未扣除手續費（0.1425%*2）和交易稅（0.3%），實際報酬更低。考慮到跟單策略的高頻交易特性，這個遺漏可能扭轉結論方向。</li><li><strong>市場層級分析：</strong>主要分析大盤加權指數層級，個股層級的法人效應可能更強或更弱。</li><li><strong>無法區分法人類型細節：</strong>「外資」包含了對沖基金、長期持有的退休基金、ETF 被動資金等，策略截然不同。</li><li><strong>散戶行為推估：</strong>本研究以「法人淨賣超 = 散戶淨買超」進行推估，但實際情況更為複雜。</li><li><strong>不同市場狀態：</strong>2013-2025 涵蓋了牛市和熊市，但具體的牛熊切分方式（120 日均線）可能影響結論。</li></ul></div><div data-lang="en"><ul><li><strong>Data limitations:</strong> FinMind free tier may have gaps or delays; some trading day data may be incomplete.</li><li><strong>No transaction costs:</strong> Commission (0.1425%*2) and tax (0.3%) not deducted. Given copy-trading high frequency, this omission may reverse conclusions.</li><li><strong>Market-level analysis:</strong> Primarily TAIEX level; individual stock effects may differ.</li><li><strong>Cannot distinguish institution subtypes:</strong> "Foreign" includes hedge funds, pension funds, passive ETFs — very different strategies.</li><li><strong>Retail behavior estimate:</strong> "Institutional net sell = retail net buy" is an approximation; reality is more complex.</li><li><strong>Market state sensitivity:</strong> 2013-2025 covers bull and bear markets, but the specific bull/bear classification (120-day MA) may affect conclusions.</li></ul></div>
-</div>
-<h2><span data-lang="zh">4.5 投資啟示</span><span data-lang="en">4.5 Investment Implications</span></h2>
-<div data-lang="zh"><p><strong>對保守型投資人：</strong>不要將法人買賣超當作交易依據。數據顯示，跟單策略在扣除交易成本後幾乎不可能獲利。如果你是長期投資人，應該把精力花在資產配置和成本控制上，而非每天追蹤法人動態。正如 Barber et al. (2009) 的研究所示，台灣散戶因頻繁交易平均每年損失 3.8%——交易越少，績效越好。</p><p><strong>對穩健型投資人：</strong>法人買賣超數據可以作為市場情緒的參考指標之一，但不應作為唯一的決策依據。例如，當三大法人連續多天大量買超時，可能代表市場情緒偏多；但你應該結合基本面分析、技術分析等多重指標來做決策，而非單純跟單。</p><p><strong>對積極型投資人：</strong>如果你執意要利用法人資訊，有兩個方向值得探索：(1) 關注「反向操作」——當散戶極度看多（法人大量賣超）時可能是賣出時機；(2) 搭配法人連續買超天數和牛熊市判斷，在牛市中法人連續買超 5 天以上時嘗試跟進——但即使如此，也要嚴格控制交易頻率和部位大小。</p></div><div data-lang="en"><p><strong>For conservative investors:</strong> Do not use institutional flow as a trading basis. Data shows copy-trading is nearly impossible to profit from after transaction costs. Focus on asset allocation and cost control rather than daily institutional tracking. As Barber et al. (2009) showed, less trading leads to better performance.</p><p><strong>For moderate investors:</strong> Institutional data can serve as one of several sentiment reference indicators, but should not be the sole decision basis. Combine with fundamental analysis, technical analysis, and other signals.</p><p><strong>For aggressive investors:</strong> If you insist on using institutional information, two directions are worth exploring: (1) contrarian — when retail is extremely bullish (heavy institutional selling) may be a sell signal; (2) use consecutive buy days + bull/bear context, following institutions only in bull markets with 5+ consecutive buy days — but even so, strictly control trading frequency and position size.</p></div>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../../index.html"><span data-lang="zh">專案主頁</span><span data-lang="en">Project Home</span></a></li>
+            <li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li>
+            <li><a href="introduction.html"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li>
+            <li><a href="methodology.html"><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></a></li>
+            <li><a href="results.html"><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></a></li>
+            <li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li>
+            <li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li>
+            <li><a href="appendix.html"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li>
+        </ul><button id="lang-toggle" onclick="toggleLang()">Switch to EN</button>
+    </nav>
+    <div class="container">
+        <h1><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></h1>
+        <h2><span data-lang="zh">4.1 核心發現</span><span data-lang="en">4.1 Core Findings</span></h2>
+        <div data-lang="zh">
+            <p><strong>發現一：法人買超有微弱的短期預測力。</strong>三大法人合計淨買超 Q5 在 T+5 日的 CAR 為 0.281%，統計上可能顯著但經濟意義有限。這與 Lu & Chen (2013)
+                的研究一致：法人羊群交易確實包含部分資訊，但這些資訊的價值非常有限。用日常生活的比喻：這就像天氣預報說「明天降雨機率 55%」——比亂猜好一點，但你不會因此不帶傘。</p>
+            <p><strong>發現二：資訊時差是最大障礙。</strong>法人買賣超數據在 T+1 才公布，而超額報酬的大部分在 T+0 就已實現。散戶在 T+1 才得到資訊，等於拿到了一張「過期的入場券」。CAR 在
+                T+0 到 T+1 之間的衰減正是 Yan & Zhang (2009) 描述的資訊優勢「半衰期」現象。對散戶而言，這意味著即使法人信號在理論上有效，到你能執行的時候，信號已經「用完」了。</p>
+            <p><strong>發現三：法人更像是動能追隨者。</strong>Granger 因果分析顯示，法人買賣超與大盤報酬的因果關係不明確——法人可能只是在追漲殺跌。結合 Grinblatt et al. (1995)
+                的發現（77% 基金是動能投資者），以及牛熊市分析中信號在熊市失效的現象，最合理的解釋是：法人的買超更多是對近期趨勢的反應，而非對未來的預測。</p>
+            <p><strong>發現四：散戶是可靠的反向指標。</strong>Q1（法人賣超最多 = 散戶買超最多的推估）的後續報酬最差。Barber et al. (2009) 發現台灣散戶年均損失 3.8%，本研究的
+                quintile 分析進一步支持了這個發現：散戶集體看多的時候，往往正是市場要反轉的時候。</p>
+        </div>
+        <div data-lang="en">
+            <p><strong>Finding 1: Weak short-term predictive power.</strong> Total institutional Q5 CAR at T+5 = 0.281%,
+                statistically significant but economically limited. Consistent with Lu & Chen (2013): institutional
+                herding contains partial information, but its value is very limited. In everyday terms: it is like a
+                weather forecast saying '55% chance of rain tomorrow' — slightly better than guessing, but you would
+                still bring an umbrella.</p>
+            <p><strong>Finding 2: Information delay is the biggest obstacle.</strong> Institutional data is published at
+                T+1, but most excess returns are realized at T+0. Retail gets the information at T+1, effectively
+                receiving an 'expired ticket.' CAR decay from T+0 to T+1 is exactly the information advantage
+                'half-life' described by Yan & Zhang (2009). Even if the signal works theoretically, by the time you can
+                execute, the signal is "used up."</p>
+            <p><strong>Finding 3: Institutions are likely momentum followers.</strong> Granger analysis shows ambiguous
+                causality — institutions may simply be chasing trends. Combined with Grinblatt et al. (1995) finding
+                (77% momentum investors) and the bull/bear analysis showing signal failure in bear markets, the most
+                plausible explanation: institutional buying is a response to recent trends, not a prediction of the
+                future.</p>
+            <p><strong>Finding 4: Retail is a reliable contrarian indicator.</strong> Q1 (most institutional selling =
+                most retail buying, estimated) has the worst forward returns. Barber et al. (2009) found Taiwan retail
+                loses 3.8% annually; our quintile analysis further supports this: when retail collectively turns
+                bullish, the market often reverses.</p>
+        </div>
+        <h2><span data-lang="zh">4.2 為什麼散戶跟單不可行？</span><span data-lang="en">4.2 Why Retail Copy-Trading Fails</span>
+        </h2>
+        <div data-lang="zh">
+            <p>綜合以上四項發現，散戶跟單策略失敗的原因可以歸結為一個簡單的數學公式：</p>
+            <p class="highlight"><strong>淨報酬 = T+1 CAR - 交易成本 = 0.118% - 0.585% = -0.467%</strong></p>
+            <p>即使法人信號在理論上有效（T+0 CAR 確實為正），三個因素的組合使散戶無法從中獲利：</p>
+            <ol>
+                <li><strong>資訊延遲（-88%）：</strong>超額報酬的 88% 在 T+0 實現，散戶 T+1 才知道。</li>
+                <li><strong>交易成本（-0.585%）：</strong>每次來回交易手續費 + 交易稅 = 0.585%，輕易吞噬殘餘的微弱 CAR。</li>
+                <li><strong>信號擁擠：</strong>數以萬計的散戶同時跟進相同信號，推高買入價格，進一步壓縮獲利空間。</li>
+            </ol>
+            <p><strong>行為金融學的視角：</strong>散戶熱衷跟單的心理根源包括：(1) <strong>權威偏誤</strong>——認為法人比散戶「更聰明」、「知道更多」；(2)
+                <strong>羊群效應</strong>——別人都在看法人買賣超，我也應該看；(3)
+                <strong>行動偏誤</strong>——面對不確定性時，「做點什麼」比「什麼都不做」感覺好，即使數據顯示後者（Buy & Hold）績效更好；(4)
+                <strong>確認偏誤</strong>——只記得跟單賺錢的時候，忘了虧錢的時候。</p>
+        </div>
+        <div data-lang="en">
+            <p>Combining all four findings, the retail copy-trading failure can be summarized in simple math:</p>
+            <p class="highlight"><strong>Net return = T+1 CAR - trading cost = 0.118% - 0.585% = -0.467%</strong></p>
+            <p>Even if the signal is theoretically valid (T+0 CAR is positive), three factors prevent retail profits:
+            </p>
+            <ol>
+                <li><strong>Information delay (-88%):</strong> 88% of excess return realized at T+0; retail learns at
+                    T+1.</li>
+                <li><strong>Transaction costs (-0.585%):</strong> Round-trip commission + tax = 0.585%, easily devouring
+                    residual CAR.</li>
+                <li><strong>Signal crowding:</strong> Tens of thousands of retail investors following the same signal
+                    drive up buy prices, further compressing profits.</li>
+            </ol>
+            <p><strong>Behavioral finance perspective:</strong> Retail enthusiasm for copy-trading stems from: (1)
+                <strong>authority bias</strong> — believing institutions are "smarter"; (2) <strong>herding</strong> —
+                everyone watches institutional flow, so I should too; (3) <strong>action bias</strong> — "doing
+                something" feels better than "doing nothing" amid uncertainty, even though data shows the latter (Buy &
+                Hold) performs better; (4) <strong>confirmation bias</strong> — remembering profitable trades,
+                forgetting losses.</p>
+        </div>
 
-<footer>V-009 <span data-lang="zh">跟著法人買就對了</span><span data-lang="en">Follow Institutional Investors</span> &copy; 2026</footer>
-</div><script src="js/main.js"></script></body></html>
+        <h2><span data-lang="zh">4.3 外資 vs 投信差異的原因</span><span data-lang="en">4.3 Why Foreign and Trust Differ</span>
+        </h2>
+        <div data-lang="zh">
+            <p>H2 檢定結果顯示外資（T+5 CAR = 0.365%）優於投信（0.214%），差距雖然不大但統計顯著。可能的原因：</p>
+            <p><strong>(1) 研究能力差異：</strong>國際投行和全球基金公司擁有龐大的產業分析師團隊、衛星數據、另類數據等資源，研究深度遠超國內投信。他們的交易決策可能確實包含更多的基本面資訊。</p>
+            <p><strong>(2) 投資視野不同：</strong>外資中的長期資金（退休基金、主權基金）以年為單位配置資產，其買超可能反映對台灣經濟的長期看法；投信則受限於季度績效排名，更容易追短線。</p>
+            <p><strong>(3) 投信的被動成分：</strong>投信的買賣超有一部分是被動行為——散戶申購基金時被迫買入、散戶贖回時被迫賣出。這些「非自主」的交易降低了投信買賣超的信號純度。</p>
+            <p>但重要的是：即使外資的預測力相對最強，其 T+5 CAR 也僅 0.365%，扣除成本後依然為負。「最好的法人」仍然不夠好到讓散戶跟單獲利。</p>
+        </div>
+        <div data-lang="en">
+            <p>H2 results show foreign (T+5 CAR = 0.365%) outperforms trust (0.214%), a small but statistically
+                significant gap. Possible reasons:</p>
+            <p><strong>(1) Research capability:</strong> International investment banks and global fund houses have
+                massive analyst teams, satellite data, alternative data — research depth far exceeding domestic trust
+                companies. Their trades may genuinely contain more fundamental information.</p>
+            <p><strong>(2) Investment horizon:</strong> Long-term foreign capital (pension, sovereign) allocates over
+                years, their buying may reflect long-term economic views; trust companies are constrained by quarterly
+                performance rankings.</p>
+            <p><strong>(3) Trust passive component:</strong> Some trust buying/selling is passive — forced to buy when
+                retail subscribes, forced to sell when retail redeems. These "involuntary" trades reduce signal purity.
+            </p>
+            <p>Critically: even the best institution (foreign) has T+5 CAR of only 0.365%, negative after costs. The
+                "best" institution is still not good enough for retail copy-trading to profit.</p>
+        </div>
+
+        <h2><span data-lang="zh">4.4 注意事項</span><span data-lang="en">4.4 Important Caveats</span></h2>
+        <div class="warning">
+            <div data-lang="zh">
+                <ul>
+                    <li><strong>數據限制：</strong>FinMind 免費版數據可能有遺漏或延遲，部分交易日的法人資料可能不完整。</li>
+                    <li><strong>交易成本未計：</strong>未扣除手續費（0.1425%*2）和交易稅（0.3%），實際報酬更低。考慮到跟單策略的高頻交易特性，這個遺漏可能扭轉結論方向。</li>
+                    <li><strong>市場層級分析：</strong>主要分析大盤加權指數層級，個股層級的法人效應可能更強或更弱。</li>
+                    <li><strong>無法區分法人類型細節：</strong>「外資」包含了對沖基金、長期持有的退休基金、ETF 被動資金等，策略截然不同。</li>
+                    <li><strong>散戶行為推估：</strong>本研究以「法人淨賣超 = 散戶淨買超」進行推估，但實際情況更為複雜。</li>
+                    <li><strong>不同市場狀態：</strong>2013-2025 涵蓋了牛市和熊市，但具體的牛熊切分方式（120 日均線）可能影響結論。</li>
+                </ul>
+            </div>
+            <div data-lang="en">
+                <ul>
+                    <li><strong>Data limitations:</strong> FinMind free tier may have gaps or delays; some trading day
+                        data may be incomplete.</li>
+                    <li><strong>No transaction costs:</strong> Commission (0.1425%*2) and tax (0.3%) not deducted. Given
+                        copy-trading high frequency, this omission may reverse conclusions.</li>
+                    <li><strong>Market-level analysis:</strong> Primarily TAIEX level; individual stock effects may
+                        differ.</li>
+                    <li><strong>Cannot distinguish institution subtypes:</strong> "Foreign" includes hedge funds,
+                        pension funds, passive ETFs — very different strategies.</li>
+                    <li><strong>Retail behavior estimate:</strong> "Institutional net sell = retail net buy" is an
+                        approximation; reality is more complex.</li>
+                    <li><strong>Market state sensitivity:</strong> 2013-2025 covers bull and bear markets, but the
+                        specific bull/bear classification (120-day MA) may affect conclusions.</li>
+                </ul>
+            </div>
+        </div>
+        <h2><span data-lang="zh">4.5 投資啟示</span><span data-lang="en">4.5 Investment Implications</span></h2>
+        <div data-lang="zh">
+            <p><strong>對保守型投資人：</strong>不要將法人買賣超當作交易依據。數據顯示，跟單策略在扣除交易成本後幾乎不可能獲利。如果你是長期投資人，應該把精力花在資產配置和成本控制上，而非每天追蹤法人動態。正如
+                Barber et al. (2009) 的研究所示，台灣散戶因頻繁交易平均每年損失 3.8%——交易越少，績效越好。</p>
+            <p><strong>對穩健型投資人：</strong>法人買賣超數據可以作為市場情緒的參考指標之一，但不應作為唯一的決策依據。例如，當三大法人連續多天大量買超時，可能代表市場情緒偏多；但你應該結合基本面分析、技術分析等多重指標來做決策，而非單純跟單。
+            </p>
+            <p><strong>對積極型投資人：</strong>如果你執意要利用法人資訊，有兩個方向值得探索：(1) 關注「反向操作」——當散戶極度看多（法人大量賣超）時可能是賣出時機；(2)
+                搭配法人連續買超天數和牛熊市判斷，在牛市中法人連續買超 5 天以上時嘗試跟進——但即使如此，也要嚴格控制交易頻率和部位大小。</p>
+        </div>
+        <div data-lang="en">
+            <p><strong>For conservative investors:</strong> Do not use institutional flow as a trading basis. Data shows
+                copy-trading is nearly impossible to profit from after transaction costs. Focus on asset allocation and
+                cost control rather than daily institutional tracking. As Barber et al. (2009) showed, less trading
+                leads to better performance.</p>
+            <p><strong>For moderate investors:</strong> Institutional data can serve as one of several sentiment
+                reference indicators, but should not be the sole decision basis. Combine with fundamental analysis,
+                technical analysis, and other signals.</p>
+            <p><strong>For aggressive investors:</strong> If you insist on using institutional information, two
+                directions are worth exploring: (1) contrarian — when retail is extremely bullish (heavy institutional
+                selling) may be a sell signal; (2) use consecutive buy days + bull/bear context, following institutions
+                only in bull markets with 5+ consecutive buy days — but even so, strictly control trading frequency and
+                position size.</p>
+        </div>
+
+        <footer>V-009 <span data-lang="zh">跟著法人買就對了</span><span data-lang="en">Follow Institutional Investors</span>
+            &copy; 2026</footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
