@@ -14,22 +14,109 @@
 
 <h1><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></h1>
 
+<div data-lang="zh"><p>本附錄提供完整的統計表格和補充圖表，供讀者深入參考。每個部分前有簡要說明，解釋其分析目的和閱讀方式。</p></div><div data-lang="en"><p>This appendix provides complete statistical tables and supplementary charts for deeper reference. Each section is preceded by a brief explanation of its analytical purpose and how to read it.</p></div>
+
 <h2><span data-lang="zh">A.1 Block Bootstrap 信賴區間</span><span data-lang="en">A.1 Block Bootstrap Confidence Intervals</span></h2>
-<div data-lang="zh"><p>Block Bootstrap（區塊大小 12 個月，10,000 次重抽）計算的 95% 信賴區間。當基準值落在 CI 之外時，表示該持有期間的報酬均值在統計上與基準值有顯著差異。</p></div><div data-lang="en"><p>Block Bootstrap (block size 12 months, 10,000 iterations) 95% confidence intervals. When the benchmark falls outside the CI, the mean return for that holding period is statistically different from the benchmark.</p></div>
+<div data-lang="zh"><p>Block Bootstrap 是用來建立統計信賴區間的穩健方法。
+    由於滾動報酬具有高度自相關，傳統的「均值 +/- 1.96 x 標準誤」方法會產生過窄的信賴區間。
+    Block Bootstrap 以 12 個月為區塊重新抽樣（保留短期時間結構），重複 10,000 次，
+    從而得到更可靠的 95% 信賴區間。</p>
+    <p><strong>如何閱讀：</strong>「基準在 CI 內」欄位為 Yes 時，表示我們無法在 95% 水準上
+    區分觀察到的均值與基準值——換言之，觀察到的報酬在統計上與基準「一致」。
+    反之，若為 No，則有 95% 的信心認為真正的長期報酬與基準不同。</p></div><div data-lang="en"><p>Block Bootstrap is a robust method for confidence interval construction.
+    Rolling returns' high autocorrelation makes traditional "mean +/- 1.96 x SE" intervals too narrow.
+    Block Bootstrap resamples in 12-month blocks (preserving short-term structure), repeated 10,000 times,
+    producing more reliable 95% confidence intervals.</p>
+    <p><strong>How to read:</strong> When "Benchmark in CI" is Yes, we cannot distinguish the observed mean
+    from the benchmark at 95% level — the observed return is statistically "consistent" with the benchmark.
+    If No, we have 95% confidence that the true long-term return differs from the benchmark.</p></div>
 <div data-lang="zh"><table><tr><th>窗口</th><th>類型</th><th>均值</th><th>CI 下限</th><th>CI 上限</th><th>基準</th><th>基準在 CI 內</th></tr><tr><td>10年</td><td>nominal_total</td><td>9.32%</td><td>8.50%</td><td>10.13%</td><td>10%</td><td>Yes</td></tr><tr><td>10年</td><td>real_total</td><td>6.92%</td><td>6.08%</td><td>7.71%</td><td>7%</td><td>Yes</td></tr><tr><td>20年</td><td>nominal_total</td><td>9.24%</td><td>8.72%</td><td>9.81%</td><td>10%</td><td>No</td></tr><tr><td>20年</td><td>real_total</td><td>6.64%</td><td>6.15%</td><td>7.13%</td><td>7%</td><td>Yes</td></tr><tr><td>30年</td><td>nominal_total</td><td>9.46%</td><td>9.08%</td><td>9.85%</td><td>10%</td><td>No</td></tr><tr><td>30年</td><td>real_total</td><td>6.65%</td><td>6.36%</td><td>6.93%</td><td>7%</td><td>No</td></tr></table></div><div data-lang="en"><table><tr><th>Window</th><th>Type</th><th>Mean</th><th>CI Low</th><th>CI High</th><th>Bench</th><th>In CI</th></tr><tr><td>10yr</td><td>nominal_total</td><td>9.32%</td><td>8.50%</td><td>10.13%</td><td>10%</td><td>Yes</td></tr><tr><td>10yr</td><td>real_total</td><td>6.92%</td><td>6.08%</td><td>7.71%</td><td>7%</td><td>Yes</td></tr><tr><td>20yr</td><td>nominal_total</td><td>9.24%</td><td>8.72%</td><td>9.81%</td><td>10%</td><td>No</td></tr><tr><td>20yr</td><td>real_total</td><td>6.64%</td><td>6.15%</td><td>7.13%</td><td>7%</td><td>Yes</td></tr><tr><td>30yr</td><td>nominal_total</td><td>9.46%</td><td>9.08%</td><td>9.85%</td><td>10%</td><td>No</td></tr><tr><td>30yr</td><td>real_total</td><td>6.65%</td><td>6.36%</td><td>6.93%</td><td>7%</td><td>No</td></tr></table></div>
 
 <h2><span data-lang="zh">A.2 歷年年度報酬</span><span data-lang="en">A.2 Annual Returns by Year</span></h2>
-<div data-lang="zh"><p>完整的歷年年度報酬柱狀圖，正報酬以綠色表示，負報酬以紅色表示。10% 基準線以虛線標示。</p></div><div data-lang="en"><p>Complete annual returns bar chart. Positive returns in green, negative in red. 10% benchmark shown as dashed line.</p></div>
+<div data-lang="zh"><p>下圖展示 1872-2022 年的完整年度報酬序列（共 151 年）。
+    正報酬以綠色表示，負報酬以紅色表示，10% 基準線以虛線標示。</p>
+    <p><strong>觀察重點：</strong>(1) 報酬的波動性極大——單年報酬從 -40% 到 +50% 不等；
+    (2) 負報酬年份的頻率約為 28%（約每 3.6 年出現一次）；
+    (3) 大部分年份的報酬低於 10%——「10%」看似是中間值，但實際上是被少數極端正報酬年份拉高的均值；
+    (4) 1930s 和 2000s 的密集紅柱清楚展示了「失落年代」的衝擊。</p></div><div data-lang="en"><p>The chart below shows complete annual returns from 1872-2022 (151 years).
+    Green for positive, red for negative returns. 10% benchmark as dashed line.</p>
+    <p><strong>Key observations:</strong> (1) Extreme volatility — single-year returns range from -40% to +50%;
+    (2) Negative return years occur ~28% of the time (about once per 3.6 years);
+    (3) Most years fall below 10% — "10%" seems like a midpoint but is actually a mean pulled up by extreme positive years;
+    (4) Dense red bars in 1930s and 2000s clearly show "lost decade" impacts.</p></div>
 <img data-lang="zh" src="../results/figures/zh/fig02_annual_returns.png" alt="fig02_annual_returns.png" class="chart-img"><img data-lang="en" src="../results/figures/en/fig02_annual_returns.png" alt="fig02_annual_returns.png" class="chart-img">
 
 <h2><span data-lang="zh">A.3 月報酬分佈</span><span data-lang="en">A.3 Monthly Return Distribution</span></h2>
+<div data-lang="zh"><p>月報酬的分布特性是理解長期投資風險的基礎。
+    S&P 500 月報酬的統計特性顯示：(1) 偏態 = 0.00（正偏——右尾較長，
+    代表少數月份有極高報酬）；(2) 峰態 = 0.0（遠高於常態分布的 3——
+    「厚尾」意味著極端事件出現的頻率遠高於常態假設）。</p>
+    <p>厚尾分布在投資實務上的意義：用常態分布模型（如 VaR）來估計風險會嚴重低估
+    極端損失的機率。2008 年 10 月的 -17% 月跌幅在常態假設下幾乎不可能發生，
+    但在厚尾分布中是合理的尾部事件。</p></div><div data-lang="en"><p>Monthly return distribution characteristics are foundational for understanding long-term risk.
+    S&P 500 monthly returns show: (1) skewness = 0.00 (positive — right tail longer,
+    meaning a few months with extremely high returns); (2) kurtosis = 0.0
+    (far above normal distribution's 3 — "fat tails" mean extreme events occur far more often than normal).</p>
+    <p>Fat tails in practice: risk models assuming normality (e.g., VaR) severely underestimate
+    extreme loss probabilities. October 2008's -17% monthly drop would be near-impossible under normality,
+    but is a reasonable tail event under the actual fat-tailed distribution.</p></div>
 <img data-lang="zh" src="../results/figures/zh/fig10_return_distribution.png" alt="fig10_return_distribution.png" class="chart-img"><img data-lang="en" src="../results/figures/en/fig10_return_distribution.png" alt="fig10_return_distribution.png" class="chart-img">
 
 <h2><span data-lang="zh">A.4 國際比較走勢圖</span><span data-lang="en">A.4 International Comparison Chart</span></h2>
+<div data-lang="zh"><p>此 PNG 圖表展示各國指數的長期累積走勢，作為互動圖表的靜態補充。
+    所有指數以 1988 年為基準（= 100）進行標準化，便於直觀比較。</p>
+    <p><strong>日本的啟示：</strong>日經 225 的「失落的 35 年」清楚可見——
+    1989 年底達到高峰後持續走低，直到 2020 年代才逐漸回升。
+    這是對「股市長期必漲」最有力的反例。
+    <strong>重要提醒：</strong>日經 225 和 FTSE 100 為價格指數（不含股息），
+    如果加回估計的股息再投入，日經的實際累積報酬會高於圖中顯示的數字，
+    但仍遠低於美國。</p></div><div data-lang="en"><p>This PNG chart shows long-term cumulative performance of international indices
+    as a static supplement to the interactive chart.
+    All indices normalized to 1988 = 100 for visual comparison.</p>
+    <p><strong>Japan's lesson:</strong> The Nikkei 225's "lost 35 years" is clearly visible —
+    peaking in late 1989 then declining, only gradually recovering in the 2020s.
+    This is the strongest counterexample to "stocks always rise long-term."
+    <strong>Note:</strong> Nikkei and FTSE are price indices (excluding dividends);
+    adding estimated dividend reinvestment would raise Nikkei's actual cumulative return
+    above what the chart shows, but still far below the US.</p></div>
 <img data-lang="zh" src="../results/figures/zh/fig07_international.png" alt="fig07_international.png" class="chart-img"><img data-lang="en" src="../results/figures/en/fig07_international.png" alt="fig07_international.png" class="chart-img">
 
 <h2><span data-lang="zh">A.5 名目 vs 實質累積報酬</span><span data-lang="en">A.5 Nominal vs Real Cumulative Returns</span></h2>
+<div data-lang="zh"><p>此圖以對數刻度呈現 1871 年至今的名目和實質累積報酬走勢。
+    對數刻度讓讀者能更直觀地比較不同時期的增長率——
+    在對數圖中，斜率代表增長率，水平線段代表零增長。</p>
+    <p><strong>觀察重點：</strong>(1) 兩條線的「距離」在 1970s 後明顯擴大——
+    這是因為 1970s 的高通膨（年均 7%+）造成名目和實質報酬之間的大幅偏離；
+    (2) 實質報酬線的斜率相對穩定，反映了美國經濟長期的「真實增長」；
+    (3) 名目報酬線的陡峭斜率很大程度上是通膨的「錯覺」——
+    這正是為什麼退休規劃必須使用實質報酬而非名目報酬。</p></div><div data-lang="en"><p>This log-scale chart shows nominal and real cumulative returns from 1871 to present.
+    Log scale enables intuitive growth rate comparison — slope represents growth rate,
+    horizontal segments represent zero growth.</p>
+    <p><strong>Key observations:</strong> (1) The "gap" between lines widened notably after the 1970s —
+    high 1970s inflation (7%+ annual) caused major divergence between nominal and real;
+    (2) The real return line maintains a relatively stable slope, reflecting the US economy's "true growth";
+    (3) The nominal line's steeper slope is largely inflation's "illusion" —
+    this is precisely why retirement planning must use real, not nominal, returns.</p></div>
 <img data-lang="zh" src="../results/figures/zh/fig01_nominal_vs_real.png" alt="fig01_nominal_vs_real.png" class="chart-img"><img data-lang="en" src="../results/figures/en/fig01_nominal_vs_real.png" alt="fig01_nominal_vs_real.png" class="chart-img">
+
+<h2><span data-lang="zh">A.6 數據來源與方法說明</span><span data-lang="en">A.6 Data Sources & Methods</span></h2>
+<div data-lang="zh"><p><strong>主要數據來源：</strong></p>
+    <ul>
+    <li>Robert Shiller CAPE Dataset: <code>http://www.econ.yale.edu/~shiller/data.htm</code></li>
+    <li>yfinance: ^GSPC (S&P 500 日線), USD/TWD=X, ^N225 (日經), ^FTSE (FTSE 100), ^GDAXI (DAX)</li>
+    <li>FRED: CPIAUCSL (美國 CPI)</li>
+    </ul>
+    <p><strong>統計軟體：</strong>Python 3.13, statsmodels (Newey-West HAC), scipy (Bootstrap), pandas, numpy</p>
+    <p><strong>隨機種子：</strong>所有涉及隨機的分析（Block Bootstrap）均使用 random_state = 42，確保完全可重現。</p>
+    <p><strong>完整程式碼：</strong>所有分析腳本位於本實驗的 <code>src/</code> 目錄下，按照標準編號命名。</p></div><div data-lang="en"><p><strong>Primary data sources:</strong></p>
+    <ul>
+    <li>Robert Shiller CAPE Dataset: <code>http://www.econ.yale.edu/~shiller/data.htm</code></li>
+    <li>yfinance: ^GSPC (S&P 500 daily), USD/TWD=X, ^N225 (Nikkei), ^FTSE (FTSE 100), ^GDAXI (DAX)</li>
+    <li>FRED: CPIAUCSL (US CPI)</li>
+    </ul>
+    <p><strong>Statistical software:</strong> Python 3.13, statsmodels (Newey-West HAC), scipy (Bootstrap), pandas, numpy</p>
+    <p><strong>Random seed:</strong> All randomized analyses (Block Bootstrap) use random_state = 42 for full reproducibility.</p>
+    <p><strong>Complete code:</strong> All analysis scripts are in the experiment's <code>src/</code> directory, following standard numbered naming.</p></div>
 
 <footer>V-005 US Stock Long-term Return | Generated by Python + Claude</footer>
 </div>

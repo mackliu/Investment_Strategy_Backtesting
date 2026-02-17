@@ -15,72 +15,223 @@
 <h1><span data-lang="zh">4. 討論</span><span data-lang="en">4. Discussion</span></h1>
 
 <h2><span data-lang="zh">4.1 主要發現</span><span data-lang="en">4.1 Key Findings</span></h2>
-<div data-lang="zh"><p>本研究的核心發現可歸納為四點：</p>
-    <ol>
-    <li><strong>「10%」基本正確但有誤導性</strong>：全期名目含息年化 9.2% 接近 10%，
-    但這個數字隱含了股息再投入（貢獻約 2%）和通膨（侵蝕約 2.3%）。
-    不含息的名目年化僅 4.6%。</li>
-    <li><strong>實質購買力增長約 7% 而非 10%</strong>：扣除通膨後的真正購買力增長率為 6.9%。
-    用「10%」做退休規劃會高估約 30-40% 的實際購買力。</li>
-    <li><strong>10% 不是「保證」而是「平均」</strong>：10 年滾動窗口中僅 39% 達到 10%，
-    最差的 10 年甚至是負報酬。入場時機對結果有決定性影響。</li>
-    <li><strong>美國例外論</strong>：美股的亮眼表現在全球並非普遍現象，以美國推論全球股市存在嚴重的存活偏差。</li>
-    </ol></div><div data-lang="en"><p>Our core findings can be summarized in four points:</p>
-    <ol>
-    <li><strong>"10%" is roughly correct but misleading</strong>: Full-period nominal total at 9.2%
-    is close to 10%, but this includes dividend reinvestment (~2%) and is before inflation
-    (which erodes ~2.3%). Price-only nominal is just 4.6%.</li>
-    <li><strong>Real purchasing power grows ~7%, not 10%</strong>: After inflation, actual purchasing power
-    grows at 6.9%. Using "10%" for retirement planning overestimates real wealth by ~30-40%.</li>
-    <li><strong>10% is an average, not a guarantee</strong>: Only 39% of 10-year
-    rolling windows achieve 10%; the worst 10-year period shows negative returns.
-    Entry timing has decisive impact.</li>
-    <li><strong>American exceptionalism</strong>: US stock performance is not universal globally;
-    using the US to generalize about "stock markets" involves serious survivorship bias.</li>
-    </ol></div>
+<div data-lang="zh"><p>本研究以 1829 個月（約 152 年）的 S&P 500 數據，
+    從多個維度拆解「美股年化報酬 10%」的論點。核心發現可歸納為五點：</p></div><div data-lang="en"><p>Using 1829 months (~152 years) of S&P 500 data,
+    we dissect the "10% annual return" claim from multiple dimensions. Core findings in five points:</p></div>
+
+<div data-lang="zh"><div class="highlight">
+    <p><strong>發現一：「10%」是名目含息的近似值，不是投資人到手的報酬。</strong></p>
+    <p>全期名目含息年化 9.2%，表面接近 10%。
+    但拆解後：不含息的價格報酬僅 4.6%（股息貢獻約 2 個百分點），
+    扣除通膨後的實質含息報酬為 6.9%（通膨侵蝕約 2.3 個百分點）。
+    如果再扣除交易成本（約 0.1-0.3%/年）和台灣的匯率拖累（約 0.4%/年），
+    台灣投資人的實際購買力增長率可能僅有 5-6%——只有「10%」的一半。</p>
+    </div></div><div data-lang="en"><div class="highlight">
+    <p><strong>Finding 1: "10%" is a nominal total approximation, not what investors actually receive.</strong></p>
+    <p>Full-period nominal total 9.2%, seemingly close to 10%.
+    But decomposed: price-only return just 4.6% (dividends contribute ~2 pp),
+    real total 6.9% (inflation erodes ~2.3 pp).
+    Subtracting transaction costs (~0.1-0.3%/year) and Taiwan FX drag (~0.4%/year),
+    Taiwan investors' actual purchasing power growth may be only 5-6% — half of "10%."</p>
+    </div></div>
+
+<div data-lang="zh"><div class="highlight">
+    <p><strong>發現二：10% 不是穩定常數，而是高度離散的「平均值」。</strong></p>
+    <p>10 年滾動窗口的名目含息報酬從 -4.0%（最差）到 21.2%（最佳），
+    範圍超過 25 個百分點。
+    達到 10% 的機率：10 年窗口 39%，30 年窗口 47%。
+    不同年代的差異更為極端：1950s 達 19%，
+    2000s 僅 -1%。投資人的入場時機幾乎決定一切。</p>
+    </div></div><div data-lang="en"><div class="highlight">
+    <p><strong>Finding 2: 10% is not a stable constant but a highly dispersed "average."</strong></p>
+    <p>10-year rolling nominal total ranges from -4.0% (worst) to 21.2% (best),
+    a span of 25 percentage points.
+    Achievement rate: 10-year 39%, 30-year 47%.
+    Decade variation is even more extreme: 1950s 19%,
+    2000s just -1%. Entry timing is nearly everything.</p>
+    </div></div>
+
+<div data-lang="zh"><div class="highlight">
+    <p><strong>發現三：統計檢定無法拒絕「報酬 <= 10%」的虛無假說。</strong></p>
+    <p>使用 Newey-West HAC 修正自相關後，所有滾動窗口（5-30 年）的名目含息報酬均值
+    均未能在統計上顯著超過 10%。效果量（Cohen's d）均小於 0.2，表示「實際差距」在統計學意義上可忽略。
+    這意味著：即使以最有利的方式衡量（名目含息、全部歷史），
+    我們也無法在統計上「證明」美股長期報酬超過 10%。</p>
+    </div></div><div data-lang="en"><div class="highlight">
+    <p><strong>Finding 3: Statistical tests cannot reject "returns <= 10%" null hypothesis.</strong></p>
+    <p>After Newey-West HAC autocorrelation correction, nominal total return means for all rolling windows (5-30 years)
+    fail to significantly exceed 10%. Effect sizes (Cohen's d) are all below 0.2, indicating the "actual gap"
+    is statistically negligible. Even measured in the most favorable way (nominal total, full history),
+    we cannot statistically "prove" US stocks return above 10%.</p>
+    </div></div>
+
+<div data-lang="zh"><div class="highlight">
+    <p><strong>發現四：美國是全球股市的「特例」，非「通則」。</strong></p>
+    <p>1988 年以來的共同期間，S&P 500 含息年化 10.8%，
+    DAX 8.8%，FTSE 4.8%（不含息），
+    日經 2.6%（不含息）。
+    美國的卓越表現部分歸因於科技巨頭（FAANG/MAAG）的崛起——
+    如果排除這些公司，S&P 500 的報酬會更接近其他已開發市場。</p>
+    </div></div><div data-lang="en"><div class="highlight">
+    <p><strong>Finding 4: The US is a global stock market "exception," not the "rule."</strong></p>
+    <p>Since 1988: S&P 500 total 10.8%,
+    DAX 8.8%, FTSE 4.8% (price only),
+    Nikkei 2.6% (price only).
+    US outperformance is partly driven by tech giants (FAANG/MAAG) —
+    excluding these, S&P 500 returns would be closer to other developed markets.</p>
+    </div></div>
+
+<div data-lang="zh"><div class="highlight">
+    <p><strong>發現五：台灣投資人面臨匯率拖累。</strong></p>
+    <p>10 年持有期的平均匯率侵蝕約 0.42%/年，
+    但美元與匯率的負相關（r = -0.24）提供了天然的部分避險。
+    總體而言，台灣投資人的美股實質報酬比美國本地投資人低約 0.5-1.5 個百分點/年。</p>
+    </div></div><div data-lang="en"><div class="highlight">
+    <p><strong>Finding 5: Taiwanese investors face FX drag.</strong></p>
+    <p>10-year holding period average FX erosion is ~0.42%/year,
+    but the negative USD-FX correlation (r = -0.24) provides natural partial hedging.
+    Overall, Taiwan investors' real US stock returns are ~0.5-1.5 pp/year lower than US domestic investors.</p>
+    </div></div>
 
 <h2><span data-lang="zh">4.2 「10%」為何如此流行？</span><span data-lang="en">4.2 Why Is '10%' So Popular?</span></h2>
-<div data-lang="zh"><p>這個數字的流行有幾個原因：</p>
+<div data-lang="zh"><p>了解一個「迷思」為何能持續流傳，有助於我們保持批判性思考：</p>
     <ul>
-    <li><strong>簡潔好記</strong>：10% 是個整數，容易記憶和傳播</li>
-    <li><strong>選擇性起始年</strong>：以 1926 年（S&P 500 正式編制）為起點，剛好避開了 1871-1925 年報酬較低的時期</li>
-    <li><strong>混淆名目與實質</strong>：大多數人引用的是名目報酬，忽略通膨的影響</li>
-    <li><strong>後見之明偏差</strong>：回顧歷史時，美國的成功看似理所當然，但站在 1945 年的角度，很難預測美國會成為全球霸主</li>
-    </ul></div><div data-lang="en"><p>The popularity of this figure has several explanations:</p>
+    <li><strong>簡潔好記：</strong>10% 是個整數，容易記憶和傳播。
+    「年化 9.17%」不如「年化 10%」好記，自然會被四捨五入。</li>
+    <li><strong>選擇性起始年：</strong>以 1926 年（S&P 500 正式編制）為起點，
+    剛好避開了 1871-1925 年報酬較低的時期。如果從 1871 年算起，數字就不那麼好看了。</li>
+    <li><strong>混淆名目與實質：</strong>大多數人引用的是名目報酬，忽略通膨的影響。
+    「10%」聽起來比「7%」更有說服力，也更容易用來推銷金融產品。</li>
+    <li><strong>後見之明偏差：</strong>回顧歷史時，美國的成功看似理所當然。
+    但 1945 年的投資人面對的選擇包括戰後的歐洲重建、日本的崩潰、
+    蘇聯的崛起——沒有人能預知 80 年後的結果。
+    用「贏家」的歷史預測未來，本質上就是存活偏差。</li>
+    <li><strong>確認偏差：</strong>人們傾向尋找支持自己信念的證據。
+    當你已經決定投資美股時，「10%」這個數字正好提供了理論支持，
+    你不會主動去查詢日本或英國的數據。</li>
+    <li><strong>金融業的激勵：</strong>「美股長期 10%」是最佳的行銷話術——
+    它讓人覺得投資是穩賺不賠的，降低了入場的心理門檻，有利於基金銷售。</li>
+    </ul></div><div data-lang="en"><p>Understanding why a "myth" persists helps maintain critical thinking:</p>
     <ul>
-    <li><strong>Round number</strong>: 10% is a clean integer, easy to remember and spread</li>
-    <li><strong>Selective starting year</strong>: Using 1926 (S&P 500 inception) conveniently excludes
-    the lower-return period of 1871-1925</li>
-    <li><strong>Nominal-real confusion</strong>: Most citations use nominal returns, ignoring inflation</li>
-    <li><strong>Hindsight bias</strong>: In retrospect, US success seems inevitable, but from a 1945
-    perspective, predicting US global dominance was far from obvious</li>
+    <li><strong>Round number:</strong> 10% is a clean integer, easy to remember.
+    "9.17% annualized" is less catchy than "10%," naturally rounded up.</li>
+    <li><strong>Selective starting year:</strong> Using 1926 (S&P 500 inception) conveniently excludes
+    lower-return 1871-1925. Starting from 1871 produces less impressive figures.</li>
+    <li><strong>Nominal-real confusion:</strong> Most citations use nominal returns, ignoring inflation.
+    "10%" sounds more compelling than "7%" and sells financial products better.</li>
+    <li><strong>Hindsight bias:</strong> Looking back, US success seems inevitable.
+    But 1945 investors faced European reconstruction, Japanese collapse,
+    and Soviet rise — no one could predict the outcome 80 years later.
+    Using the "winner's" history to predict the future is survivorship bias.</li>
+    <li><strong>Confirmation bias:</strong> People seek evidence supporting their beliefs.
+    If you've already decided to invest in US stocks, "10%" provides theoretical support;
+    you won't proactively look up Japan or UK data.</li>
+    <li><strong>Financial industry incentives:</strong> "US stocks return 10% long-term" is the perfect marketing pitch —
+    it makes investing feel like a sure bet, lowers psychological barriers, and helps fund sales.</li>
     </ul></div>
 
 <h2><span data-lang="zh">4.3 注意事項與研究限制</span><span data-lang="en">4.3 Caveats and Limitations</span></h2>
-<div data-lang="zh"><ul>
-    <li>Shiller 數據為月平均價格，非月末收盤價，可能與實際投資報酬有微小差異</li>
-    <li>早期數據（1871-1926）的品質不如現代，S&P 500 指數在 1957 年才正式擴展至 500 檔成分股</li>
-    <li>國際比較中，日經 225 與 FTSE 100 為價格指數（不含股息），與 S&P 500 含息報酬的比較不完全公平</li>
-    <li>匯率分析僅涵蓋 2004 年後約 20 年，可能無法完全反映長期匯率趨勢</li>
-    <li>本研究未考慮交易成本、稅務（如海外所得稅）和基金管理費等實務因素</li>
-    </ul></div><div data-lang="en"><ul>
-    <li>Shiller data uses monthly average prices, not month-end closes, potentially differing slightly from actual investment returns</li>
-    <li>Early data quality (1871-1926) is inferior to modern data; the S&P 500 only expanded to 500 constituents in 1957</li>
-    <li>International comparisons use price indices (excluding dividends) for Nikkei and FTSE, making the comparison with S&P 500 total return not entirely fair</li>
-    <li>FX analysis covers only ~20 years since 2004, potentially not reflecting long-term currency trends</li>
-    <li>This study does not account for transaction costs, taxes (e.g., overseas income tax), or fund management fees</li>
-    </ul></div>
+<div data-lang="zh"><div class="warning">
+    <p>本研究的結論應在以下限制的脈絡下解讀：</p>
+    <ol>
+    <li><strong>數據品質：</strong>Shiller 數據使用月平均價格（非月末收盤價），
+    且早期數據（1871-1926）的品質不如現代。S&P 500 指數在 1957 年才正式擴展至 500 檔成分股，
+    之前的數據實際上反映的是較小的股票組合。</li>
+    <li><strong>國際比較的公平性：</strong>日經 225 與 FTSE 100 為價格指數（不含股息），
+    與 S&P 500 含息報酬的比較不完全公平。加上估計的股息殖利率後，差距會縮小但仍顯著。</li>
+    <li><strong>匯率分析的時間限制：</strong>USD/TWD 匯率分析僅涵蓋 2004 年後約 20 年，
+    無法反映更長期的匯率趨勢。台幣長期走勢受多重因素影響（貿易順差、央行干預、
+    美國貨幣政策），短期數據的推論力有限。</li>
+    <li><strong>未考慮實務成本：</strong>未計入交易成本（手續費 0.1425%、ETF 管理費 0.03-0.2%）、
+    稅務（台灣海外所得稅、美國股息預扣稅 30%）等實務因素。
+    這些成本每年侵蝕約 0.3-1% 的報酬。</li>
+    <li><strong>滾動窗口的統計限制：</strong>150 年的數據看似很多，
+    但對於 30 年滾動窗口，有效的獨立觀察值只有約 5 組（150/30）。
+    雖然使用了 Newey-West HAC 和 Block Bootstrap 來處理，統計推論力仍然有限。</li>
+    <li><strong>未來預測能力：</strong>歷史報酬不等於未來報酬。
+    當前的高 CAPE（>30）環境和全球低利率正常化，
+    可能意味著未來 10-20 年的預期報酬低於歷史平均。</li>
+    </ol>
+    </div></div><div data-lang="en"><div class="warning">
+    <p>Results should be interpreted within these limitations:</p>
+    <ol>
+    <li><strong>Data quality:</strong> Shiller data uses monthly average prices (not month-end closes),
+    and early data (1871-1926) is inferior. The S&P 500 only expanded to 500 constituents in 1957;
+    earlier data reflects a smaller stock universe.</li>
+    <li><strong>International comparison fairness:</strong> Nikkei 225 and FTSE 100 are price indices (excluding dividends).
+    Adding estimated dividend yields would narrow but not eliminate the gap.</li>
+    <li><strong>FX analysis time limitation:</strong> USD/TWD analysis covers only ~20 years since 2004,
+    unable to reflect longer-term FX trends. TWD is influenced by trade surpluses, central bank intervention,
+    and US monetary policy — limited inference from short-term data.</li>
+    <li><strong>Practical costs omitted:</strong> Transaction costs (commission 0.1425%, ETF fees 0.03-0.2%),
+    taxes (Taiwan overseas income tax, US 30% dividend withholding) not included.
+    These erode ~0.3-1% of returns annually.</li>
+    <li><strong>Rolling window statistical limits:</strong> 150 years seems extensive,
+    but for 30-year rolling windows, effective independent observations are only ~5 (150/30).
+    Despite using HAC and Bootstrap, statistical power is limited.</li>
+    <li><strong>Future predictive power:</strong> Historical returns do not equal future returns.
+    Current high CAPE (>30) and global rate normalization may mean
+    future 10-20 year expected returns are below historical averages.</li>
+    </ol>
+    </div></div>
 
 <h2><span data-lang="zh">4.4 投資啟示</span><span data-lang="en">4.4 Investment Implications</span></h2>
-<div data-lang="zh"><p><strong>保守型投資人</strong>：以 7% 的實質報酬做退休規劃，而非 10%。
-    長期持有美股確實有正報酬，但要有心理準備面對 10 年甚至更長的低回報期。</p>
-    <p><strong>積極型投資人</strong>：「美股長期上漲」的論點在歷史上基本成立，但不代表任何 10 年都能獲得 10%。
-    台灣投資人還需額外考慮匯率風險，建議分散至不同國家市場以降低單一市場的集中風險。</p></div><div data-lang="en"><p><strong>Conservative investors</strong>: Use 7% real returns for retirement planning,
-    not 10%. Long-term US equity investing does yield positive returns, but be prepared for
-    decade-long periods of below-average performance.</p>
-    <p><strong>Aggressive investors</strong>: The thesis that "US stocks rise long-term" is historically valid,
-    but it doesn't mean every 10-year period delivers 10%. Taiwanese investors should also factor in
-    currency risk and consider diversifying across markets to reduce concentration risk.</p></div>
+
+<div data-lang="zh"><div class="highlight">
+    <h4>保守型投資人</h4>
+    <ul>
+    <li><strong>退休規劃：</strong>以 7% 的實質報酬（而非 10% 名目）做退休規劃。
+    這意味著需要更多的儲蓄或更長的工作年限。</li>
+    <li><strong>心理準備：</strong>即使長期持有美股，也要有心理準備面對 10 年甚至更長的低回報期
+    （如 2000s）。這不是「失敗」，而是「正常」。</li>
+    <li><strong>多元配置：</strong>不應將全部退休金投入單一國家市場。
+    全球分散配置可以降低存活偏差的風險。</li>
+    </ul></div></div><div data-lang="en"><div class="highlight">
+    <h4>Conservative Investors</h4>
+    <ul>
+    <li><strong>Retirement planning:</strong> Use 7% real return (not 10% nominal) for planning.
+    This means more savings needed or longer working years.</li>
+    <li><strong>Mental preparation:</strong> Even with long-term US holdings, prepare for decade-long
+    below-average periods (like 2000s). This is "normal," not "failure."</li>
+    <li><strong>Diversification:</strong> Never put all retirement funds in a single country.
+    Global diversification reduces survivorship bias risk.</li>
+    </ul></div></div>
+
+<div data-lang="zh"><div class="highlight">
+    <h4>積極型投資人</h4>
+    <ul>
+    <li><strong>基本面成立：</strong>「美股長期上漲」的論點在歷史上基本成立——
+    20 年以上持有正報酬率為 100%。但不代表任何 10 年都能獲得 10%。</li>
+    <li><strong>入場時機：</strong>高 CAPE 時期進場（如 CAPE > 30）的 10 年後報酬，
+    歷史上顯著低於低 CAPE 時期。Shiller 的研究反覆證實了這一點。</li>
+    <li><strong>匯率分散：</strong>台灣投資人若投資美股，
+    建議同時持有部分美元計價資產（不換匯），或使用全球配置 ETF，
+    以降低單一貨幣曝險。</li>
+    </ul></div></div><div data-lang="en"><div class="highlight">
+    <h4>Aggressive Investors</h4>
+    <ul>
+    <li><strong>Thesis valid:</strong> "US stocks rise long-term" is historically valid —
+    20+ year positive rate is 100%. But not every 10-year period delivers 10%.</li>
+    <li><strong>Entry timing:</strong> Entering during high CAPE periods (>30) historically
+    produces below-average 10-year forward returns. Shiller's research repeatedly confirms this.</li>
+    <li><strong>FX diversification:</strong> Taiwanese investors in US stocks should
+    keep some assets in USD-denominated form, or use global allocation ETFs,
+    to reduce single-currency exposure.</li>
+    </ul></div></div>
+
+<div data-lang="zh"><div class="warning">
+    <h4>所有投資人的共通建議</h4>
+    <p><strong>不要用「10%」做退休規劃。</strong>
+    用實質報酬（約 7%）為基線，再扣除交易成本和匯率影響。
+    如果最終到手的報酬是 5-6%，你的計劃仍然成立——這比用 10% 規劃但最後發現實際只有 5% 好得多。
+    <strong>保守的計劃 + 超額的結果，遠勝於樂觀的計劃 + 不足的結果。</strong></p>
+    </div></div><div data-lang="en"><div class="warning">
+    <h4>Universal Advice for All Investors</h4>
+    <p><strong>Do not use "10%" for retirement planning.</strong>
+    Use real returns (~7%) as baseline, then subtract transaction costs and FX impact.
+    If actual return is 5-6%, your plan still works — far better than planning for 10% and getting 5%.
+    <strong>A conservative plan with surplus outcomes beats an optimistic plan with shortfalls.</strong></p>
+    </div></div>
 
 <footer>V-005 US Stock Long-term Return | Generated by Python + Claude</footer>
 </div>

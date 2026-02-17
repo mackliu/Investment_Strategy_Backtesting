@@ -21,7 +21,11 @@
     <p>然而，這個看似簡單的「10%」背後隱藏著多個重要的細節：它是名目報酬還是實質報酬？
     是否包含股息再投入？起始年份的選擇如何影響結果？對於非美國投資人，匯率風險又如何？</p>
     <p>更根本的問題是：以美國這個 20 世紀最成功的經濟體為樣本，推論「股市長期報酬 10%」，
-    是否存在嚴重的存活偏差（Survivorship Bias）？</p></div><div data-lang="en"><p>"US stocks return 10% annually over the long term" is one of the most widely cited figures in investing.
+    是否存在嚴重的存活偏差（Survivorship Bias）？
+    如果我們站在 1945 年，面對的是一個剛從戰爭中恢復的世界——德國和日本的股市幾乎歸零，
+    英國正面臨殖民帝國的衰落。以事後之明來看美國的成功，似乎理所當然；
+    但在當時，沒有人能預知美國會成為全球霸主。用「贏家」的歷史來預測未來，
+    本質上就是一種選擇性偏差。</p></div><div data-lang="en"><p>"US stocks return 10% annually over the long term" is one of the most widely cited figures in investing.
     Across YouTube, podcasts, and investment courses, this number is repeatedly referenced, often implying
     that simply holding US stocks long-term guarantees ~10% annualized returns. The origin traces to the
     S&P 500's historical performance since 1926.</p>
@@ -29,40 +33,122 @@
     include dividend reinvestment? How does the starting year affect results? For non-US investors,
     what about currency risk?</p>
     <p>More fundamentally: Using the most successful 20th-century economy as a sample to claim
-    "stocks return 10% long-term" — does this suffer from serious survivorship bias?</p></div>
+    "stocks return 10% long-term" — does this suffer from serious survivorship bias?
+    Standing in 1945, the world faced a devastated landscape — German and Japanese markets nearly wiped out,
+    Britain's colonial empire declining. In hindsight, US success seems inevitable;
+    at the time, no one could predict US global dominance. Using the "winner's" history
+    to predict the future is inherently selection bias.</p></div>
 
 <h2><span data-lang="zh">1.2 文獻回顧</span><span data-lang="en">1.2 Literature Review</span></h2>
-<div data-lang="zh"><p><strong>Siegel (2014)</strong>《Stocks for the Long Run》研究美股 1802-2012 的數據，
-    發現實質年化報酬約 6.6%，而非名目的 10%。通膨的長期侵蝕使得「10%」的購買力遠不如表面數字。</p>
-    <p><strong>Dimson, Marsh & Staunton (2002)</strong>《Triumph of the Optimists》分析全球 16 國 1900-2000 年
-    的股市表現，發現實質報酬中位數約 5%，美國位居前列。這意味著以美國為代表來推論「全球股市」有嚴重偏差。</p>
+<div data-lang="zh"><p><strong>Siegel (2014)</strong>《Stocks for the Long Run》是「美股 10%」說法最重要的學術根源。
+    Siegel 研究了美股 1802-2012 的數據，發現名目年化報酬約 9.6%（接近 10%），
+    但實質年化報酬（扣除通膨）僅約 6.6%。他強調：「任何不區分名目與實質報酬的投資討論都是不完整的。」
+    值得注意的是，Siegel 的時間範圍從 1802 年開始——1802-1870 年期間的數據品質遠不如現代。</p>
+    <p><strong>Dimson, Marsh & Staunton (2002)</strong>《Triumph of the Optimists》是存活偏差研究的里程碑。
+    他們分析了全球 16 國 1900-2000 年的股市表現，發現股票實質年化報酬的中位數約為 5%（而非 7% 或 10%），
+    且美國位居前列。這意味著：(1) 以美國為代表來推論「全球股市」有嚴重偏差；
+    (2) 未來的股票報酬很可能低於過去——因為部分歷史報酬來自「估值倍數的擴張」（P/E 從低升高），
+    而非純粹的企業盈餘增長。</p>
+    <p><strong>Arnott & Bernstein (2002)</strong> 在《What Risk Premium Is Normal?》中指出，
+    股票風險溢酬並非固定常數。20 世紀的高溢酬部分來自意外因素（兩次世界大戰後美國的崛起），
+    未來的預期溢酬可能僅有 2-4%——遠低於歷史的 5-7%。</p>
     <p><strong>Robert Shiller</strong> 的 CAPE 數據集提供了 1871 年至今的月頻數據，
-    包含價格、股息、盈餘與 CPI，是驗證美股長期報酬最完整的公開數據源。</p></div><div data-lang="en"><p><strong>Siegel (2014)</strong> in "Stocks for the Long Run" studied US stock data from 1802-2012,
-    finding real annualized returns of approximately 6.6%, not the nominal 10%. Long-term inflation erosion
-    means the purchasing power of "10%" is far less than the headline number suggests.</p>
-    <p><strong>Dimson, Marsh & Staunton (2002)</strong> in "Triumph of the Optimists" analyzed stock markets
-    in 16 countries from 1900-2000, finding median real returns of approximately 5%, with the US near the top.
-    This implies significant bias in using the US as representative of "global stock markets."</p>
+    包含價格、股息、盈餘與 CPI，是驗證美股長期報酬最完整的公開數據源。
+    Shiller 本人多次提醒：高 CAPE 環境（如 2020 年代的 30+）預示著未來 10 年的報酬將低於歷史均值。</p>
+    <p><strong>Pastor & Stambaugh (2012)</strong> 的研究指出，股票市場的長期報酬存在「學習效應」——
+    投資者對股票的風險評估隨時間改變，導致不同時期的風險溢酬差異極大。
+    換言之，歷史平均報酬可能無法準確預測未來。</p></div><div data-lang="en"><p><strong>Siegel (2014)</strong>'s "Stocks for the Long Run" is the primary academic source for the "10%" claim.
+    Siegel studied US stocks from 1802-2012, finding nominal annualized returns of ~9.6% (close to 10%),
+    but real returns (inflation-adjusted) of only ~6.6%. He emphasizes: "Any investment discussion that
+    does not distinguish nominal from real returns is incomplete."
+    Notably, Siegel's data starts from 1802 — data quality before 1870 is far inferior to modern standards.</p>
+    <p><strong>Dimson, Marsh & Staunton (2002)</strong>'s "Triumph of the Optimists" is a landmark survivorship bias study.
+    They analyzed 16 countries from 1900-2000, finding median real equity returns of ~5% (not 7% or 10%),
+    with the US near the top. This implies: (1) using the US to generalize about "global stocks" involves serious bias;
+    (2) future equity returns are likely lower than historical — as some past returns came from valuation expansion
+    (rising P/E ratios) rather than pure earnings growth.</p>
+    <p><strong>Arnott & Bernstein (2002)</strong> in "What Risk Premium Is Normal?" argue that the equity risk premium
+    is not a constant. The 20th century's high premium partly resulted from unexpected factors
+    (US rise after two world wars), and future expected premium may be only 2-4% — far below the historical 5-7%.</p>
     <p><strong>Robert Shiller's</strong> CAPE dataset provides monthly data from 1871 to present,
     including price, dividends, earnings, and CPI — the most comprehensive public data source
-    for verifying US long-term stock returns.</p></div>
+    for verifying US long-term stock returns.
+    Shiller himself has repeatedly warned: high CAPE environments (30+ in the 2020s)
+    predict below-average 10-year forward returns.</p>
+    <p><strong>Pastor & Stambaugh (2012)</strong> show that long-term stock returns exhibit a "learning effect" —
+    investor risk perceptions change over time, causing risk premiums to vary significantly across periods.
+    In other words, historical average returns may not accurately predict the future.</p></div>
 
 <h2><span data-lang="zh">1.3 研究假說</span><span data-lang="en">1.3 Research Hypotheses</span></h2>
-<div data-lang="zh"><table>
-    <tr><th>假說</th><th>H0 (虛無)</th><th>H1 (對立)</th></tr>
-    <tr><td>Q1 名目報酬</td><td>名目含息年化報酬 &le; 10%</td><td>&gt; 10%</td></tr>
-    <tr><td>Q2 實質報酬</td><td>實質含息年化報酬 &le; 7%</td><td>&gt; 7%</td></tr>
-    <tr><td>Q3 匯率風險</td><td>TWD 報酬 &ge; USD 報酬</td><td>TWD &lt; USD</td></tr>
-    <tr><td>Q4 存活偏差</td><td>美國 = 其他國家</td><td>美國 &gt; 其他</td></tr>
-    <tr><td>Q5 持有期效果</td><td>報酬離散度不隨持有期遞減</td><td>離散度遞減</td></tr>
-    </table></div><div data-lang="en"><table>
-    <tr><th>Hypothesis</th><th>H0 (Null)</th><th>H1 (Alternative)</th></tr>
-    <tr><td>Q1 Nominal</td><td>Nominal total ann. return &le; 10%</td><td>&gt; 10%</td></tr>
-    <tr><td>Q2 Real</td><td>Real total ann. return &le; 7%</td><td>&gt; 7%</td></tr>
-    <tr><td>Q3 FX Risk</td><td>TWD return &ge; USD return</td><td>TWD &lt; USD</td></tr>
-    <tr><td>Q4 Survivorship</td><td>US = other countries</td><td>US &gt; others</td></tr>
-    <tr><td>Q5 Holding Period</td><td>Return dispersion does not decrease</td><td>Dispersion decreases</td></tr>
+<div data-lang="zh"><p>本研究提出五個研究假說，涵蓋報酬水準、通膨侵蝕、匯率風險、存活偏差和持有期效果：</p>
+    <table>
+    <tr><th>假說</th><th>H0 (虛無)</th><th>H1 (對立)</th><th>為何重要</th></tr>
+    <tr><td>Q1 名目報酬</td><td>名目含息年化 &le; 10%</td><td>&gt; 10%</td>
+    <td>最基本的問題——「10%」是否在統計上成立</td></tr>
+    <tr><td>Q2 實質報酬</td><td>實質含息年化 &le; 7%</td><td>&gt; 7%</td>
+    <td>扣除通膨後的真實購買力增長</td></tr>
+    <tr><td>Q3 匯率風險</td><td>TWD 報酬 &ge; USD 報酬</td><td>TWD &lt; USD</td>
+    <td>台灣投資人面臨的額外風險因子</td></tr>
+    <tr><td>Q4 存活偏差</td><td>美國 = 其他國家</td><td>美國 &gt; 其他</td>
+    <td>以美國推論全球是否合理</td></tr>
+    <tr><td>Q5 持有期效果</td><td>離散度不隨持有期遞減</td><td>離散度遞減</td>
+    <td>「投資越久越安全」是否有數據支持</td></tr>
+    </table></div><div data-lang="en"><p>We test five hypotheses covering return levels, inflation erosion, FX risk, survivorship bias, and holding period effects:</p>
+    <table>
+    <tr><th>Hypothesis</th><th>H0 (Null)</th><th>H1 (Alternative)</th><th>Why It Matters</th></tr>
+    <tr><td>Q1 Nominal</td><td>Nominal total ann. &le; 10%</td><td>&gt; 10%</td>
+    <td>The most basic question — is "10%" statistically valid</td></tr>
+    <tr><td>Q2 Real</td><td>Real total ann. &le; 7%</td><td>&gt; 7%</td>
+    <td>True purchasing power growth after inflation</td></tr>
+    <tr><td>Q3 FX Risk</td><td>TWD return &ge; USD</td><td>TWD &lt; USD</td>
+    <td>Additional risk factor for Taiwanese investors</td></tr>
+    <tr><td>Q4 Survivorship</td><td>US = other countries</td><td>US &gt; others</td>
+    <td>Whether generalizing from US to global is valid</td></tr>
+    <tr><td>Q5 Holding Period</td><td>Dispersion does not decrease</td><td>Dispersion decreases</td>
+    <td>Does "longer = safer" have data support</td></tr>
     </table></div>
+
+<div data-lang="zh"><p><strong>Q1 與 Q2 的區別至關重要。</strong>大多數投資網紅引用的 10% 是「名目含息」報酬——
+    包含股息再投入（約貢獻 2%）且未扣除通膨。但對退休規劃而言，
+    真正重要的是「扣除通膨後的實質購買力增長」（Q2），而非名目數字。</p>
+    <p><strong>Q3 是台灣投資人最常忽略的風險。</strong>台灣人透過複委託或海外券商投資美股，
+    最終需要換回新台幣。如果新台幣在投資期間升值，實際報酬會低於美元計價的數字。
+    Q3 量化這個「匯率拖累」的大小。</p>
+    <p><strong>Q4 挑戰了一個隱含假設。</strong>引用「美股 10%」來說「股市長期會漲」，
+    暗示這是股票市場的普遍規律。但如果日本投資人聽到的是「日經 225 從 1989 年高點至今 35 年還沒回本」，
+    他們對「股市長期必漲」的看法會完全不同。</p></div><div data-lang="en"><p><strong>The distinction between Q1 and Q2 is crucial.</strong> Most investment influencers cite the
+    10% as "nominal total return" — including dividend reinvestment (~2% contribution) and before inflation.
+    But for retirement planning, what truly matters is "real purchasing power growth after inflation" (Q2),
+    not the nominal figure.</p>
+    <p><strong>Q3 is the most overlooked risk for Taiwanese investors.</strong> Taiwan investors buying US stocks
+    via sub-brokerage or offshore accounts must eventually convert back to TWD.
+    If TWD appreciates during the holding period, actual returns fall below USD-denominated figures.
+    Q3 quantifies this "FX drag."</p>
+    <p><strong>Q4 challenges an implicit assumption.</strong> Citing "US stocks 10%" to argue "stocks always rise long-term"
+    implies a universal market law. But if a Japanese investor hears "Nikkei 225 has not recovered
+    from its 1989 peak after 35 years," their view of "stocks always rise" would be entirely different.</p></div>
+
+<h2><span data-lang="zh">1.4 研究貢獻</span><span data-lang="en">1.4 Research Contributions</span></h2>
+<div data-lang="zh"><ul>
+    <li><strong>完整時間跨度：</strong>使用 1871 年至今超過 150 年的數據，
+    涵蓋兩次世界大戰、大蕭條、石油危機、科技泡沫、金融海嘯等所有重大經濟事件。</li>
+    <li><strong>多維度拆解：</strong>系統性區分名目/實質、含息/不含息、不同起始年份、不同持有期的報酬。</li>
+    <li><strong>統計嚴謹性：</strong>使用 Newey-West HAC 處理滾動報酬的自相關問題，
+    避免傳統 t 檢定因資料重疊導致的錯誤推論。</li>
+    <li><strong>國際視角：</strong>納入日本、英國、德國的股市數據進行存活偏差分析。</li>
+    <li><strong>台灣投資人觀點：</strong>以 USD/TWD 匯率量化台灣投資人的實際報酬，
+    並提供匯率風險的分解分析。</li>
+    </ul></div><div data-lang="en"><ul>
+    <li><strong>Complete time span:</strong> 150+ years of data from 1871, covering two world wars,
+    the Great Depression, oil crises, dot-com bubble, GFC, and all major economic events.</li>
+    <li><strong>Multi-dimensional decomposition:</strong> Systematically separates nominal/real,
+    total/price-only, different starting years, and different holding periods.</li>
+    <li><strong>Statistical rigor:</strong> Uses Newey-West HAC to address autocorrelation in rolling returns,
+    avoiding erroneous inference from overlapping data in standard t-tests.</li>
+    <li><strong>International perspective:</strong> Includes Japan, UK, and Germany for survivorship bias analysis.</li>
+    <li><strong>Taiwan investor viewpoint:</strong> Quantifies actual returns for Taiwan investors using USD/TWD FX,
+    with variance decomposition of currency impact.</li>
+    </ul></div>
 
 <footer>V-005 US Stock Long-term Return | Generated by Python + Claude</footer>
 </div>

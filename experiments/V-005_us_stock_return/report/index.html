@@ -24,37 +24,75 @@
     </div></div>
 
 <h2><span data-lang="zh">摘要</span><span data-lang="en">Abstract</span></h2>
-<div data-lang="zh"><p>本研究使用 Robert Shiller 的長期數據集（1871-2023，共 1829 個月），
-    驗證「美股長期年化報酬 10%」這一廣為流傳的投資論點。</p>
+<div data-lang="zh"><p>本研究使用 Robert Shiller 的長期數據集（1871-2023，共 1829 個月，約 152 年），
+    驗證「美股長期年化報酬 10%」這一廣為流傳的投資論點。
+    研究採用 Newey-West HAC 檢定處理滾動報酬的自相關問題，
+    並以 Block Bootstrap（10,000 次重抽樣）建立穩健的信賴區間。
+    此外，以日經 225、FTSE 100、DAX 等國際指數進行存活偏差檢驗，
+    並以 USD/TWD 匯率分析台灣投資人的實際報酬。</p>
     <p>主要發現：</p>
     <ul>
     <li>全期名目含息年化報酬為 <strong>9.2%</strong>，表面上接近 10%，
-    但 10 年滾動報酬僅有 <strong>39%</strong> 的機率達到 10%</li>
+    但不含股息僅 4.6%。
+    10 年滾動報酬僅有 <strong>39%</strong> 的機率達到 10%，
+    30 年也僅 47%。</li>
     <li>扣除通膨後的實質年化報酬僅 <strong>6.9%</strong>，
-    「10%」嚴重高估了實際購買力增長</li>
+    「10%」嚴重高估了實際購買力增長約 2.3 個百分點/年。</li>
     <li>不同年代差異巨大：1950 年代名目含息高達 19%，
-    2000 年代僅 -1%</li>
-    <li>存活偏差明顯：同期日經 225 年化僅 2.6%（不含息）</li>
-    </ul></div><div data-lang="en"><p>This study uses Robert Shiller's long-term dataset (1871-2023, 1829 months)
-    to verify the widely cited claim that US stocks deliver 10% annualized returns.</p>
+    2000 年代僅 -1%。</li>
+    <li>存活偏差顯著：1988 年以來同期，S&P 500 含息年化 10.8%，
+    日經 225 僅 2.6%（不含息），FTSE 100 4.8%（不含息）。</li>
+    <li>台灣投資人面臨匯率拖累：10 年持有期平均匯率侵蝕約 0.42%/年。</li>
+    </ul></div><div data-lang="en"><p>This study uses Robert Shiller's long-term dataset (1871-2023, 1829 months, ~152 years)
+    to verify the widely cited claim that US stocks deliver 10% annualized returns.
+    We employ Newey-West HAC tests for autocorrelated rolling returns,
+    Block Bootstrap (10,000 resamples) for robust confidence intervals,
+    international indices (Nikkei 225, FTSE 100, DAX) for survivorship bias testing,
+    and USD/TWD exchange rates for Taiwan investor perspective.</p>
     <p>Key findings:</p>
     <ul>
     <li>Full-period nominal total annualized return is <strong>9.2%</strong>,
-    seemingly close to 10%, but only <strong>39%</strong>
-    of 10-year rolling periods actually achieve 10%</li>
+    seemingly close to 10%, but price-only is just 4.6%.
+    Only <strong>39%</strong> of 10-year and 47% of 30-year
+    rolling periods actually achieve 10%.</li>
     <li>Real (inflation-adjusted) annualized return is only <strong>6.9%</strong>,
-    meaning "10%" significantly overstates actual purchasing power growth</li>
+    meaning "10%" overstates actual purchasing power growth by ~2.3 pp/year.</li>
     <li>Huge variation across decades: 1950s nominal total reached 19%,
-    while 2000s was only -1%</li>
-    <li>Clear survivorship bias: Nikkei 225 returned only 2.6%
-    annually (price only) over the same period</li>
+    while 2000s was only -1%.</li>
+    <li>Significant survivorship bias: Since 1988, S&P 500 total 10.8%,
+    Nikkei 225 2.6% (price only), FTSE 100 4.8% (price only).</li>
+    <li>Taiwan investors face FX drag: 10-year holding period averages ~0.42%/year erosion.</li>
     </ul></div>
 
 <h2><span data-lang="zh">互動圖表：S&P 500 長期走勢</span><span data-lang="en">Interactive Chart: S&P 500 Long-term Trend</span></h2>
-<div data-lang="zh"><p>下圖展示 1871 年至今的 S&P 500 累積報酬（對數刻度），清楚呈現名目報酬與實質報酬之間的巨大差距。</p></div><div data-lang="en"><p>The chart below shows S&P 500 cumulative returns since 1871 (log scale), clearly illustrating the massive gap between nominal and real returns.</p></div>
+<div data-lang="zh"><p>下圖展示 1871 年至今的 S&P 500 累積報酬（對數刻度），清楚呈現名目報酬與實質報酬之間的巨大差距。滑鼠懸停可查看特定時間點的數值。名目累積報酬看似驚人——1871 年投入 1 美元，至今已增長數萬倍。但扣除通膨後，實質購買力的增長遠沒有那麼戲劇性。這個「落差」正是本研究要量化的核心問題。</p></div><div data-lang="en"><p>The chart below shows S&P 500 cumulative returns since 1871 (log scale). Hover to see specific values. Nominal cumulative growth appears staggering — $1 invested in 1871 grows to tens of thousands. But after inflation, real purchasing power growth is far less dramatic. Quantifying this 'gap' is the core question of this study.</p></div>
 <div class="chart-container">
 <iframe data-lang="zh" src="assets/figures/zh/plotly_cumulative.html" class="plotly-chart" frameborder="0"></iframe><iframe data-lang="en" src="assets/figures/en/plotly_cumulative.html" class="plotly-chart" frameborder="0"></iframe>
 </div>
+
+<div data-lang="zh"><h2>主要發現一覽</h2>
+    <div class="highlight">
+    <p><strong>1. 「10%」是名目含息的近似值，不是實質報酬</strong>：全期名目含息 9.2%，
+    但不含股息僅 4.6%，實質含息 6.9%。
+    股息貢獻約 2 個百分點，通膨侵蝕約 2.3 個百分點。</p>
+    <p><strong>2. 10% 並非穩定保證</strong>：10 年期滾動名目含息均值 9.3%，
+    但最差為 -4.0%，最佳為 21.2%。離散度極大。</p>
+    <p><strong>3. 統計檢定無法拒絕 H0</strong>：以 Newey-West HAC 修正後，
+    名目含息報酬均值未能在統計上顯著超過 10% 基準。</p>
+    <p><strong>4. 美國是特例，非通則</strong>：國際比較顯示美國表現遠超其他主要市場。</p>
+    </div></div><div data-lang="en"><h2>Key Findings at a Glance</h2>
+    <div class="highlight">
+    <p><strong>1. "10%" is a nominal total approximation, not real return</strong>: Full-period nominal total 9.2%,
+    but price-only 4.6%, real total 6.9%.
+    Dividends contribute ~2 pp, inflation erodes ~2.3 pp.</p>
+    <p><strong>2. 10% is not a stable guarantee</strong>: 10-year rolling nominal total mean is 9.3%,
+    but ranges from -4.0% to 21.2%. Extreme dispersion.</p>
+    <p><strong>3. Statistical tests cannot reject H0</strong>: After Newey-West HAC correction,
+    nominal total mean does not significantly exceed the 10% benchmark.</p>
+    <p><strong>4. The US is exceptional, not typical</strong>: International comparison shows US far outperforms other major markets.</p>
+    </div></div>
+
+<div data-lang="zh"><h2>報告導覽</h2><p>本報告按 IMRaD 學術結構編排：<strong>緒論</strong>（背景、文獻、假說）→ <strong>研究方法</strong>（數據、計算、統計）→ <strong>實證結果</strong>（績效、持有期、國際比較）→ <strong>討論</strong>（解讀、限制、啟示）→ <strong>結論</strong>。使用導覽列可跳轉各頁。</p></div><div data-lang="en"><h2>Report Navigation</h2><p>This report follows IMRaD academic structure: <strong>Introduction</strong> (background, literature, hypotheses) -> <strong>Methodology</strong> (data, calculations, statistics) -> <strong>Results</strong> (performance, holding periods, international) -> <strong>Discussion</strong> (interpretation, limitations, implications) -> <strong>Conclusion</strong>. Use the navigation bar to jump between sections.</p></div>
 
 <footer>V-005 US Stock Long-term Return | Generated by Python + Claude</footer>
 </div>

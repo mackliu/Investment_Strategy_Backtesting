@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>附錄</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav><ul><li><a href="../../../index.html"><span data-lang="zh">專案主頁</span><span data-lang="en">Project Home</span></a></li><li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li><li><a href="introduction.html"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li><li><a href="methodology.html"><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></a></li><li><a href="results.html"><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></a></li><li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li><li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li><li><a href="appendix.html"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li></ul><button id="lang-toggle" onclick="toggleLang()">Switch to EN</button></nav>
+<div class="container">
+
+<h1><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></h1>
+
+<div data-lang="zh"><p>以下為正文未詳細討論的補充分析圖表。這些圖表從不同角度驗證正文的結論，也讓有興趣深入探索的讀者可以自行發現更多有趣的模式。互動式圖表支援滑鼠懸停查看數值、拖曳縮放特定時段等功能。</p></div><div data-lang="en"><p>Below are supplementary charts not discussed in detail in the main text. These validate conclusions from different angles and allow curious readers to discover additional patterns. Interactive charts support hover-to-view values, drag-to-zoom, and more.</p></div>
+
+<h2><span data-lang="zh">A.1 相關係數矩陣</span><span data-lang="en">A.1 Correlation Matrix</span></h2>
+<div data-lang="zh"><p>下圖為各資產季度報酬的相關係數矩陣。相關係數介於 -1（完全反向）到 +1（完全同向）之間。如果兩項資產的相關性低，代表它們的漲跌不同步，組合在一起可以降低整體風險——這就是「不要把所有雞蛋放在同一個籃子裡」的數學根據。觀察重點：房價與 0050 的相關性是高還是低？如果很低，代表房地產在分散投資組合風險方面有其價值。</p></div><div data-lang="en"><p>Correlation matrix of quarterly returns. Correlation ranges from -1 (perfectly inverse) to +1 (perfectly aligned). Low correlation between assets means their movements are not synchronized — combining them reduces overall risk ("don't put all eggs in one basket" in mathematical terms). Key question: is housing-0050 correlation high or low? Low correlation suggests housing has diversification value.</p></div>
+<img data-lang="zh" src="../results/figures/zh/fig11_correlation.png" alt=""><img data-lang="en" src="../results/figures/en/fig11_correlation.png" alt="">
+
+<h2><span data-lang="zh">A.2 滾動報酬比較</span><span data-lang="en">A.2 Rolling Return Comparison</span></h2>
+<div data-lang="zh"><p>滾動 5 年年化報酬比較，可觀察房價與股票在不同時期的相對表現。「滾動」的意思是從每個時間點向前看 5 年的報酬，隨著時間窗口的移動，觀察這兩項資產的相對優勢如何變化。如果房地產的滾動報酬曲線有時高於、有時低於 0050，代表沒有哪一方「永遠」勝出——答案取決於你選的時間段。這也提醒我們，用「過去 X 年的報酬」來判斷投資好壞，結論會隨著 X 的選擇而改變。</p></div><div data-lang="en"><p>Rolling 5-year annualized returns show how housing and stocks perform in different periods. "Rolling" means looking at 5-year returns from each starting point as the window slides forward. If housing's curve alternates above and below 0050, neither "always" wins — it depends on the period chosen. This reminds us that conclusions about "past X-year returns" change depending on how X is selected.</p></div>
+<img data-lang="zh" src="../results/figures/zh/fig09_rolling_return.png" alt=""><img data-lang="en" src="../results/figures/en/fig09_rolling_return.png" alt="">
+<div class="chart-container" data-lang="zh"><iframe src="assets/figures/zh/plotly_rolling.html" height="500"></iframe></div><div class="chart-container" data-lang="en"><iframe src="assets/figures/en/plotly_rolling.html" height="500"></iframe></div>
+
+<h2><span data-lang="zh">A.3 回撤比較</span><span data-lang="en">A.3 Drawdown Comparison</span></h2>
+<div data-lang="zh"><p>回撤圖展示各資產從歷史高點下跌的幅度與持續時間。對投資人來說，回撤不只是一個數字——它代表你的實際「痛苦程度」。即使最終報酬為正，中間的大幅回撤可能讓你因恐慌而賣在低點。觀察重點：各資產回撤的深度和恢復時間。</p></div><div data-lang="en"><p>The drawdown chart shows how far each asset falls from its historical peak and how long it takes to recover. For investors, drawdown represents your actual "pain level." Even if final returns are positive, large intermediate drawdowns may cause panic selling at lows. Key observations: depth and recovery time of drawdowns for each asset.</p></div>
+<img data-lang="zh" src="../results/figures/zh/fig10_drawdown.png" alt=""><img data-lang="en" src="../results/figures/en/fig10_drawdown.png" alt="">
+
+<h2><span data-lang="zh">A.4 損益平衡分析</span><span data-lang="en">A.4 Break-even Analysis</span></h2>
+<div data-lang="zh"><p>下圖顯示不同持有期間下「買房」勝過「租房+投資」的機率。50% 線代表損益平衡——在這條線以上，代表買房在多數起始時點勝出；在這條線以下，代表租房+投資勝出。這張圖直接回答了「我至少要持有多少年，買房才划算？」的問題。注意觀察勝率隨持有年限的變化趨勢：是持有越久越有利於買房，還是到了某個年限就趨於平穩？</p></div><div data-lang="en"><p>Buy win rate by holding period. The 50% line represents break-even — above the line, buying wins in most starting periods; below, renting+investing wins. This chart directly answers "how long must I hold for buying to pay off?" Observe how the win rate changes with holding period: does it consistently improve, or plateau after a certain point?</p></div>
+<img data-lang="zh" src="../results/figures/zh/fig06_breakeven.png" alt=""><img data-lang="en" src="../results/figures/en/fig06_breakeven.png" alt="">
+
+<h2><span data-lang="zh">A.5 風險-報酬散佈圖（互動版）</span><span data-lang="en">A.5 Risk-Return Scatter (Interactive)</span></h2>
+<div data-lang="zh"><p>互動版風險-報酬圖讓你可以懸停查看每個資產類別的精確數值。注意各資產在圖上的相對位置：左上角（低風險高報酬）最理想，右下角（高風險低報酬）最差。斜率越陡的連線代表越高的 Sharpe ratio（風險調整報酬）。</p></div><div data-lang="en"><p>The interactive risk-return scatter lets you hover to see exact values for each asset class. Note relative positions: upper-left (low risk, high return) is ideal, lower-right (high risk, low return) is worst. Steeper connecting lines represent higher Sharpe ratios (risk-adjusted returns).</p></div>
+<div class="chart-container" data-lang="zh"><iframe src="assets/figures/zh/plotly_risk_return.html" height="500"></iframe></div><div class="chart-container" data-lang="en"><iframe src="assets/figures/en/plotly_risk_return.html" height="500"></iframe></div>
+
+<h2><span data-lang="zh">A.6 敏感度分析（互動版）</span><span data-lang="en">A.6 Sensitivity Analysis (Interactive)</span></h2>
+<div data-lang="zh"><p>互動版敏感度分析圖讓你可以精確查看每個持有成本假設下的淨報酬。嘗試找到一個「交叉點」——在哪個持有成本水準下，房地產淨報酬等於 0050？如果你的實際持有成本高於這個交叉點，投資房地產的財務吸引力就不如被動指數投資。</p></div><div data-lang="en"><p>The interactive sensitivity chart lets you see exact net returns at each cost assumption. Try to find the "crossover point" — at what holding cost level does net housing return equal 0050? If your actual holding costs exceed this crossover, passive index investing is financially superior.</p></div>
+<div class="chart-container" data-lang="zh"><iframe src="assets/figures/zh/plotly_sensitivity.html" height="500"></iframe></div><div class="chart-container" data-lang="en"><iframe src="assets/figures/en/plotly_sensitivity.html" height="500"></iframe></div>
+
+<h2><span data-lang="zh">A.7 數據來源說明</span><span data-lang="en">A.7 Data Source Notes</span></h2>
+<div class="warning">
+<div data-lang="zh"><p>注意：信義房價指數為根據公開資料估算，非官方精確數值</p></div><div data-lang="en"><p>Note: Sinyi HPI values are estimates based on public data, not official exact figures</p></div>
+</div>
+
+<footer><div data-lang="zh"><p>V-008 房地產是最好的投資？ | 用數據說話：投資策略回測研究</p></div><div data-lang="en"><p>V-008 Is Real Estate the Best Investment? | Let Data Speak</p></div></footer>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

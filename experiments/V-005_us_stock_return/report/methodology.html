@@ -14,46 +14,157 @@
 
 <h1><span data-lang="zh">2. 研究方法</span><span data-lang="en">2. Methodology</span></h1>
 
-<h2><span data-lang="zh">2.1 數據來源</span><span data-lang="en">2.1 Data Sources</span></h2>
-<div data-lang="zh"><p>主要數據源為 Robert Shiller 的長期數據集（1871 年 1 月至 2023 年 9 月，共 1829 個月），
-    涵蓋 S&P 500 月平均價格、12 個月滾動股息、美國 CPI 等。</p>
-    <p>輔助數據源包括：yfinance（^GSPC 日頻價格作為交叉驗證）、FRED（美國 CPI 交叉驗證）、
-    USD/TWD 匯率（2004 年起，用於台灣投資人視角分析）、以及日經 225、FTSE 100、DAX 等國際指數。</p>
-    <p>CPI 交叉驗證結果：Shiller CPI 與 FRED CPIAUCSL 在共同期間（1947-2023）的水準相關性達 0.999987，
-    確認數據一致性。</p></div><div data-lang="en"><p>The primary data source is Robert Shiller's long-term dataset (January 1871 to September 2023,
-    1829 months), covering S&P 500 monthly average prices, trailing 12-month dividends, and US CPI.</p>
-    <p>Supplementary sources include: yfinance (^GSPC daily prices for cross-validation), FRED (US CPI cross-validation),
-    USD/TWD exchange rate (from 2004, for Taiwan investor perspective), and international indices
-    (Nikkei 225, FTSE 100, DAX).</p>
-    <p>CPI cross-validation: Shiller CPI and FRED CPIAUCSL show 0.999987 level correlation over their
-    common period (1947-2023), confirming data consistency.</p></div>
+<h2><span data-lang="zh">2.1 數據來源與品質</span><span data-lang="en">2.1 Data Sources & Quality</span></h2>
+<div data-lang="zh"><p><strong>主要數據源：</strong>Robert Shiller 的長期數據集（1871 年 1 月至 2023 年 9 月，共 1829 個月，
+    約 152 年），涵蓋 S&P 500 月平均價格、12 個月滾動股息、10 年期盈餘、美國 CPI 等。
+    這是學術界最廣泛引用的美股長期數據集，被 Siegel、Campbell、Shiller 等學者在數百篇論文中使用。</p>
+    <p><strong>數據品質考量：</strong></p>
+    <ul>
+    <li><strong>早期數據（1871-1926）：</strong>S&P 指數的前身為 Cowles Commission 指數，
+    成分股數量較少，股息估計可能存在偏差。Shiller 對此進行了標準化處理。</li>
+    <li><strong>S&P 500 正式編制（1926+）：</strong>指數正式化後數據品質提高，
+    但 1957 年前成分股僅約 90 檔，非今日的 500 檔。</li>
+    <li><strong>月平均 vs 月末：</strong>Shiller 使用月平均價格（非月末收盤價），
+    這使得計算出的月報酬與實際投資經驗略有不同，但在年化層面的差異可忽略。</li>
+    </ul>
+    <p><strong>輔助數據源：</strong></p>
+    <ul>
+    <li><strong>yfinance ^GSPC：</strong>日頻價格，用於交叉驗證 Shiller 月頻數據的現代部分。</li>
+    <li><strong>FRED CPIAUCSL：</strong>美國消費者物價指數，與 Shiller CPI 在 1947-2023 共同期間的
+    水準相關性達 0.999987，確認通膨數據一致性。</li>
+    <li><strong>USD/TWD 匯率：</strong>2004 年起，取自 yfinance，用於台灣投資人視角分析。</li>
+    <li><strong>國際指數：</strong>日經 225（1965+）、FTSE 100（1984+）、DAX（1987+），
+    用於存活偏差分析。需注意日經和 FTSE 為價格指數（不含股息），DAX 為含息指數。</li>
+    </ul></div><div data-lang="en"><p><strong>Primary data:</strong> Robert Shiller's long-term dataset (January 1871 to September 2023,
+    1829 months, ~152 years), covering S&P 500 monthly average prices,
+    trailing 12-month dividends, 10-year earnings, and US CPI.
+    This is the most widely cited long-term US stock dataset in academia,
+    used by Siegel, Campbell, Shiller, and hundreds of other scholars.</p>
+    <p><strong>Data quality considerations:</strong></p>
+    <ul>
+    <li><strong>Early data (1871-1926):</strong> The S&P predecessor was the Cowles Commission index,
+    with fewer constituents and potentially biased dividend estimates. Shiller applied standardization.</li>
+    <li><strong>S&P 500 formal inception (1926+):</strong> Data quality improves after formalization,
+    but pre-1957 the index had only ~90 stocks, not today's 500.</li>
+    <li><strong>Monthly average vs month-end:</strong> Shiller uses monthly average prices (not month-end closes),
+    causing slight differences from actual investment returns at monthly level, but negligible at annual level.</li>
+    </ul>
+    <p><strong>Supplementary data:</strong></p>
+    <ul>
+    <li><strong>yfinance ^GSPC:</strong> Daily prices for cross-validating Shiller's modern data.</li>
+    <li><strong>FRED CPIAUCSL:</strong> US CPI, showing 0.999987 level correlation with Shiller CPI
+    over their 1947-2023 common period, confirming inflation data consistency.</li>
+    <li><strong>USD/TWD:</strong> From 2004, via yfinance, for Taiwan investor perspective analysis.</li>
+    <li><strong>International indices:</strong> Nikkei 225 (1965+), FTSE 100 (1984+), DAX (1987+)
+    for survivorship bias analysis. Note: Nikkei and FTSE are price indices (excluding dividends);
+    DAX is a total return index.</li>
+    </ul></div>
 
 <h2><span data-lang="zh">2.2 報酬計算方法</span><span data-lang="en">2.2 Return Calculation Methods</span></h2>
-<div data-lang="zh"><p><strong>含息月報酬</strong> = (P<sub>t</sub> + D<sub>t</sub>/12) / P<sub>t-1</sub> - 1，
-    其中 D<sub>t</sub>/12 為每月股息估計值。此方法假設股息均勻分配且立即再投入，
-    為 Shiller 教授本人在論文中使用的標準做法。</p>
-    <p><strong>實質月報酬</strong> = (1 + 名目月報酬) / (1 + 月通膨率) - 1，逐月調整通膨。</p>
-    <p><strong>台幣計價報酬</strong> = (1 + USD 月報酬) x (1 + 匯率月變動率) - 1。</p></div><div data-lang="en"><p><strong>Monthly total return</strong> = (P<sub>t</sub> + D<sub>t</sub>/12) / P<sub>t-1</sub> - 1,
-    where D<sub>t</sub>/12 is the estimated monthly dividend. This assumes dividends are evenly distributed
-    and immediately reinvested — the standard method used by Professor Shiller himself.</p>
-    <p><strong>Real monthly return</strong> = (1 + nominal monthly return) / (1 + monthly inflation) - 1,
-    deflated month by month.</p>
-    <p><strong>TWD-denominated return</strong> = (1 + USD monthly return) x (1 + FX monthly change) - 1.</p></div>
+<div data-lang="zh"><p>本研究嚴格區分四種報酬定義，因為混淆它們是「10% 迷思」的根源：</p>
+    <table>
+    <tr><th>報酬類型</th><th>公式</th><th>包含因素</th><th>適用場景</th></tr>
+    <tr><td>名目不含息 (Price)</td><td>P<sub>t</sub> / P<sub>t-1</sub> - 1</td>
+    <td>僅價格變動</td><td>技術分析、指數觀察</td></tr>
+    <tr><td>名目含息 (Total)</td><td>(P<sub>t</sub> + D<sub>t</sub>/12) / P<sub>t-1</sub> - 1</td>
+    <td>價格 + 股息再投入</td><td>基金績效比較</td></tr>
+    <tr><td>實質含息 (Real)</td><td>(1 + 名目含息) / (1 + 通膨) - 1</td>
+    <td>價格 + 股息 - 通膨</td><td>退休規劃、購買力分析</td></tr>
+    <tr><td>台幣計價 (TWD)</td><td>(1 + USD報酬) x (1 + 匯率變動) - 1</td>
+    <td>美元報酬 + 匯率影響</td><td>台灣投資人實際報酬</td></tr>
+    </table></div><div data-lang="en"><p>This study rigorously distinguishes four return definitions, as confusing them is the root of the "10% myth":</p>
+    <table>
+    <tr><th>Return Type</th><th>Formula</th><th>Includes</th><th>Use Case</th></tr>
+    <tr><td>Nominal Price Only</td><td>P<sub>t</sub> / P<sub>t-1</sub> - 1</td>
+    <td>Price change only</td><td>Technical analysis, index watching</td></tr>
+    <tr><td>Nominal Total</td><td>(P<sub>t</sub> + D<sub>t</sub>/12) / P<sub>t-1</sub> - 1</td>
+    <td>Price + dividend reinvestment</td><td>Fund performance comparison</td></tr>
+    <tr><td>Real Total</td><td>(1 + nominal total) / (1 + inflation) - 1</td>
+    <td>Price + dividends - inflation</td><td>Retirement planning, purchasing power</td></tr>
+    <tr><td>TWD-denominated</td><td>(1 + USD return) x (1 + FX change) - 1</td>
+    <td>USD return + FX impact</td><td>Actual return for Taiwan investors</td></tr>
+    </table></div>
 
-<h2><span data-lang="zh">2.3 統計方法</span><span data-lang="en">2.3 Statistical Methods</span></h2>
-<div data-lang="zh"><p><strong>Newey-West HAC t 檢定</strong>：由於滾動報酬存在高度自相關（例如 10 年窗口相鄰起始月
-    有 99.2% 數據重疊），傳統 t 檢定的標準誤會被嚴重低估。Newey-West HAC 標準誤透過考慮自相關結構，
-    提供正確的統計推論。</p>
-    <p><strong>Block Bootstrap</strong>：將時間序列分成區塊（12 個月）重新抽樣，保留時間相依結構，
-    計算信賴區間。用於穩健性驗證。</p>
-    <p><strong>Cohen's d 效果量</strong>：量化觀察到的報酬均值與基準值（10% 或 7%）之間的差距大小。</p></div><div data-lang="en"><p><strong>Newey-West HAC t-test</strong>: Rolling returns exhibit high autocorrelation (e.g., adjacent
-    starting months in a 10-year window share 99.2% of data). Standard t-test standard errors would be
-    severely underestimated. Newey-West HAC standard errors account for autocorrelation structure,
-    providing valid statistical inference.</p>
-    <p><strong>Block Bootstrap</strong>: Resamples the time series in blocks (12 months) to preserve
-    temporal dependence structure, used for computing confidence intervals and robustness checks.</p>
-    <p><strong>Cohen's d effect size</strong>: Quantifies the magnitude of difference between observed
-    mean returns and benchmark values (10% or 7%).</p></div>
+<div data-lang="zh"><p><strong>為什麼這個區分很重要？</strong>以全期數據為例：
+    名目不含息年化約 7%，加上股息再投入變成約 9%（接近 10%），
+    但扣除通膨後僅剩約 7%。如果進一步考慮匯率和交易成本，實際報酬可能更低。
+    大多數投資課程引用的「10%」是名目含息——這是四種定義中第二高的數字，
+    而非投資人最終拿到手的實質購買力。</p>
+    <p><strong>股息的重要性：</strong>在 150 年的長期中，股息再投入貢獻了總報酬的約 40-50%。
+    早期（1871-1950）股息殖利率經常超過 5%，是報酬的主要來源。
+    近年（2000+）殖利率降至 1.5-2%，股息的相對貢獻下降，但仍不可忽略。</p></div><div data-lang="en"><p><strong>Why this distinction matters:</strong> Using full-period data as an example:
+    nominal price-only annualized ~7%, add dividend reinvestment to get ~9% (close to 10%),
+    but after inflation only ~7% remains. Adding FX and transaction costs would reduce it further.
+    Most investment courses cite the "10%" as nominal total — the second-highest of four definitions,
+    not the actual purchasing power investors end up with.</p>
+    <p><strong>Importance of dividends:</strong> Over 150 years, dividend reinvestment contributes ~40-50% of total returns.
+    Early periods (1871-1950) had dividend yields often exceeding 5%, the primary return source.
+    Recent years (2000+) see yields at 1.5-2%, reducing dividend contribution but still non-negligible.</p></div>
+
+<h2><span data-lang="zh">2.3 分析框架</span><span data-lang="en">2.3 Analytical Framework</span></h2>
+<div data-lang="zh"><p>本研究採用多層次分析框架：</p>
+    <ol>
+    <li><strong>全期績效分析：</strong>計算 1871 年至今的各類年化報酬，作為「10%」的基線檢驗。</li>
+    <li><strong>子期間比較：</strong>將歷史分為 5 個子期間（全期、S&P 正式、戰後、近期、新千年），
+    檢驗起始年份對報酬的影響。</li>
+    <li><strong>滾動窗口分析：</strong>以 1-30 年的滾動窗口計算年化報酬，
+    觀察「10%」在不同持有期間的實現機率。</li>
+    <li><strong>年代別分析：</strong>以 10 年為單位觀察報酬的時間變異性。</li>
+    <li><strong>國際比較：</strong>以 1988 年以來的共同期間，比較美國與其他主要市場的表現。</li>
+    <li><strong>匯率分解：</strong>將台幣計價報酬分解為美元報酬 + 匯率影響 + 交互項。</li>
+    </ol></div><div data-lang="en"><p>This study employs a multi-level analytical framework:</p>
+    <ol>
+    <li><strong>Full-period analysis:</strong> Calculate all return types from 1871 to present as baseline for "10%" verification.</li>
+    <li><strong>Sub-period comparison:</strong> Split history into 5 sub-periods (full, S&P formal, post-war, recent, new millennium)
+    to test starting year sensitivity.</li>
+    <li><strong>Rolling window analysis:</strong> Compute annualized returns over 1-30 year rolling windows
+    to observe "10%" realization probability across holding periods.</li>
+    <li><strong>Decade analysis:</strong> 10-year blocks to observe temporal return variability.</li>
+    <li><strong>International comparison:</strong> Common period since 1988, comparing US vs other major markets.</li>
+    <li><strong>FX decomposition:</strong> Decompose TWD returns into USD return + FX impact + interaction term.</li>
+    </ol></div>
+
+<h2><span data-lang="zh">2.4 統計方法</span><span data-lang="en">2.4 Statistical Methods</span></h2>
+<div data-lang="zh"><p>滾動報酬的統計推論面臨一個核心挑戰：<strong>資料重疊導致高度自相關</strong>。
+    例如，以 1990 年 1 月和 1990 年 2 月為起點的兩條 10 年滾動路徑，
+    有 119 個月的數據完全重疊（119/120 = 99.2%）。
+    傳統 t 檢定假設觀察值獨立，在此情境下會嚴重低估標準誤，導致過度拒絕虛無假說。</p></div><div data-lang="en"><p>Statistical inference on rolling returns faces a core challenge: <strong>data overlap causing high autocorrelation</strong>.
+    For example, 10-year rolling paths starting January 1990 and February 1990
+    share 119 of 120 months (99.2% overlap).
+    Standard t-tests assume independent observations, severely underestimating standard errors
+    and leading to excessive null hypothesis rejection.</p></div>
+
+<div data-lang="zh"><table>
+    <tr><th>方法</th><th>用途</th><th>為何選用</th></tr>
+    <tr><td>Newey-West HAC t 檢定</td><td>Q1, Q2 假說檢定</td>
+    <td>修正自相關導致的標準誤低估。lag 長度設為窗口月份數 - 1（例如 10 年窗口用 lag = 119），
+    確保涵蓋完整的重疊結構。</td></tr>
+    <tr><td>Block Bootstrap (10,000 次)</td><td>信賴區間估計</td>
+    <td>以 12 個月為區塊重抽樣，保留年度季節性和短期動量結構。
+    12 個月區塊大小基於月報酬的自相關函數——在約 12 個月後衰減至接近零。</td></tr>
+    <tr><td>Cohen's d 效果量</td><td>所有假說</td>
+    <td>p 值會隨樣本量變化——1,800 個月報酬幾乎任何微小差異都會「顯著」。
+    d 直接衡量實際差異大小：|d| < 0.2 為小、0.2-0.8 為中、> 0.8 為大。</td></tr>
+    <tr><td>子期間穩健性檢驗</td><td>時間穩定性</td>
+    <td>將 150 年分為多個子期間，檢驗結論是否受特定歷史時期主導。</td></tr>
+    <tr><td>變異數分解</td><td>Q3 匯率分析</td>
+    <td>將台幣報酬的變異拆解為美元報酬變異、匯率變異和協方差項。</td></tr>
+    </table></div><div data-lang="en"><table>
+    <tr><th>Method</th><th>Purpose</th><th>Why Chosen</th></tr>
+    <tr><td>Newey-West HAC t-test</td><td>Q1, Q2 hypothesis testing</td>
+    <td>Corrects autocorrelation-induced SE underestimation. Lag = window months - 1
+    (e.g., lag = 119 for 10-year window) to cover full overlap structure.</td></tr>
+    <tr><td>Block Bootstrap (10,000)</td><td>Confidence interval estimation</td>
+    <td>12-month blocks preserve annual seasonality and short-term momentum.
+    Block size based on autocorrelation function — decays to near-zero at ~12 months.</td></tr>
+    <tr><td>Cohen's d effect size</td><td>All hypotheses</td>
+    <td>p-values are sample-size dependent — with 1,800 monthly returns, almost any tiny difference is "significant."
+    d directly measures practical difference: |d| < 0.2 small, 0.2-0.8 medium, > 0.8 large.</td></tr>
+    <tr><td>Sub-period robustness</td><td>Temporal stability</td>
+    <td>Split 150 years into sub-periods to test if conclusions are driven by specific eras.</td></tr>
+    <tr><td>Variance decomposition</td><td>Q3 FX analysis</td>
+    <td>Decomposes TWD return variance into USD return variance, FX variance, and covariance term.</td></tr>
+    </table></div>
 
 <footer>V-005 US Stock Long-term Return | Generated by Python + Claude</footer>
 </div>

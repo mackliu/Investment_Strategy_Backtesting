@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>V-007：年輕人應該 All-in 股票？</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav><ul><li><a href="../../../index.html"><span data-lang="zh">專案主頁</span><span data-lang="en">Project Home</span></a></li><li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li><li><a href="introduction.html"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li><li><a href="methodology.html"><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></a></li><li><a href="results.html"><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></a></li><li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li><li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li><li><a href="appendix.html"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li></ul><button id="lang-toggle" onclick="toggleLang()">Switch to EN</button></nav>
+<div class="container">
+
+<h1><span data-lang="zh">V-007：年輕人應該 All-in 股票？</span><span data-lang="en">V-007: Should Young People Go All-in on Stocks?</span></h1>
+
+<div class="highlight">
+<div data-lang="zh"><p><strong>研究問題：</strong>年輕人應該把所有資金投入股票嗎？長期 100% 股票配置真的是最佳策略嗎？還是該因應不同的人生階段調整配置？</p></div><div data-lang="en"><p><strong>Research Question:</strong> Should young people invest 100% in stocks? Is an all-stock allocation truly optimal, or should allocation adapt to different life stages?</p></div>
+</div>
+
+<div data-lang="zh"><h2>摘要</h2><p>本研究以美國超過 150 年的股票與債券月度實質報酬數據，模擬不同投資期間（10-40 年）與 6 種配置策略的歷史定期定額（DCA）投資生涯。6 種策略涵蓋固定比例（100% 股票、80/20、60/40、40/60）和動態策略（目標日期、反向滑降），共產生超過 56,000 條歷史投資路徑。</p><p>核心發現：100% 股票策略在 30 年 DCA 投資後中位數終值為投入成本的 <strong>3.05 倍</strong>，遠高於 60/40 的 <strong>2.56 倍</strong>。然而，100% 股票在 10 年期的虧損機率為 <strong>11.5%</strong>，30 年期最差 5% 情境僅有 1.57 倍，而 60/40 同期最差 5% 為 1.26 倍。序列風險分析顯示，投資末期遭遇崩盤的投資者終值中位數僅 2.83 倍，遠低於初期崩盤者的 5.29 倍（效果量 d = 2.06，極大）。恐慌賣出模擬更證實：在崩盤時出場的投資者終值顯著低於紀律投資者（p < 0.001）。</p></div><div data-lang="en"><h2>Abstract</h2><p>Using 150+ years of US real stock and bond monthly returns, this study simulates DCA investment careers of 10-40 years across 6 allocation strategies — 4 fixed (100% stock, 80/20, 60/40, 40/60) and 2 dynamic (Target Date, Reverse Glide) — generating over 56,000 historical investment paths.</p><p>Key finding: 100% stock achieves a median terminal value of <strong>3.05x</strong> invested capital after 30 years, vs <strong>2.56x</strong> for 60/40. However, 100% stock has 11.5% loss probability at 10 years; the worst 5% at 30 years yields only 1.57x vs 60/40's 1.26x. Sequence risk analysis shows late-career crashes yield only 2.83x median vs 5.29x for early crashes (d = 2.06). Panic selling simulation confirms significantly lower terminal values for those who exit during drawdowns (p < 0.001).</p></div>
+
+<img data-lang="zh" src="../results/figures/zh/fig03_terminal_boxplot.png" alt=""><img data-lang="en" src="../results/figures/en/fig03_terminal_boxplot.png" alt="">
+
+<div data-lang="zh"><p><strong>上圖解讀：</strong>箱型圖呈現各策略在 10-40 年投資期間的終值分布。紅色虛線為損益平衡點（1.0x，即回本）。隨著投資期間延長，所有策略的中位數（箱內中線）上升，且分布逐漸遠離紅線——但 100% 股票（紅色）的箱體和鬚線最長，代表最大的不確定性。60/40（藍色）的箱體較窄，結果更為集中。</p></div><div data-lang="en"><p><strong>Chart interpretation:</strong> Box plots show terminal value distributions across strategies and periods. Red dashed line is the break-even point (1.0x). As horizon extends, all medians (center lines) rise and distributions move away from the red line — but 100% stock (red) has the widest boxes and whiskers, indicating greatest uncertainty. 60/40 (blue) has narrower boxes with more concentrated outcomes.</p></div>
+
+<h2><span data-lang="zh">主要發現</span><span data-lang="en">Key Findings</span></h2>
+<ol>
+<div data-lang="zh"><li><strong>時間是朋友，但非保證：</strong>100% 股票的虧損機率從 10 年 11.5% → 20 年 4.4% → 30 年 0.0%。時間確實大幅降低虧損機率，但即使 30 年也未歸零。</li><li><strong>報酬差距隨時間擴大：</strong>10 年的策略差異不大（中位數 1.46x），但 40 年後 100% 股票（4.58x）是 60/40（3.41x）的 1.3 倍。複利效應讓小差異長期放大。</li><li><strong>序列風險效果驚人：</strong>崩盤發生在職涯末期 vs 初期，終值差異達 1.87 倍，效果量 d = 2.06（極大效果量）。這是本研究最重要的風險警示。</li><li><strong>紀律比配置更重要：</strong>恐慌賣出模擬中，60/40 紀律投資者的終值優於 100% 股票恐慌賣出者。選擇你能堅持的配置，而非理論最優。</li></div><div data-lang="en"><li><strong>Time helps but is no guarantee:</strong> 100% stock loss probability: 10Y 11.5% -> 20Y 4.4% -> 30Y 0.0%. Time greatly reduces loss probability, but even 30 years never reaches zero.</li><li><strong>Return gap widens with time:</strong> 10-year strategy differences are modest (median 1.46x), but at 40 years, 100% stock (4.58x) is 1.3x of 60/40 (3.41x). Compounding amplifies small differences over time.</li><li><strong>Sequence risk is dramatic:</strong> Late-career vs early-career crashes produce 1.87x difference; effect size d = 2.06 (very large). This is the study's most important risk warning.</li><li><strong>Discipline matters more than allocation:</strong> Panic selling simulation shows disciplined 60/40 investors outperform panicking 100% stock investors. Choose the allocation you can stick with, not the theoretically optimal one.</li></div>
+</ol>
+
+<div data-lang="zh"><h2>報告導覽</h2><ul><li><a href="introduction.html"><strong>緒論</strong></a>：背景、文獻回顧、假說定義</li><li><a href="methodology.html"><strong>研究方法</strong></a>：Shiller 數據、模擬方法、6 種策略定義、統計方法</li><li><a href="results.html"><strong>實證結果</strong></a>：終值分布、虧損機率、策略比較、序列風險、恐慌賣出</li><li><a href="discussion.html"><strong>討論</strong></a>：核心發現解讀、人力資本觀點、行為因素、實務啟示</li><li><a href="conclusion.html"><strong>結論</strong></a>：五大結論、假說總結、未來方向</li><li><a href="appendix.html"><strong>附錄</strong></a>：完整數據表、滾動報酬、台灣驗證</li></ul></div><div data-lang="en"><h2>Report Navigation</h2><ul><li><a href="introduction.html"><strong>Introduction</strong></a>: Background, literature review, hypotheses</li><li><a href="methodology.html"><strong>Methodology</strong></a>: Shiller data, simulation, 6 strategies, statistics</li><li><a href="results.html"><strong>Results</strong></a>: Terminal distributions, loss probability, strategy comparison, sequence risk, panic selling</li><li><a href="discussion.html"><strong>Discussion</strong></a>: Key findings, human capital, behavioral factors, practical advice</li><li><a href="conclusion.html"><strong>Conclusion</strong></a>: Five conclusions, hypothesis summary, future directions</li><li><a href="appendix.html"><strong>Appendix</strong></a>: Full data tables, rolling returns, Taiwan validation</li></ul></div>
+
+<footer><div data-lang="zh"><p>V-007 年輕人應該 All-in 股票？ | 用數據說話：投資策略回測研究</p></div><div data-lang="en"><p>V-007 Should Young People Go All-in on Stocks? | Let Data Speak</p></div></footer>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>附錄</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav><ul><li><a href="../../../index.html"><span data-lang="zh">專案主頁</span><span data-lang="en">Project Home</span></a></li><li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li><li><a href="introduction.html"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li><li><a href="methodology.html"><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></a></li><li><a href="results.html"><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></a></li><li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li><li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li><li><a href="appendix.html"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li></ul><button id="lang-toggle" onclick="toggleLang()">Switch to EN</button></nav>
+<div class="container">
+
+    <h1><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></h1>
+
+    <div data-lang="zh"><p>本附錄收錄完整的數據表格、統計檢定結果和補充圖表。這些資料為正文的結論提供詳細的數據支撐。建議讀者在閱讀正文時遇到想確認的具體數字，可以回到此處查找。</p></div><div data-lang="en"><p>This appendix contains complete data tables, statistical test results, and supplementary charts. These materials provide detailed data support for the main text conclusions. Readers can refer back here when seeking specific numbers mentioned in the main text.</p></div>
+
+    <h2><span data-lang="zh">A.1 各資產描述統計</span><span data-lang="en">A.1 Asset Descriptive Statistics</span></h2>
+    <div data-lang="zh"><p>下表為各資產在分析期間的完整統計摘要（台幣計價月報酬）。所有數值均基於月報酬率計算。如何閱讀此表：ann_return 為年化報酬率，ann_volatility 為年化波動度（越低越穩定），sharpe_ratio 為夏普比率（越高代表每單位風險獲得的報酬越多），max_drawdown 為最大回撤（越接近 0% 越好），cvar_5 為最差 5% 情境的平均月損失，skewness 為偏態（負值代表左尾較厚、極端虧損更頻繁），kurtosis 為峰態（大於 3 代表厚尾、極端事件多於常態分佈）。</p></div><div data-lang="en"><p>Complete statistical summary of each asset (TWD-denominated monthly returns). All values computed from monthly returns. How to read: ann_return = annualized return; ann_volatility = annualized volatility (lower = more stable); sharpe_ratio = Sharpe ratio (higher = more return per unit risk); max_drawdown = maximum drawdown (closer to 0% is better); cvar_5 = average monthly loss in worst 5% scenarios; skewness = distribution skew (negative = fatter left tail, more frequent extreme losses); kurtosis = distribution tail thickness (above 3 = fat tails, more extreme events than normal distribution).</p></div>
+    <table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>label</th>
+      <th>ann_return</th>
+      <th>ann_volatility</th>
+      <th>sharpe_ratio</th>
+      <th>max_drawdown</th>
+      <th>cvar_5</th>
+      <th>skewness</th>
+      <th>kurtosis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0050</td>
+      <td>11.92%</td>
+      <td>18.78%</td>
+      <td>0.63</td>
+      <td>-53.93%</td>
+      <td>-11.94%</td>
+      <td>-0.20</td>
+      <td>1.01</td>
+    </tr>
+    <tr>
+      <td>SPY</td>
+      <td>10.51%</td>
+      <td>14.08%</td>
+      <td>0.75</td>
+      <td>-46.99%</td>
+      <td>-8.31%</td>
+      <td>-0.42</td>
+      <td>0.91</td>
+    </tr>
+    <tr>
+      <td>TLT</td>
+      <td>3.23%</td>
+      <td>14.81%</td>
+      <td>0.22</td>
+      <td>-42.07%</td>
+      <td>-7.63%</td>
+      <td>0.69</td>
+      <td>1.87</td>
+    </tr>
+    <tr>
+      <td>GLD</td>
+      <td>8.95%</td>
+      <td>16.53%</td>
+      <td>0.54</td>
+      <td>-37.39%</td>
+      <td>-8.95%</td>
+      <td>0.08</td>
+      <td>0.16</td>
+    </tr>
+    <tr>
+      <td>VNQ</td>
+      <td>5.63%</td>
+      <td>21.13%</td>
+      <td>0.27</td>
+      <td>-66.34%</td>
+      <td>-14.07%</td>
+      <td>-0.60</td>
+      <td>4.69</td>
+    </tr>
+  </tbody>
+</table>
+
+    <h2><span data-lang="zh">A.2 投資組合績效彙整</span><span data-lang="en">A.2 Portfolio Performance Summary</span></h2>
+    <div data-lang="zh"><p>七個投資組合的全期間績效指標比較（年度再平衡、台幣計價）。此表是選擇「最適合自己」的投資組合的關鍵參考。建議讀者不要只看報酬率（ann_return）——同時關注波動度（ann_volatility）和最大回撤（max_drawdown），因為這些直接影響你在投資過程中的心理感受。一個年化少賺 1% 但最大回撤少 10% 的組合，對大多數人而言是更好的選擇。</p></div><div data-lang="en"><p>Full-period performance metrics for seven portfolios (annual rebalancing, TWD-denominated). This table is the key reference for choosing the "best-fit" portfolio. Don't focus solely on returns (ann_return) — also consider volatility (ann_volatility) and max drawdown (max_drawdown), as these directly affect your psychological experience during investing. A portfolio earning 1% less annually but with 10% less max drawdown is likely the better choice for most people.</p></div>
+    <table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>label</th>
+      <th>label_zh</th>
+      <th>ann_return</th>
+      <th>ann_volatility</th>
+      <th>sharpe_ratio</th>
+      <th>max_drawdown</th>
+      <th>cvar_5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>tw_only</td>
+      <td>100% 台股</td>
+      <td>11.92%</td>
+      <td>18.78%</td>
+      <td>0.63</td>
+      <td>-53.93%</td>
+      <td>-11.94%</td>
+    </tr>
+    <tr>
+      <td>us_only</td>
+      <td>100% 美股</td>
+      <td>10.51%</td>
+      <td>14.08%</td>
+      <td>0.75</td>
+      <td>-46.99%</td>
+      <td>-8.31%</td>
+    </tr>
+    <tr>
+      <td>tw_us</td>
+      <td>台股60/美股40</td>
+      <td>11.61%</td>
+      <td>15.14%</td>
+      <td>0.77</td>
+      <td>-49.66%</td>
+      <td>-10.09%</td>
+    </tr>
+    <tr>
+      <td>stock_bond</td>
+      <td>股60/債40</td>
+      <td>8.46%</td>
+      <td>9.73%</td>
+      <td>0.87</td>
+      <td>-18.33%</td>
+      <td>-5.53%</td>
+    </tr>
+    <tr>
+      <td>three_way</td>
+      <td>三分法(股/債/金)</td>
+      <td>8.54%</td>
+      <td>9.27%</td>
+      <td>0.92</td>
+      <td>-14.30%</td>
+      <td>-4.81%</td>
+    </tr>
+    <tr>
+      <td>five_asset</td>
+      <td>五資產等權</td>
+      <td>9.19%</td>
+      <td>9.97%</td>
+      <td>0.92</td>
+      <td>-24.19%</td>
+      <td>-5.73%</td>
+    </tr>
+    <tr>
+      <td>practical</td>
+      <td>實務配置</td>
+      <td>10.13%</td>
+      <td>10.69%</td>
+      <td>0.95</td>
+      <td>-30.33%</td>
+      <td>-6.61%</td>
+    </tr>
+  </tbody>
+</table>
+
+    <h2><span data-lang="zh">A.3 統計檢定彙整</span><span data-lang="en">A.3 Statistical Tests Summary</span></h2>
+    <div data-lang="zh"><p>所有假說檢定結果，含效果量與信賴區間。如何閱讀此表：「p-value」越小代表結果越不可能是偶然（通常 &lt;0.05 視為統計顯著）；「effect_size」衡量差異的實際大小（有些差異雖然統計顯著，但實際影響很小）；「CI」為 95% 信賴區間，代表如果重複這個實驗 100 次，約有 95 次的結果會落在這個範圍內。信賴區間越窄，代表我們對估計結果越有信心。</p></div><div data-lang="en"><p>All hypothesis test results with effect sizes and confidence intervals. How to read: "p-value": smaller means less likely due to chance (typically &lt;0.05 is statistically significant); "effect_size": measures practical magnitude (some differences are statistically significant but practically small); "CI": 95% confidence interval — if we repeated this experiment 100 times, ~95 results would fall in this range. Narrower CI means higher confidence in our estimate.</p></div>
+    <table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>hypothesis</th>
+      <th>test</th>
+      <th>statistic</th>
+      <th>p_value</th>
+      <th>effect_size</th>
+      <th>ci_95</th>
+      <th>conclusion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>H1: Diversification Effect</td>
+      <td>Bootstrap MaxDD diff: five_asset vs 0050</td>
+      <td>29.7%</td>
+      <td>1.000000</td>
+      <td>d=3.39</td>
+      <td>[9.4%, 43.0%]</td>
+      <td>Not significant</td>
+    </tr>
+    <tr>
+      <td>H1: Diversification Effect</td>
+      <td>Bootstrap MaxDD diff: five_asset vs SPY</td>
+      <td>22.8%</td>
+      <td>0.979500</td>
+      <td>d=3.08</td>
+      <td>[0.6%, 30.1%]</td>
+      <td>Not significant</td>
+    </tr>
+    <tr>
+      <td>H1: Diversification Effect</td>
+      <td>Bootstrap MaxDD diff: five_asset vs TLT</td>
+      <td>17.9%</td>
+      <td>0.954200</td>
+      <td>d=1.40</td>
+      <td>[-3.2%, 47.4%]</td>
+      <td>Not significant</td>
+    </tr>
+    <tr>
+      <td>H1: Diversification Effect</td>
+      <td>Bootstrap MaxDD diff: five_asset vs GLD</td>
+      <td>13.2%</td>
+      <td>0.865900</td>
+      <td>d=1.18</td>
+      <td>[-8.0%, 35.8%]</td>
+      <td>Not significant</td>
+    </tr>
+    <tr>
+      <td>H1: Diversification Effect</td>
+      <td>Bootstrap MaxDD diff: five_asset vs VNQ</td>
+      <td>42.2%</td>
+      <td>0.999900</td>
+      <td>d=3.34</td>
+      <td>[9.6%, 57.3%]</td>
+      <td>Not significant</td>
+    </tr>
+    <tr>
+      <td>H2: Correlation Structure Change</td>
+      <td>Fisher z-transform (0/10 pairs significant)</td>
+      <td>mean z=-0.05</td>
+      <td>0.076366</td>
+      <td>mean r_diff=-0.031</td>
+      <td>-</td>
+      <td>0/10 pairs show significant correlation increase in crisis</td>
+    </tr>
+    <tr>
+      <td>H3: Diminishing Marginal Benefit</td>
+      <td>NLS fit: sigma(N) = sigma_sys + sigma_idio/sqrt(N)</td>
+      <td>R2=0.9985</td>
+      <td>-</td>
+      <td>sigma_sys=12.9%, sigma_idio=12.4%</td>
+      <td>-</td>
+      <td>Strong fit confirms diminishing marginal benefit</td>
+    </tr>
+  </tbody>
+</table>
+
+    <h2><span data-lang="zh">A.4 相關矩陣</span><span data-lang="en">A.4 Correlation Matrix</span></h2>
+    <div data-lang="zh"><p>全期間相關係數熱力圖與滾動相關係數的靜態版本。熱力圖呈現全期間的「平均」相關結構，而滾動相關圖則揭示這個相關結構如何隨時間變化。兩者搭配閱讀才能獲得完整的圖景：全期間的相關性告訴你「長期而言，這些資產傾向如何互動」，滾動相關性則告訴你「這種互動關係是否穩定，還是在不同時期差異很大」。</p></div><div data-lang="en"><p>Full-period correlation heatmap and static version of rolling correlations. The heatmap shows the "average" correlation structure, while the rolling chart reveals how this structure changes over time. Read both together for the complete picture: full-period correlation tells you "in the long run, how do these assets interact?" while rolling correlation tells you "is this interaction stable, or does it vary significantly across periods?"</p></div>
+    <img data-lang="zh" src="../results/figures/zh/fig03_correlation_heatmap.png" alt=""><img data-lang="en" src="../results/figures/en/fig03_correlation_heatmap.png" alt="">
+    <img data-lang="zh" src="../results/figures/zh/fig05_rolling_correlation.png" alt=""><img data-lang="en" src="../results/figures/en/fig05_rolling_correlation.png" alt="">
+
+    <h2><span data-lang="zh">A.5 補充圖表</span><span data-lang="en">A.5 Supplementary Charts</span></h2>
+    <div data-lang="zh"><p>以下為正文中互動圖表的靜態版本，以及額外的風險比較圖。靜態版本適合列印或在不支援 JavaScript 的環境中閱讀。投資組合累積報酬圖呈現七個組合的長期成長軌跡，而風險指標比較圖以三個維度同時展示各組合的風險輪廓。</p></div><div data-lang="en"><p>Below are static versions of interactive charts from the main text, plus additional risk comparison charts. Static versions are suitable for printing or environments without JavaScript. The portfolio cumulative chart shows long-term growth trajectories of seven portfolios, while the risk metrics comparison chart displays each portfolio's risk profile across three dimensions simultaneously.</p></div>
+    <img data-lang="zh" src="../results/figures/zh/fig06_portfolio_cumulative.png" alt=""><img data-lang="en" src="../results/figures/en/fig06_portfolio_cumulative.png" alt="">
+    <img data-lang="zh" src="../results/figures/zh/fig09_risk_compare.png" alt=""><img data-lang="en" src="../results/figures/en/fig09_risk_compare.png" alt="">
+    
+<footer><div data-lang="zh"><p>V-006 分散投資就能降低風險？ | 用數據說話：投資策略回測研究</p></div><div data-lang="en"><p>V-006 Does Diversification Always Reduce Risk? | Let Data Speak</p></div></footer>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
