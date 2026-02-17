@@ -1,42 +1,334 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>實證結果 | V-009</title><link rel="stylesheet" href="css/style.css"></head>
-<body><nav><ul><li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li><li><a href="introduction.html"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li><li><a href="methodology.html"><span data-lang="zh">方法</span><span data-lang="en">Methodology</span></a></li><li><a href="results.html"><span data-lang="zh">結果</span><span data-lang="en">Results</span></a></li><li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li><li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li><li><a href="appendix.html"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li></ul><button id="lang-toggle" onclick="toggleLang()">Switch to EN</button></nav><div class="container">
-<h1><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></h1>
-<h2><span data-lang="zh">3.1 法人買賣超與大盤走勢</span><span data-lang="en">3.1 Institutional Flow and Market Trend</span></h2>
-<div data-lang="zh"><p>首先觀察法人買賣超與大盤的整體關係。下圖上半部為加權指數走勢，下半部為三大法人的每日淨買賣超金額。</p></div><div data-lang="en"><p>First, observe the overall relationship between institutional flow and market trend. Upper panel: TAIEX; lower panel: daily institutional net buy/sell amounts.</p></div>
-<img data-lang="zh" src="../results/figures/zh/fig01_net_buy_ts.png" alt="fig01_net_buy_ts.png"><img data-lang="en" src="../results/figures/en/fig01_net_buy_ts.png" alt="fig01_net_buy_ts.png">
-<div data-lang="zh"><p><strong>關鍵觀察：</strong>(1) 外資（紅色）的買賣超金額最大，是台灣市場的主要推動力量；投信（藍色）和自營商（綠色）的影響力相對較小。(2) 三大法人的買超時期大致與大盤上漲期重合，賣超時期與下跌期重合——但這到底是因果關係還是只是相關性，需要 Granger 因果檢定才能判斷。(3) 在極端行情（如 2020 年 3 月 COVID-19 崩盤）中，法人的動作特別劇烈，但也是散戶最容易恐慌跟單的時候。</p></div><div data-lang="en"><p><strong>Key observations:</strong> (1) Foreign investors (red) have the largest flow, being the primary market driver; trust (blue) and dealer (green) have relatively smaller influence. (2) Institutional buying roughly coincides with market rallies, and selling with declines — but whether this is causal or merely correlated requires Granger testing. (3) During extreme moves (e.g., March 2020 COVID crash), institutional actions are most dramatic, but this is also when retail is most likely to panic-follow.</p></div>
-<h2><span data-lang="zh">3.2 CAR 衰減分析</span><span data-lang="en">3.2 CAR Decay Analysis</span></h2>
-<div data-lang="zh"><p>CAR（Cumulative Abnormal Return，累積異常報酬）衰減曲線是本研究的核心圖表。它展示法人大量買超後，市場在接下來 1-60 天的累積超額報酬。如果曲線持續上升，代表信號有持久的預測力；如果上升後下降，代表只有短期價格壓力效應。</p></div><div data-lang="en"><p>The CAR (Cumulative Abnormal Return) decay curve is the core chart of this study. It shows cumulative excess returns for 1-60 days after institutional heavy buying. If the curve keeps rising, the signal has lasting predictive power; if it rises then falls, it is merely short-term price pressure.</p></div>
-<img data-lang="zh" src="../results/figures/zh/fig02_car_decay.png" alt="fig02_car_decay.png"><img data-lang="en" src="../results/figures/en/fig02_car_decay.png" alt="fig02_car_decay.png">
-<div data-lang="zh"><p><strong>關鍵觀察：</strong>(1) 法人淨買超 Q5 在短期確實存在正的超額報酬：T+1 = 0.118%，T+5 = 0.281%，T+20 = 1.105%，T+60 = 2.966%。CAR 隨期間延長而增加，但增長速率遞減。</p><p>(2) 各法人的 CAR 比較：外資 T+5 = 0.365%（最強），自營商 = 0.253%，投信 = 0.214%（最弱）。外資的 CAR 較為持久，投信最快消散——這與外資擁有更深的研究能力和更長的投資視野一致。自營商雖然排名第二，但其交易以避險和套利為主，信號中的「資訊成分」存疑。</p><p>(3) 整體而言，CAR 的絕對值不大——T+5 僅 0.281%，扣除單次來回成本 0.585% 後即為負值。這意味著即使信號在統計上有效，在實務操作中也無法獲利。法人買超更多是短期價格壓力效應（供需推動股價），而非基於長期資訊優勢的預測。</p></div><div data-lang="en"><p><strong>Key observations:</strong> (1) Q5 net buy shows positive short-term excess returns: T+1 = 0.118%, T+5 = 0.281%, T+20 = 1.105%, T+60 = 2.966%. CAR increases with horizon but at a decreasing rate.</p><p>(2) Cross-institution comparison: Foreign T+5 = 0.365% (strongest), Dealer = 0.253%, Trust = 0.214% (weakest). Foreign CAR persists longer, consistent with deeper research and longer investment horizon. Dealer ranks second but trades mainly for hedging/arbitrage, making "information content" questionable.</p><p>(3) Absolute CAR values are small — T+5 only 0.281%, net of 0.585% round-trip cost turns negative. Even if statistically valid, practically unprofitable. Price pressure (supply-demand) rather than information-based prediction is the more likely explanation.</p></div>
-<h2><span data-lang="zh">3.3 五分位報酬分析</span><span data-lang="en">3.3 Quintile Return Analysis</span></h2>
-<div data-lang="zh"><p>如果法人買賣超真的是有效信號，我們預期看到 Q1（賣超最多）到 Q5（買超最多）的前瞻報酬呈現單調遞增的階梯狀排列。</p></div><div data-lang="en"><p>If institutional flow is a genuine signal, we expect forward returns to increase monotonically from Q1 (most selling) to Q5 (most buying) in a staircase pattern.</p></div>
-<img data-lang="zh" src="../results/figures/zh/fig03_quintile.png" alt="fig03_quintile.png"><img data-lang="en" src="../results/figures/en/fig03_quintile.png" alt="fig03_quintile.png">
-<div data-lang="zh"><p><strong>關鍵觀察：</strong>五分位報酬確實呈現從 Q1 到 Q5 遞增的趨勢，但並非完美的階梯狀——中間組（Q2-Q4）的差異較小，主要差異集中在兩個極端組（Q1 和 Q5）。這表示只有極端的大量買超或大量賣超才具有微弱的預測價值，一般水準的法人交易沒有信號意義。值得注意的是，Q1（法人賣超最多 = 散戶買超最多）的報酬最差——散戶的集體判斷往往是錯的。</p></div><div data-lang="en"><p><strong>Key observations:</strong> Quintile returns do show an increasing trend from Q1 to Q5, but not a perfect staircase — middle groups (Q2-Q4) show little difference, with the main gap concentrated at the extremes (Q1 and Q5). This means only extreme heavy buying/selling has weak predictive value; normal institutional trading carries no signal. Notably, Q1 (most institutional selling = most retail buying) has the worst returns — collective retail judgment is often wrong.</p></div>
-<h2><span data-lang="zh">3.4 資訊時差效應</span><span data-lang="en">3.4 Information Delay Effect</span></h2>
-<div data-lang="zh"><p>這是對散戶最重要的一張圖。T+0（假設同日就能知道法人買賣超）vs T+1（實際上隔日才公布）的 CAR 比較，直接量化了「遲到一天」的代價。</p></div><div data-lang="en"><p>This is the most important chart for retail investors. T+0 (hypothetically knowing same-day) vs T+1 (actual next-day publication) CAR comparison directly quantifies the cost of "being one day late."</p></div>
-<img data-lang="zh" src="../results/figures/zh/fig06_info_delay.png" alt="fig06_info_delay.png"><img data-lang="en" src="../results/figures/en/fig06_info_delay.png" alt="fig06_info_delay.png">
-<div data-lang="zh"><p><strong>關鍵觀察——這是本研究最重要的發現之一：</strong></p><p>T+0（假設同日知道）的 T+1 日 CAR = 1.001%，T+1（實際隔日公布）的 T+1 日 CAR = 0.118%——衰減幅度高達 <strong>88%</strong>。也就是說，法人買超帶來的超額報酬，有 88% 在當天就已實現。等到隔天散戶看到資料時，最肥美的一段利潤已經過去了。</p><p>用日常比喻：這就像一場演唱會，法人是 VIP 持票者（T+0 入場），散戶是黃牛票持有者（T+1 才能進場）。等散戶進場時，最精彩的開場曲已經唱完了。不僅如此，T+1 的 CAR（0.118%）在扣除單次來回交易成本 0.585% 後，變成約 -0.467% 的負值——你跟單不僅沒賺，還倒虧。</p><p>這正是 Yan & Zhang (2009) 所描述的資訊優勢「半衰期」現象：法人的資訊優勢在幾天內就完全消散。對散戶而言，這一天的延遲就是致命的。</p></div><div data-lang="en"><p><strong>Key finding — one of the most important in this study:</strong></p><p>T+0 (hypothetical same-day) 1-day CAR = 1.001%, T+1 (actual next-day) 1-day CAR = 0.118% — a <strong>88%</strong> decay. 88% of excess return is realized on day 0 before retail even sees the data.</p><p>Analogy: like a concert where institutions are VIP ticket holders (T+0 entry) and retail holds scalper tickets (T+1). By the time retail enters, the best opening song is already over. Moreover, T+1 CAR (0.118%) minus 0.585% round-trip cost equals approximately -0.467% — copy-trading not only fails to profit but actually loses money.</p><p>This is exactly the information advantage "half-life" described by Yan & Zhang (2009): institutional edge dissipates within days. For retail, one day of delay is fatal.</p></div>
-<h2><span data-lang="zh">3.5 牛熊市差異</span><span data-lang="en">3.5 Bull vs Bear Market</span></h2>
-<div data-lang="zh"><p>牛熊市分析是區分「真正的預測力」和「動能效應」的關鍵檢驗。如果法人信號在牛市和熊市中都有效，才能說法人具有超越市場的判斷力；如果只在牛市有效，更可能只是動能的副產品（追漲在上升趨勢中本來就容易賺錢）。</p></div><div data-lang="en"><p>Bull/bear analysis is the crucial test to distinguish "genuine prediction" from "momentum effect." If signals work in both bull and bear markets, institutions truly have superior judgment; if only in bull markets, it is more likely a momentum byproduct (trend-following naturally profits in uptrends).</p></div>
-<img data-lang="zh" src="../results/figures/zh/fig05_bull_bear.png" alt="fig05_bull_bear.png"><img data-lang="en" src="../results/figures/en/fig05_bull_bear.png" alt="fig05_bull_bear.png">
-<div data-lang="zh"><p><strong>關鍵觀察：</strong>牛市中法人 Q5 買超 T+5 CAR = +0.624%（勝率 65.6%），效果明顯且穩定。但在熊市中，T+5 CAR = -0.925%（勝率 39.2%）——不僅效果反轉為負值，勝率也低於 50%（意味著跟著買的人超過一半會虧損）。</p><p>這個結果極具說服力：如果法人真的有基於資訊優勢的預測力，他們應該在熊市中也能識別「被低估」的時機並從中獲利。但數據顯示，法人在熊市中的買超反而是「接飛刀」——市場繼續下跌。這強烈暗示法人買超只是在追漲（動能交易），而非基於對未來的獨到判斷。</p><p>對散戶的啟示更加直接：即使你只在牛市中跟單（試圖規避熊市風險），問題是你如何判斷現在是牛市還是熊市？等你確認是牛市時（事後判斷），趨勢可能已經走了大半。這使得「條件式跟單」在實務上也難以執行。</p></div><div data-lang="en"><p><strong>Key observations:</strong> Bull market Q5 T+5 CAR = +0.624% (win rate 65.6%), clear and stable effect. Bear market T+5 CAR = -0.925% (win rate 39.2%) — effect reverses to negative, win rate below 50% (meaning most followers lose money).</p><p>This is highly compelling: if institutions had information-based prediction, they should identify "undervalued" opportunities in bear markets too. But data shows institutional buying in bear markets is "catching a falling knife" — the market keeps declining. This strongly suggests momentum trading, not superior judgment.</p><p>Implication for retail is even more direct: even if you only follow in bull markets (avoiding bear risk), how do you know it is a bull market? By the time you confirm (hindsight), the trend may be mostly over. This makes "conditional copy-trading" practically infeasible.</p></div>
-<h2><span data-lang="zh">3.6 連續買超分析</span><span data-lang="en">3.6 Consecutive Buy Analysis</span></h2>
-<img data-lang="zh" src="../results/figures/zh/fig04_consecutive.png" alt="fig04_consecutive.png"><img data-lang="en" src="../results/figures/en/fig04_consecutive.png" alt="fig04_consecutive.png">
-<div data-lang="zh"><p><strong>關鍵觀察——反直覺發現：</strong>連續買超天數增加時，後續報酬不僅沒有遞增，反而呈遞減趨勢。以三大法人合計、T+5 日報酬為例：連續 1 天買超後報酬 = 0.219%，連續 3 天 = 0.103%，連續 5 天 = 0.057%，連續 10 天 = -0.232%——越買越久，報酬反而越差！</p><p>這可能的解釋是「物極必反」效應：法人連續多天大量買超往往發生在強勢上漲趨勢的尾聲。此時市場已經漲了一大段，進一步上漲的空間有限，反轉的風險增加。Spearman 趨勢檢定的結果（rho = -1.0）也確認了這個負向趨勢——這正式推翻了 H4（連續買超增強信號）的假設。</p><p>對散戶的啟示：不要因為看到「外資連續 N 天買超」就衝動跟進。連續買超越久，不代表信號越強，反而可能代表趨勢即將耗盡。就像跑馬拉松——跑在最前面的選手不一定能堅持到終點，衝太快的反而可能最先力竭。</p></div><div data-lang="en"><p><strong>Counter-intuitive finding:</strong> As consecutive buy days increase, forward returns do not increase but actually decline. Total institutional T+5 return: 1-day = 0.219%, 3-day = 0.103%, 5-day = 0.057%, 10-day = -0.232% — the longer they buy, the worse the returns!</p><p>Likely explanation: "what goes up must come down" — extended institutional buying streaks tend to occur at the tail end of strong uptrends when further upside is limited and reversal risk increases. Spearman trend test (rho = -1.0) confirms this negative relationship, formally rejecting H4.</p><p>For retail: do not rush in because "foreign investors bought N consecutive days." Longer streaks do not mean stronger signals — they may mean the trend is exhausting. Like a marathon — the runner at the front is not necessarily going to finish; sprinting too hard may lead to earliest collapse.</p></div>
-<h2><span data-lang="zh">3.7 Permutation 檢定</span><span data-lang="en">3.7 Permutation Test</span></h2>
-<div data-lang="zh"><p>Permutation 檢定是最嚴格的統計檢驗。我們將法人買賣超序列隨機打亂 10,000 次，每次重新計算 Q5 的 CAR。如果真實的 CAR 落在隨機分佈的極端位置（前 5%），才能說信號顯著優於隨機。</p></div><div data-lang="en"><p>The permutation test is the most rigorous statistical test. We randomly shuffle institutional flow 10,000 times, recomputing Q5 CAR each time. Only if the real CAR falls in the extreme tail (top 5%) of the random distribution can we say the signal significantly outperforms random.</p></div>
-<img data-lang="zh" src="../results/figures/zh/fig09_permutation.png" alt="fig09_permutation.png"><img data-lang="en" src="../results/figures/en/fig09_permutation.png" alt="fig09_permutation.png">
-<div data-lang="zh"><p><strong>關鍵觀察：</strong>灰色直方圖是 10,000 次隨機排列的 CAR 分佈，紅色虛線是真實 CAR。Permutation 檢定 p = 0.2627——真實 CAR（0.281%）在隨機分佈中約排在第 74 百分位。這意味著真實的法人信號確實比大多數隨機排列好，但尚未達到傳統的 5% 顯著門檻。</p><p>換句話說：在 10,000 次隨機模擬中，約有 2627 次「碰巧」產生了比真實法人信號更好的結果。這個比例不算太高（代表法人信號確實有些東西），但也不算太低（不能完全排除巧合）。用學術語言說，「法人信號邊際顯著但不足以通過嚴格檢定」。用白話說，「有點用，但沒那麼有用」。</p><p>這是比單純的 t 檢定更有說服力的結果。t 檢定（p = 0.0005）顯示顯著，但 t 檢定假設常態分佈——而 Permutation Test 不需要此假設。兩者的差異說明法人信號的「顯著性」在一定程度上依賴於統計假設，這進一步削弱了信號的可靠性。</p></div><div data-lang="en"><p><strong>Key observations:</strong> Gray histogram = 10,000 random shuffle CAR distribution; red dashed line = true CAR. Permutation test p = 0.2627 — true CAR (0.281%) ranks approximately at the 74th percentile of the random distribution. The real signal is better than most random shuffles, but does not reach the conventional 5% significance threshold.</p><p>In other words: among 10,000 simulations, about 2627 randomly produced results better than the real signal. Not too many (the signal has some substance), but not too few (coincidence cannot be ruled out). Academically: "marginally significant but fails strict testing." In plain language: "somewhat useful, but not that useful."</p><p>This is more convincing than a simple t-test. The t-test (p = 0.0005) shows significance, but assumes normality — Permutation Test does not. The discrepancy suggests signal "significance" partly depends on statistical assumptions, further weakening reliability.</p></div>
-<h2><span data-lang="zh">3.8 領先-落後分析</span><span data-lang="en">3.8 Lead-Lag Analysis</span></h2>
-<img data-lang="zh" src="../results/figures/zh/fig07_granger.png" alt="fig07_granger.png"><img data-lang="en" src="../results/figures/en/fig07_granger.png" alt="fig07_granger.png">
-<div data-lang="zh"><p><strong>關鍵觀察：</strong>領先-落後相關係數圖展示法人買賣超與大盤報酬在不同時間偏移下的相關性。正值 lag（法人領先）的相關係數如果明顯高於負值 lag（法人落後），代表法人確實能領先市場；如果兩邊對稱或負值 lag 更高，代表法人只是在反應市場變化而非預測。零軸附近的峰值大小和不對稱程度是判斷因果方向的關鍵。</p></div><div data-lang="en"><p><strong>Key observations:</strong> The lead-lag correlation plot shows correlation between institutional flow and market returns at different time offsets. If positive lags (institution leads) show clearly higher correlation than negative lags (institution follows), institutions truly lead the market; if symmetric or negative lags are higher, institutions merely react to market changes. The peak magnitude near zero and asymmetry are key for determining causal direction.</p></div>
-<h2><span data-lang="zh">3.9 假說檢定摘要</span><span data-lang="en">3.9 Hypothesis Test Summary</span></h2>
-<div data-lang="zh"><p>下表彙整四個假說的統計檢定結果。效果量幫助判斷即使統計顯著的結果，其實際經濟意義有多大。</p></div><div data-lang="en"><p>The table below summarizes all four hypothesis test results. Effect sizes help judge the practical economic significance of statistically significant results.</p></div>
-<img data-lang="zh" src="../results/figures/zh/fig12_hypothesis.png" alt="fig12_hypothesis.png"><img data-lang="en" src="../results/figures/en/fig12_hypothesis.png" alt="fig12_hypothesis.png">
-<div data-lang="zh"><table><tr><th>假說</th><th>檢定</th><th>p 值</th><th>效果量</th><th>結論</th></tr><tr><td>H1</td><td>Event Study t-test</td><td>0.0005</td><td>0.139</td><td>拒絕 H0</td></tr><tr><td>H2</td><td>CAR comparison across institutions</td><td>0.0000</td><td>0.078</td><td>拒絕 H0</td></tr><tr><td>H3</td><td>CAR decay ratio</td><td>0.0100</td><td>0.770</td><td>拒絕 H0</td></tr><tr><td>H4</td><td>Spearman trend test</td><td>0.0000</td><td>1.000</td><td>拒絕 H0</td></tr></table></div><div data-lang="en"><table><tr><th>Hyp.</th><th>Test</th><th>p-value</th><th>Effect</th><th>Result</th></tr><tr><td>H1</td><td>Event Study t-test</td><td>0.0005</td><td>0.139</td><td>Reject</td></tr><tr><td>H2</td><td>CAR comparison across institutions</td><td>0.0000</td><td>0.078</td><td>Reject</td></tr><tr><td>H3</td><td>CAR decay ratio</td><td>0.0100</td><td>0.770</td><td>Reject</td></tr><tr><td>H4</td><td>Spearman trend test</td><td>0.0000</td><td>1.000</td><td>Reject</td></tr></table></div><div data-lang="zh"><p><strong>結果解讀：</strong>效果量柱狀圖直觀展示各假說的效果大小。旁邊的 p 值和星號標記幫助快速判斷顯著性。整體來看，法人信號確實優於隨機，但效果量不大——用白話說，「有用，但沒有那麼有用」。</p></div><div data-lang="en"><p><strong>Interpretation:</strong> The effect size bar chart visualizes each hypothesis magnitude. Adjacent p-values and markers enable quick significance assessment. Overall, institutional signals do outperform random, but effect sizes are modest — "it works, but not that well."</p></div>
-<footer>V-009 <span data-lang="zh">跟著法人買就對了</span><span data-lang="en">Follow Institutional Investors</span> &copy; 2026</footer>
-</div><script src="js/main.js"></script></body></html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>實證結果 | V-009</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../../index.html"><span data-lang="zh">專案主頁</span><span data-lang="en">Project Home</span></a></li>
+            <li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li>
+            <li><a href="introduction.html"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li>
+            <li><a href="methodology.html"><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></a></li>
+            <li><a href="results.html"><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></a></li>
+            <li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li>
+            <li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li>
+            <li><a href="appendix.html"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li>
+        </ul><button id="lang-toggle" onclick="toggleLang()">Switch to EN</button>
+    </nav>
+    <div class="container">
+        <h1><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></h1>
+        <h2><span data-lang="zh">3.1 法人買賣超與大盤走勢</span><span data-lang="en">3.1 Institutional Flow and Market
+                Trend</span></h2>
+        <div data-lang="zh">
+            <p>首先觀察法人買賣超與大盤的整體關係。下圖上半部為加權指數走勢，下半部為三大法人的每日淨買賣超金額。</p>
+        </div>
+        <div data-lang="en">
+            <p>First, observe the overall relationship between institutional flow and market trend. Upper panel: TAIEX;
+                lower panel: daily institutional net buy/sell amounts.</p>
+        </div>
+        <img data-lang="zh" src="../results/figures/zh/fig01_net_buy_ts.png" alt="fig01_net_buy_ts.png"><img
+            data-lang="en" src="../results/figures/en/fig01_net_buy_ts.png" alt="fig01_net_buy_ts.png">
+        <div data-lang="zh">
+            <p><strong>關鍵觀察：</strong>(1) 外資（紅色）的買賣超金額最大，是台灣市場的主要推動力量；投信（藍色）和自營商（綠色）的影響力相對較小。(2)
+                三大法人的買超時期大致與大盤上漲期重合，賣超時期與下跌期重合——但這到底是因果關係還是只是相關性，需要 Granger 因果檢定才能判斷。(3) 在極端行情（如 2020 年 3 月 COVID-19
+                崩盤）中，法人的動作特別劇烈，但也是散戶最容易恐慌跟單的時候。</p>
+        </div>
+        <div data-lang="en">
+            <p><strong>Key observations:</strong> (1) Foreign investors (red) have the largest flow, being the primary
+                market driver; trust (blue) and dealer (green) have relatively smaller influence. (2) Institutional
+                buying roughly coincides with market rallies, and selling with declines — but whether this is causal or
+                merely correlated requires Granger testing. (3) During extreme moves (e.g., March 2020 COVID crash),
+                institutional actions are most dramatic, but this is also when retail is most likely to panic-follow.
+            </p>
+        </div>
+        <h2><span data-lang="zh">3.2 CAR 衰減分析</span><span data-lang="en">3.2 CAR Decay Analysis</span></h2>
+        <div data-lang="zh">
+            <p>CAR（Cumulative Abnormal Return，累積異常報酬）衰減曲線是本研究的核心圖表。它展示法人大量買超後，市場在接下來 1-60
+                天的累積超額報酬。如果曲線持續上升，代表信號有持久的預測力；如果上升後下降，代表只有短期價格壓力效應。</p>
+        </div>
+        <div data-lang="en">
+            <p>The CAR (Cumulative Abnormal Return) decay curve is the core chart of this study. It shows cumulative
+                excess returns for 1-60 days after institutional heavy buying. If the curve keeps rising, the signal has
+                lasting predictive power; if it rises then falls, it is merely short-term price pressure.</p>
+        </div>
+        <img data-lang="zh" src="../results/figures/zh/fig02_car_decay.png" alt="fig02_car_decay.png"><img
+            data-lang="en" src="../results/figures/en/fig02_car_decay.png" alt="fig02_car_decay.png">
+        <div data-lang="zh">
+            <p><strong>關鍵觀察：</strong>(1) 法人淨買超 Q5 在短期確實存在正的超額報酬：T+1 = 0.118%，T+5 = 0.281%，T+20 = 1.105%，T+60 =
+                2.966%。CAR 隨期間延長而增加，但增長速率遞減。</p>
+            <p>(2) 各法人的 CAR 比較：外資 T+5 = 0.365%（最強），自營商 = 0.253%，投信 = 0.214%（最弱）。外資的 CAR
+                較為持久，投信最快消散——這與外資擁有更深的研究能力和更長的投資視野一致。自營商雖然排名第二，但其交易以避險和套利為主，信號中的「資訊成分」存疑。</p>
+            <p>(3) 整體而言，CAR 的絕對值不大——T+5 僅 0.281%，扣除單次來回成本 0.585%
+                後即為負值。這意味著即使信號在統計上有效，在實務操作中也無法獲利。法人買超更多是短期價格壓力效應（供需推動股價），而非基於長期資訊優勢的預測。</p>
+        </div>
+        <div data-lang="en">
+            <p><strong>Key observations:</strong> (1) Q5 net buy shows positive short-term excess returns: T+1 = 0.118%,
+                T+5 = 0.281%, T+20 = 1.105%, T+60 = 2.966%. CAR increases with horizon but at a decreasing rate.</p>
+            <p>(2) Cross-institution comparison: Foreign T+5 = 0.365% (strongest), Dealer = 0.253%, Trust = 0.214%
+                (weakest). Foreign CAR persists longer, consistent with deeper research and longer investment horizon.
+                Dealer ranks second but trades mainly for hedging/arbitrage, making "information content" questionable.
+            </p>
+            <p>(3) Absolute CAR values are small — T+5 only 0.281%, net of 0.585% round-trip cost turns negative. Even
+                if statistically valid, practically unprofitable. Price pressure (supply-demand) rather than
+                information-based prediction is the more likely explanation.</p>
+        </div>
+        <h2><span data-lang="zh">3.3 五分位報酬分析</span><span data-lang="en">3.3 Quintile Return Analysis</span></h2>
+        <div data-lang="zh">
+            <p>如果法人買賣超真的是有效信號，我們預期看到 Q1（賣超最多）到 Q5（買超最多）的前瞻報酬呈現單調遞增的階梯狀排列。</p>
+        </div>
+        <div data-lang="en">
+            <p>If institutional flow is a genuine signal, we expect forward returns to increase monotonically from Q1
+                (most selling) to Q5 (most buying) in a staircase pattern.</p>
+        </div>
+        <img data-lang="zh" src="../results/figures/zh/fig03_quintile.png" alt="fig03_quintile.png"><img data-lang="en"
+            src="../results/figures/en/fig03_quintile.png" alt="fig03_quintile.png">
+        <div data-lang="zh">
+            <p><strong>關鍵觀察：</strong>五分位報酬確實呈現從 Q1 到 Q5 遞增的趨勢，但並非完美的階梯狀——中間組（Q2-Q4）的差異較小，主要差異集中在兩個極端組（Q1 和
+                Q5）。這表示只有極端的大量買超或大量賣超才具有微弱的預測價值，一般水準的法人交易沒有信號意義。值得注意的是，Q1（法人賣超最多 = 散戶買超最多）的報酬最差——散戶的集體判斷往往是錯的。</p>
+        </div>
+        <div data-lang="en">
+            <p><strong>Key observations:</strong> Quintile returns do show an increasing trend from Q1 to Q5, but not a
+                perfect staircase — middle groups (Q2-Q4) show little difference, with the main gap concentrated at the
+                extremes (Q1 and Q5). This means only extreme heavy buying/selling has weak predictive value; normal
+                institutional trading carries no signal. Notably, Q1 (most institutional selling = most retail buying)
+                has the worst returns — collective retail judgment is often wrong.</p>
+        </div>
+        <h2><span data-lang="zh">3.4 資訊時差效應</span><span data-lang="en">3.4 Information Delay Effect</span></h2>
+        <div data-lang="zh">
+            <p>這是對散戶最重要的一張圖。T+0（假設同日就能知道法人買賣超）vs T+1（實際上隔日才公布）的 CAR 比較，直接量化了「遲到一天」的代價。</p>
+        </div>
+        <div data-lang="en">
+            <p>This is the most important chart for retail investors. T+0 (hypothetically knowing same-day) vs T+1
+                (actual next-day publication) CAR comparison directly quantifies the cost of "being one day late."</p>
+        </div>
+        <img data-lang="zh" src="../results/figures/zh/fig06_info_delay.png" alt="fig06_info_delay.png"><img
+            data-lang="en" src="../results/figures/en/fig06_info_delay.png" alt="fig06_info_delay.png">
+        <div data-lang="zh">
+            <p><strong>關鍵觀察——這是本研究最重要的發現之一：</strong></p>
+            <p>T+0（假設同日知道）的 T+1 日 CAR = 1.001%，T+1（實際隔日公布）的 T+1 日 CAR = 0.118%——衰減幅度高達
+                <strong>88%</strong>。也就是說，法人買超帶來的超額報酬，有 88% 在當天就已實現。等到隔天散戶看到資料時，最肥美的一段利潤已經過去了。</p>
+            <p>用日常比喻：這就像一場演唱會，法人是 VIP 持票者（T+0 入場），散戶是黃牛票持有者（T+1 才能進場）。等散戶進場時，最精彩的開場曲已經唱完了。不僅如此，T+1 的
+                CAR（0.118%）在扣除單次來回交易成本 0.585% 後，變成約 -0.467% 的負值——你跟單不僅沒賺，還倒虧。</p>
+            <p>這正是 Yan & Zhang (2009) 所描述的資訊優勢「半衰期」現象：法人的資訊優勢在幾天內就完全消散。對散戶而言，這一天的延遲就是致命的。</p>
+        </div>
+        <div data-lang="en">
+            <p><strong>Key finding — one of the most important in this study:</strong></p>
+            <p>T+0 (hypothetical same-day) 1-day CAR = 1.001%, T+1 (actual next-day) 1-day CAR = 0.118% — a
+                <strong>88%</strong> decay. 88% of excess return is realized on day 0 before retail even sees the data.
+            </p>
+            <p>Analogy: like a concert where institutions are VIP ticket holders (T+0 entry) and retail holds scalper
+                tickets (T+1). By the time retail enters, the best opening song is already over. Moreover, T+1 CAR
+                (0.118%) minus 0.585% round-trip cost equals approximately -0.467% — copy-trading not only fails to
+                profit but actually loses money.</p>
+            <p>This is exactly the information advantage "half-life" described by Yan & Zhang (2009): institutional edge
+                dissipates within days. For retail, one day of delay is fatal.</p>
+        </div>
+        <h2><span data-lang="zh">3.5 牛熊市差異</span><span data-lang="en">3.5 Bull vs Bear Market</span></h2>
+        <div data-lang="zh">
+            <p>牛熊市分析是區分「真正的預測力」和「動能效應」的關鍵檢驗。如果法人信號在牛市和熊市中都有效，才能說法人具有超越市場的判斷力；如果只在牛市有效，更可能只是動能的副產品（追漲在上升趨勢中本來就容易賺錢）。</p>
+        </div>
+        <div data-lang="en">
+            <p>Bull/bear analysis is the crucial test to distinguish "genuine prediction" from "momentum effect." If
+                signals work in both bull and bear markets, institutions truly have superior judgment; if only in bull
+                markets, it is more likely a momentum byproduct (trend-following naturally profits in uptrends).</p>
+        </div>
+        <img data-lang="zh" src="../results/figures/zh/fig05_bull_bear.png" alt="fig05_bull_bear.png"><img
+            data-lang="en" src="../results/figures/en/fig05_bull_bear.png" alt="fig05_bull_bear.png">
+        <div data-lang="zh">
+            <p><strong>關鍵觀察：</strong>牛市中法人 Q5 買超 T+5 CAR = +0.624%（勝率 65.6%），效果明顯且穩定。但在熊市中，T+5 CAR = -0.925%（勝率
+                39.2%）——不僅效果反轉為負值，勝率也低於 50%（意味著跟著買的人超過一半會虧損）。</p>
+            <p>這個結果極具說服力：如果法人真的有基於資訊優勢的預測力，他們應該在熊市中也能識別「被低估」的時機並從中獲利。但數據顯示，法人在熊市中的買超反而是「接飛刀」——市場繼續下跌。這強烈暗示法人買超只是在追漲（動能交易），而非基於對未來的獨到判斷。
+            </p>
+            <p>對散戶的啟示更加直接：即使你只在牛市中跟單（試圖規避熊市風險），問題是你如何判斷現在是牛市還是熊市？等你確認是牛市時（事後判斷），趨勢可能已經走了大半。這使得「條件式跟單」在實務上也難以執行。</p>
+        </div>
+        <div data-lang="en">
+            <p><strong>Key observations:</strong> Bull market Q5 T+5 CAR = +0.624% (win rate 65.6%), clear and stable
+                effect. Bear market T+5 CAR = -0.925% (win rate 39.2%) — effect reverses to negative, win rate below 50%
+                (meaning most followers lose money).</p>
+            <p>This is highly compelling: if institutions had information-based prediction, they should identify
+                "undervalued" opportunities in bear markets too. But data shows institutional buying in bear markets is
+                "catching a falling knife" — the market keeps declining. This strongly suggests momentum trading, not
+                superior judgment.</p>
+            <p>Implication for retail is even more direct: even if you only follow in bull markets (avoiding bear risk),
+                how do you know it is a bull market? By the time you confirm (hindsight), the trend may be mostly over.
+                This makes "conditional copy-trading" practically infeasible.</p>
+        </div>
+        <h2><span data-lang="zh">3.6 連續買超分析</span><span data-lang="en">3.6 Consecutive Buy Analysis</span></h2>
+        <img data-lang="zh" src="../results/figures/zh/fig04_consecutive.png" alt="fig04_consecutive.png"><img
+            data-lang="en" src="../results/figures/en/fig04_consecutive.png" alt="fig04_consecutive.png">
+        <div data-lang="zh">
+            <p><strong>關鍵觀察——反直覺發現：</strong>連續買超天數增加時，後續報酬不僅沒有遞增，反而呈遞減趨勢。以三大法人合計、T+5 日報酬為例：連續 1 天買超後報酬 = 0.219%，連續 3 天 =
+                0.103%，連續 5 天 = 0.057%，連續 10 天 = -0.232%——越買越久，報酬反而越差！</p>
+            <p>這可能的解釋是「物極必反」效應：法人連續多天大量買超往往發生在強勢上漲趨勢的尾聲。此時市場已經漲了一大段，進一步上漲的空間有限，反轉的風險增加。Spearman 趨勢檢定的結果（rho =
+                -1.0）也確認了這個負向趨勢——這正式推翻了 H4（連續買超增強信號）的假設。</p>
+            <p>對散戶的啟示：不要因為看到「外資連續 N 天買超」就衝動跟進。連續買超越久，不代表信號越強，反而可能代表趨勢即將耗盡。就像跑馬拉松——跑在最前面的選手不一定能堅持到終點，衝太快的反而可能最先力竭。</p>
+        </div>
+        <div data-lang="en">
+            <p><strong>Counter-intuitive finding:</strong> As consecutive buy days increase, forward returns do not
+                increase but actually decline. Total institutional T+5 return: 1-day = 0.219%, 3-day = 0.103%, 5-day =
+                0.057%, 10-day = -0.232% — the longer they buy, the worse the returns!</p>
+            <p>Likely explanation: "what goes up must come down" — extended institutional buying streaks tend to occur
+                at the tail end of strong uptrends when further upside is limited and reversal risk increases. Spearman
+                trend test (rho = -1.0) confirms this negative relationship, formally rejecting H4.</p>
+            <p>For retail: do not rush in because "foreign investors bought N consecutive days." Longer streaks do not
+                mean stronger signals — they may mean the trend is exhausting. Like a marathon — the runner at the front
+                is not necessarily going to finish; sprinting too hard may lead to earliest collapse.</p>
+        </div>
+        <h2><span data-lang="zh">3.7 Permutation 檢定</span><span data-lang="en">3.7 Permutation Test</span></h2>
+        <div data-lang="zh">
+            <p>Permutation 檢定是最嚴格的統計檢驗。我們將法人買賣超序列隨機打亂 10,000 次，每次重新計算 Q5 的 CAR。如果真實的 CAR 落在隨機分佈的極端位置（前 5%），才能說信號顯著優於隨機。
+            </p>
+        </div>
+        <div data-lang="en">
+            <p>The permutation test is the most rigorous statistical test. We randomly shuffle institutional flow 10,000
+                times, recomputing Q5 CAR each time. Only if the real CAR falls in the extreme tail (top 5%) of the
+                random distribution can we say the signal significantly outperforms random.</p>
+        </div>
+        <img data-lang="zh" src="../results/figures/zh/fig09_permutation.png" alt="fig09_permutation.png"><img
+            data-lang="en" src="../results/figures/en/fig09_permutation.png" alt="fig09_permutation.png">
+        <div data-lang="zh">
+            <p><strong>關鍵觀察：</strong>灰色直方圖是 10,000 次隨機排列的 CAR 分佈，紅色虛線是真實 CAR。Permutation 檢定 p = 0.2627——真實
+                CAR（0.281%）在隨機分佈中約排在第 74 百分位。這意味著真實的法人信號確實比大多數隨機排列好，但尚未達到傳統的 5% 顯著門檻。</p>
+            <p>換句話說：在 10,000 次隨機模擬中，約有 2627
+                次「碰巧」產生了比真實法人信號更好的結果。這個比例不算太高（代表法人信號確實有些東西），但也不算太低（不能完全排除巧合）。用學術語言說，「法人信號邊際顯著但不足以通過嚴格檢定」。用白話說，「有點用，但沒那麼有用」。
+            </p>
+            <p>這是比單純的 t 檢定更有說服力的結果。t 檢定（p = 0.0005）顯示顯著，但 t 檢定假設常態分佈——而 Permutation Test
+                不需要此假設。兩者的差異說明法人信號的「顯著性」在一定程度上依賴於統計假設，這進一步削弱了信號的可靠性。</p>
+        </div>
+        <div data-lang="en">
+            <p><strong>Key observations:</strong> Gray histogram = 10,000 random shuffle CAR distribution; red dashed
+                line = true CAR. Permutation test p = 0.2627 — true CAR (0.281%) ranks approximately at the 74th
+                percentile of the random distribution. The real signal is better than most random shuffles, but does not
+                reach the conventional 5% significance threshold.</p>
+            <p>In other words: among 10,000 simulations, about 2627 randomly produced results better than the real
+                signal. Not too many (the signal has some substance), but not too few (coincidence cannot be ruled out).
+                Academically: "marginally significant but fails strict testing." In plain language: "somewhat useful,
+                but not that useful."</p>
+            <p>This is more convincing than a simple t-test. The t-test (p = 0.0005) shows significance, but assumes
+                normality — Permutation Test does not. The discrepancy suggests signal "significance" partly depends on
+                statistical assumptions, further weakening reliability.</p>
+        </div>
+        <h2><span data-lang="zh">3.8 領先-落後分析</span><span data-lang="en">3.8 Lead-Lag Analysis</span></h2>
+        <img data-lang="zh" src="../results/figures/zh/fig07_granger.png" alt="fig07_granger.png"><img data-lang="en"
+            src="../results/figures/en/fig07_granger.png" alt="fig07_granger.png">
+        <div data-lang="zh">
+            <p><strong>關鍵觀察：</strong>領先-落後相關係數圖展示法人買賣超與大盤報酬在不同時間偏移下的相關性。正值 lag（法人領先）的相關係數如果明顯高於負值
+                lag（法人落後），代表法人確實能領先市場；如果兩邊對稱或負值 lag 更高，代表法人只是在反應市場變化而非預測。零軸附近的峰值大小和不對稱程度是判斷因果方向的關鍵。</p>
+        </div>
+        <div data-lang="en">
+            <p><strong>Key observations:</strong> The lead-lag correlation plot shows correlation between institutional
+                flow and market returns at different time offsets. If positive lags (institution leads) show clearly
+                higher correlation than negative lags (institution follows), institutions truly lead the market; if
+                symmetric or negative lags are higher, institutions merely react to market changes. The peak magnitude
+                near zero and asymmetry are key for determining causal direction.</p>
+        </div>
+        <h2><span data-lang="zh">3.9 假說檢定摘要</span><span data-lang="en">3.9 Hypothesis Test Summary</span></h2>
+        <div data-lang="zh">
+            <p>下表彙整四個假說的統計檢定結果。效果量幫助判斷即使統計顯著的結果，其實際經濟意義有多大。</p>
+        </div>
+        <div data-lang="en">
+            <p>The table below summarizes all four hypothesis test results. Effect sizes help judge the practical
+                economic significance of statistically significant results.</p>
+        </div>
+        <img data-lang="zh" src="../results/figures/zh/fig12_hypothesis.png" alt="fig12_hypothesis.png"><img
+            data-lang="en" src="../results/figures/en/fig12_hypothesis.png" alt="fig12_hypothesis.png">
+        <div data-lang="zh">
+            <table>
+                <tr>
+                    <th>假說</th>
+                    <th>檢定</th>
+                    <th>p 值</th>
+                    <th>效果量</th>
+                    <th>結論</th>
+                </tr>
+                <tr>
+                    <td>H1</td>
+                    <td>Event Study t-test</td>
+                    <td>0.0005</td>
+                    <td>0.139</td>
+                    <td>拒絕 H0</td>
+                </tr>
+                <tr>
+                    <td>H2</td>
+                    <td>CAR comparison across institutions</td>
+                    <td>0.0000</td>
+                    <td>0.078</td>
+                    <td>拒絕 H0</td>
+                </tr>
+                <tr>
+                    <td>H3</td>
+                    <td>CAR decay ratio</td>
+                    <td>0.0100</td>
+                    <td>0.770</td>
+                    <td>拒絕 H0</td>
+                </tr>
+                <tr>
+                    <td>H4</td>
+                    <td>Spearman trend test</td>
+                    <td>0.0000</td>
+                    <td>1.000</td>
+                    <td>拒絕 H0</td>
+                </tr>
+            </table>
+        </div>
+        <div data-lang="en">
+            <table>
+                <tr>
+                    <th>Hyp.</th>
+                    <th>Test</th>
+                    <th>p-value</th>
+                    <th>Effect</th>
+                    <th>Result</th>
+                </tr>
+                <tr>
+                    <td>H1</td>
+                    <td>Event Study t-test</td>
+                    <td>0.0005</td>
+                    <td>0.139</td>
+                    <td>Reject</td>
+                </tr>
+                <tr>
+                    <td>H2</td>
+                    <td>CAR comparison across institutions</td>
+                    <td>0.0000</td>
+                    <td>0.078</td>
+                    <td>Reject</td>
+                </tr>
+                <tr>
+                    <td>H3</td>
+                    <td>CAR decay ratio</td>
+                    <td>0.0100</td>
+                    <td>0.770</td>
+                    <td>Reject</td>
+                </tr>
+                <tr>
+                    <td>H4</td>
+                    <td>Spearman trend test</td>
+                    <td>0.0000</td>
+                    <td>1.000</td>
+                    <td>Reject</td>
+                </tr>
+            </table>
+        </div>
+        <div data-lang="zh">
+            <p><strong>結果解讀：</strong>效果量柱狀圖直觀展示各假說的效果大小。旁邊的 p 值和星號標記幫助快速判斷顯著性。整體來看，法人信號確實優於隨機，但效果量不大——用白話說，「有用，但沒有那麼有用」。
+            </p>
+        </div>
+        <div data-lang="en">
+            <p><strong>Interpretation:</strong> The effect size bar chart visualizes each hypothesis magnitude. Adjacent
+                p-values and markers enable quick significance assessment. Overall, institutional signals do outperform
+                random, but effect sizes are modest — "it works, but not that well."</p>
+        </div>
+        <footer>V-009 <span data-lang="zh">跟著法人買就對了</span><span data-lang="en">Follow Institutional Investors</span>
+            &copy; 2026</footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
