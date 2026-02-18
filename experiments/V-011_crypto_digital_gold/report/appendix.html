@@ -1,301 +1,50 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>附錄 | V-011</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>附錄 | V-011</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <nav>
-        <ul>
-            <li><a href="../../../index.html"><span data-lang="zh">專案主頁</span><span data-lang="en">Project Home</span></a></li>
-            <li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li>
-            <li><a href="introduction.html"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li>
-            <li><a href="methodology.html"><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></a></li>
-            <li><a href="results.html"><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></a></li>
-            <li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li>
-            <li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li>
-            <li><a href="appendix.html"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li>
-        </ul><span class="nav-title"><span data-lang="zh">V-011：加密貨幣是數位黃金</span><span data-lang="en">V-011: Cryptocurrency Is Digital Gold</span></span><button id="lang-toggle" onclick="toggleLang()">Switch to EN</button>
-    </nav>
-    <div class="container">
+<nav><ul><li><a href="../../../index.html"><span data-lang="zh">專案主頁</span><span data-lang="en">Project Home</span></a></li><li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li><li><a href="introduction.html"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li><li><a href="methodology.html"><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></a></li><li><a href="results.html"><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></a></li><li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li><li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li><li><a href="appendix.html"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li></ul><span class="nav-title"><span data-lang="zh">V-011: 加密貨幣是數位黃金</span><span data-lang="en">V-011: Cryptocurrency Is Digital Gold</span></span><button id="lang-toggle" onclick="toggleLang()">Switch to EN</button></nav>
+<div class="container">
 
-        <h1><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></h1>
+<h1><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></h1>
 
-        <div data-lang="zh">
-            <p>附錄提供研究中使用的詳細數據和補充分析結果，供有興趣深入研究的讀者參考。包含完整相關係數矩陣、互動式圖表（支援滑鼠懸停和縮放），以及正態性檢定結果。</p>
-        </div>
-        <div data-lang="en">
-            <p>The appendix provides detailed data and supplementary analysis results for readers interested in deeper
-                research. Includes the full correlation matrix, interactive charts (supporting hover and zoom), and
-                normality test results.</p>
-        </div>
+<div data-lang="zh"><p>附錄提供研究中使用的詳細數據和補充分析結果，供有興趣深入研究的讀者參考。包含完整相關係數矩陣、互動式圖表（支援滑鼠懸停和縮放），以及正態性檢定結果。</p></div><div data-lang="en"><p>The appendix provides detailed data and supplementary analysis results for readers interested in deeper research. Includes the full correlation matrix, interactive charts (supporting hover and zoom), and normality test results.</p></div>
 
-        <h2><span data-lang="zh">A.1 完整相關係數矩陣</span><span data-lang="en">A.1 Full Correlation Matrix</span></h2>
-        <div data-lang="zh">
-            <p><strong>如何閱讀：</strong>相關係數矩陣顯示所有資產對之間的 Pearson 相關係數。數值範圍 -1 到 +1：接近 +1 表示兩資產高度同步，接近 -1 表示反向，接近 0
-                表示無關。對角線為 1.000（資產與自身完全相關）。重點關注 BTC 所在的行列——它與黃金的相關性高低直接回應「數位黃金」的核心論述。</p>
-        </div>
-        <div data-lang="en">
-            <p><strong>How to read:</strong> The correlation matrix shows Pearson correlations between all asset pairs.
-                Values range from -1 to +1: near +1 means highly synchronized, near -1 means opposite, near 0 means
-                unrelated. The diagonal is 1.000 (perfect self-correlation). Focus on BTC's row/column -- its
-                correlation with gold directly addresses the core 'digital gold' thesis.</p>
-        </div>
-        <table>
-            <tr>
-                <th></th>
-                <th>btc</th>
-                <th>eth</th>
-                <th>gold</th>
-                <th>spy</th>
-                <th>nasdaq</th>
-                <th>tlt</th>
-            </tr>
-            <tr>
-                <td><strong>btc</strong></td>
-                <td>1.000</td>
-                <td>0.776</td>
-                <td>0.085</td>
-                <td>0.207</td>
-                <td>0.226</td>
-                <td>-0.008</td>
-            </tr>
-            <tr>
-                <td><strong>eth</strong></td>
-                <td>0.776</td>
-                <td>1.000</td>
-                <td>0.098</td>
-                <td>0.287</td>
-                <td>0.305</td>
-                <td>-0.013</td>
-            </tr>
-            <tr>
-                <td><strong>gold</strong></td>
-                <td>0.085</td>
-                <td>0.098</td>
-                <td>1.000</td>
-                <td>0.041</td>
-                <td>0.047</td>
-                <td>0.280</td>
-            </tr>
-            <tr>
-                <td><strong>spy</strong></td>
-                <td>0.207</td>
-                <td>0.287</td>
-                <td>0.041</td>
-                <td>1.000</td>
-                <td>0.949</td>
-                <td>-0.190</td>
-            </tr>
-            <tr>
-                <td><strong>nasdaq</strong></td>
-                <td>0.226</td>
-                <td>0.305</td>
-                <td>0.047</td>
-                <td>0.949</td>
-                <td>1.000</td>
-                <td>-0.144</td>
-            </tr>
-            <tr>
-                <td><strong>tlt</strong></td>
-                <td>-0.008</td>
-                <td>-0.013</td>
-                <td>0.280</td>
-                <td>-0.190</td>
-                <td>-0.144</td>
-                <td>1.000</td>
-            </tr>
-        </table>
+<h2><span data-lang="zh">A.1 完整相關係數矩陣</span><span data-lang="en">A.1 Full Correlation Matrix</span></h2>
+<div data-lang="zh"><p><strong>如何閱讀：</strong>相關係數矩陣顯示所有資產對之間的 Pearson 相關係數。數值範圍 -1 到 +1：接近 +1 表示兩資產高度同步，接近 -1 表示反向，接近 0 表示無關。對角線為 1.000（資產與自身完全相關）。重點關注 BTC 所在的行列——它與黃金的相關性高低直接回應「數位黃金」的核心論述。</p></div><div data-lang="en"><p><strong>How to read:</strong> The correlation matrix shows Pearson correlations between all asset pairs. Values range from -1 to +1: near +1 means highly synchronized, near -1 means opposite, near 0 means unrelated. The diagonal is 1.000 (perfect self-correlation). Focus on BTC's row/column -- its correlation with gold directly addresses the core 'digital gold' thesis.</p></div>
+<table><tr><th></th><th>btc</th><th>eth</th><th>gold</th><th>spy</th><th>nasdaq</th><th>tlt</th></tr><tr><td><strong>btc</strong></td><td>1.000</td><td>0.776</td><td>0.085</td><td>0.207</td><td>0.226</td><td>-0.008</td></tr><tr><td><strong>eth</strong></td><td>0.776</td><td>1.000</td><td>0.098</td><td>0.287</td><td>0.305</td><td>-0.013</td></tr><tr><td><strong>gold</strong></td><td>0.085</td><td>0.098</td><td>1.000</td><td>0.041</td><td>0.047</td><td>0.280</td></tr><tr><td><strong>spy</strong></td><td>0.207</td><td>0.287</td><td>0.041</td><td>1.000</td><td>0.949</td><td>-0.190</td></tr><tr><td><strong>nasdaq</strong></td><td>0.226</td><td>0.305</td><td>0.047</td><td>0.949</td><td>1.000</td><td>-0.144</td></tr><tr><td><strong>tlt</strong></td><td>-0.008</td><td>-0.013</td><td>0.280</td><td>-0.190</td><td>-0.144</td><td>1.000</td></tr></table>
 
-        <h2><span data-lang="zh">A.2 互動式圖表</span><span data-lang="en">A.2 Interactive Charts</span></h2>
-        <div data-lang="zh">
-            <p>以下互動式圖表使用 Plotly 製作，支援滑鼠懸停檢視精確數值、框選放大特定區間、雙擊還原全景、點擊圖例隱藏/顯示個別資產等功能。建議使用桌面瀏覽器以獲得最佳互動體驗。</p>
-        </div>
-        <div data-lang="en">
-            <p>Interactive charts below are built with Plotly, supporting hover for exact values, box-select to zoom
-                into specific periods, double-click to reset view, and legend clicks to hide/show individual assets.
-                Desktop browsers recommended for best experience.</p>
-        </div>
+<h2><span data-lang="zh">A.2 互動式圖表</span><span data-lang="en">A.2 Interactive Charts</span></h2>
+<div data-lang="zh"><p>以下互動式圖表使用 Plotly 製作，支援滑鼠懸停檢視精確數值、框選放大特定區間、雙擊還原全景、點擊圖例隱藏/顯示個別資產等功能。建議使用桌面瀏覽器以獲得最佳互動體驗。</p></div><div data-lang="en"><p>Interactive charts below are built with Plotly, supporting hover for exact values, box-select to zoom into specific periods, double-click to reset view, and legend clicks to hide/show individual assets. Desktop browsers recommended for best experience.</p></div>
 
-        <h3><span data-lang="zh">累積報酬</span><span data-lang="en">Cumulative Returns</span></h3>
-        <div data-lang="zh" class="chart-container"><iframe src="assets/figures/zh/plotly01_cumulative.html"
-                height="500"></iframe></div>
-        <div data-lang="en" class="chart-container"><iframe src="assets/figures/en/plotly01_cumulative.html"
-                height="500"></iframe></div>
+<h3><span data-lang="zh">累積報酬</span><span data-lang="en">Cumulative Returns</span></h3>
+<div data-lang="zh" class="chart-container"><iframe src="assets/figures/zh/plotly01_cumulative.html" height="500"></iframe></div><div data-lang="en" class="chart-container"><iframe src="assets/figures/en/plotly01_cumulative.html" height="500"></iframe></div>
 
-        <h3><span data-lang="zh">滾動相關</span><span data-lang="en">Rolling Correlation</span></h3>
-        <div data-lang="zh" class="chart-container"><iframe src="assets/figures/zh/plotly02_rolling_corr.html"
-                height="500"></iframe></div>
-        <div data-lang="en" class="chart-container"><iframe src="assets/figures/en/plotly02_rolling_corr.html"
-                height="500"></iframe></div>
+<h3><span data-lang="zh">滾動相關</span><span data-lang="en">Rolling Correlation</span></h3>
+<div data-lang="zh" class="chart-container"><iframe src="assets/figures/zh/plotly02_rolling_corr.html" height="500"></iframe></div><div data-lang="en" class="chart-container"><iframe src="assets/figures/en/plotly02_rolling_corr.html" height="500"></iframe></div>
 
-        <h3><span data-lang="zh">投組累積報酬</span><span data-lang="en">Portfolio Returns</span></h3>
-        <div data-lang="zh" class="chart-container"><iframe src="assets/figures/zh/plotly03_portfolio.html"
-                height="500"></iframe></div>
-        <div data-lang="en" class="chart-container"><iframe src="assets/figures/en/plotly03_portfolio.html"
-                height="500"></iframe></div>
+<h3><span data-lang="zh">投組累積報酬</span><span data-lang="en">Portfolio Returns</span></h3>
+<div data-lang="zh" class="chart-container"><iframe src="assets/figures/zh/plotly03_portfolio.html" height="500"></iframe></div><div data-lang="en" class="chart-container"><iframe src="assets/figures/en/plotly03_portfolio.html" height="500"></iframe></div>
 
-        <h3><span data-lang="zh">效率前緣</span><span data-lang="en">Efficient Frontier</span></h3>
-        <div data-lang="zh" class="chart-container"><iframe src="assets/figures/zh/plotly04_frontier.html"
-                height="500"></iframe></div>
-        <div data-lang="en" class="chart-container"><iframe src="assets/figures/en/plotly04_frontier.html"
-                height="500"></iframe></div>
+<h3><span data-lang="zh">效率前緣</span><span data-lang="en">Efficient Frontier</span></h3>
+<div data-lang="zh" class="chart-container"><iframe src="assets/figures/zh/plotly04_frontier.html" height="500"></iframe></div><div data-lang="en" class="chart-container"><iframe src="assets/figures/en/plotly04_frontier.html" height="500"></iframe></div>
 
-        <h3><span data-lang="zh">危機表現</span><span data-lang="en">Crisis Performance</span></h3>
-        <div data-lang="zh" class="chart-container"><iframe src="assets/figures/zh/plotly05_crisis.html"
-                height="500"></iframe></div>
-        <div data-lang="en" class="chart-container"><iframe src="assets/figures/en/plotly05_crisis.html"
-                height="500"></iframe></div>
+<h3><span data-lang="zh">危機表現</span><span data-lang="en">Crisis Performance</span></h3>
+<div data-lang="zh" class="chart-container"><iframe src="assets/figures/zh/plotly05_crisis.html" height="500"></iframe></div><div data-lang="en" class="chart-container"><iframe src="assets/figures/en/plotly05_crisis.html" height="500"></iframe></div>
 
-        <h2><span data-lang="zh">A.3 正態性檢定</span><span data-lang="en">A.3 Normality Tests</span></h2>
-        <div data-lang="zh">
-            <p><strong>為什麼要檢定正態性：</strong>許多統計方法（如 t 檢定、OLS
-                迴歸）假設資料呈常態分布。如果日報酬不服從常態分布（特別是有「肥尾」現象），用傳統方法可能低估極端風險。這就是為什麼我們在投組分析中使用 Block Bootstrap——它不假設任何特定分布。</p>
-            <p><strong>結果：</strong>所有資產的日報酬均不服從常態分布（Jarque-Bera p < 0.001），BTC 的峰態和偏態最為極端。這意味著 BTC
-                    的「肥尾」效應最嚴重——極端暴跌（或暴漲）的頻率遠高於鐘型曲線的預測。在風險管理上，這代表「以為 BTC 單日最大虧損不會超過 X%」的直覺往往過於樂觀。</p>
-        </div>
-        <div data-lang="en">
-            <p><strong>Why test normality:</strong> Many statistical methods (t-tests, OLS regression) assume normal
-                distributions. If daily returns are non-normal (especially with 'fat tails'), traditional methods may
-                underestimate extreme risks. This is why we use Block Bootstrap in portfolio analysis -- it assumes no
-                specific distribution.</p>
-            <p><strong>Results:</strong> All assets' daily returns reject normality (Jarque-Bera p < 0.001), with BTC
-                    showing the most extreme kurtosis and skewness. BTC's 'fat tail' effect is most severe -- extreme
-                    crashes (or surges) occur far more often than a bell curve predicts. For risk management, this means
-                    the intuition that 'BTC' s max single-day loss will not exceed X%' is often too optimistic.</p>
-        </div>
-        <div data-lang="zh">
-            <table>
-                <tr>
-                    <th>資產</th>
-                    <th>偏態</th>
-                    <th>峰態</th>
-                    <th>JB 統計量</th>
-                    <th>JB p 值</th>
-                    <th>常態?</th>
-                </tr>
-                <tr>
-                    <td>btc</td>
-                    <td>-0.105</td>
-                    <td>7.9</td>
-                    <td>10557</td>
-                    <td>0.00e+00</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>eth</td>
-                    <td>-0.104</td>
-                    <td>6.2</td>
-                    <td>4663</td>
-                    <td>0.00e+00</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>gold</td>
-                    <td>-0.094</td>
-                    <td>5.8</td>
-                    <td>5614</td>
-                    <td>0.00e+00</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>spy</td>
-                    <td>-0.314</td>
-                    <td>21.7</td>
-                    <td>79685</td>
-                    <td>0.00e+00</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>nasdaq</td>
-                    <td>-0.223</td>
-                    <td>13.9</td>
-                    <td>32671</td>
-                    <td>0.00e+00</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>tlt</td>
-                    <td>0.102</td>
-                    <td>7.8</td>
-                    <td>10393</td>
-                    <td>0.00e+00</td>
-                    <td>No</td>
-                </tr>
-            </table>
-        </div>
-        <div data-lang="en">
-            <table>
-                <tr>
-                    <th>Asset</th>
-                    <th>Skew</th>
-                    <th>Kurtosis</th>
-                    <th>JB Stat</th>
-                    <th>JB p-value</th>
-                    <th>Normal?</th>
-                </tr>
-                <tr>
-                    <td>btc</td>
-                    <td>-0.105</td>
-                    <td>7.9</td>
-                    <td>10557</td>
-                    <td>0.00e+00</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>eth</td>
-                    <td>-0.104</td>
-                    <td>6.2</td>
-                    <td>4663</td>
-                    <td>0.00e+00</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>gold</td>
-                    <td>-0.094</td>
-                    <td>5.8</td>
-                    <td>5614</td>
-                    <td>0.00e+00</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>spy</td>
-                    <td>-0.314</td>
-                    <td>21.7</td>
-                    <td>79685</td>
-                    <td>0.00e+00</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>nasdaq</td>
-                    <td>-0.223</td>
-                    <td>13.9</td>
-                    <td>32671</td>
-                    <td>0.00e+00</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>tlt</td>
-                    <td>0.102</td>
-                    <td>7.8</td>
-                    <td>10393</td>
-                    <td>0.00e+00</td>
-                    <td>No</td>
-                </tr>
-            </table>
-        </div>
-        <footer>V-011 <span data-lang="zh">加密貨幣是數位黃金</span><span data-lang="en">Cryptocurrency Is Digital Gold</span>
-            &copy; 2026</footer>
-    </div>
-    <script src="js/main.js"></script>
+<h2><span data-lang="zh">A.3 正態性檢定</span><span data-lang="en">A.3 Normality Tests</span></h2>
+<div data-lang="zh"><p><strong>為什麼要檢定正態性：</strong>許多統計方法（如 t 檢定、OLS 迴歸）假設資料呈常態分布。如果日報酬不服從常態分布（特別是有「肥尾」現象），用傳統方法可能低估極端風險。這就是為什麼我們在投組分析中使用 Block Bootstrap——它不假設任何特定分布。</p><p><strong>結果：</strong>所有資產的日報酬均不服從常態分布（Jarque-Bera p < 0.001），BTC 的峰態和偏態最為極端。這意味著 BTC 的「肥尾」效應最嚴重——極端暴跌（或暴漲）的頻率遠高於鐘型曲線的預測。在風險管理上，這代表「以為 BTC 單日最大虧損不會超過 X%」的直覺往往過於樂觀。</p></div><div data-lang="en"><p><strong>Why test normality:</strong> Many statistical methods (t-tests, OLS regression) assume normal distributions. If daily returns are non-normal (especially with 'fat tails'), traditional methods may underestimate extreme risks. This is why we use Block Bootstrap in portfolio analysis -- it assumes no specific distribution.</p><p><strong>Results:</strong> All assets' daily returns reject normality (Jarque-Bera p < 0.001), with BTC showing the most extreme kurtosis and skewness. BTC's 'fat tail' effect is most severe -- extreme crashes (or surges) occur far more often than a bell curve predicts. For risk management, this means the intuition that 'BTC's max single-day loss will not exceed X%' is often too optimistic.</p></div>
+<div data-lang="zh"><table><tr><th>資產</th><th>偏態</th><th>峰態</th><th>JB 統計量</th><th>JB p 值</th><th>常態?</th></tr><tr><td>btc</td><td>-0.105</td><td>7.9</td><td>10557</td><td>0.00e+00</td><td>No</td></tr><tr><td>eth</td><td>-0.104</td><td>6.2</td><td>4663</td><td>0.00e+00</td><td>No</td></tr><tr><td>gold</td><td>-0.094</td><td>5.8</td><td>5614</td><td>0.00e+00</td><td>No</td></tr><tr><td>spy</td><td>-0.314</td><td>21.7</td><td>79685</td><td>0.00e+00</td><td>No</td></tr><tr><td>nasdaq</td><td>-0.223</td><td>13.9</td><td>32671</td><td>0.00e+00</td><td>No</td></tr><tr><td>tlt</td><td>0.102</td><td>7.8</td><td>10393</td><td>0.00e+00</td><td>No</td></tr></table></div><div data-lang="en"><table><tr><th>Asset</th><th>Skew</th><th>Kurtosis</th><th>JB Stat</th><th>JB p-value</th><th>Normal?</th></tr><tr><td>btc</td><td>-0.105</td><td>7.9</td><td>10557</td><td>0.00e+00</td><td>No</td></tr><tr><td>eth</td><td>-0.104</td><td>6.2</td><td>4663</td><td>0.00e+00</td><td>No</td></tr><tr><td>gold</td><td>-0.094</td><td>5.8</td><td>5614</td><td>0.00e+00</td><td>No</td></tr><tr><td>spy</td><td>-0.314</td><td>21.7</td><td>79685</td><td>0.00e+00</td><td>No</td></tr><tr><td>nasdaq</td><td>-0.223</td><td>13.9</td><td>32671</td><td>0.00e+00</td><td>No</td></tr><tr><td>tlt</td><td>0.102</td><td>7.8</td><td>10393</td><td>0.00e+00</td><td>No</td></tr></table></div>
+<footer>V-011 <span data-lang="zh">加密貨幣是數位黃金</span><span data-lang="en">Cryptocurrency Is Digital Gold</span> &copy; 2026</footer>
+</div>
+<script src="js/main.js"></script>
 
 <!-- Cloudflare Web Analytics -->
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "a71d7e2545564ad9a7cb681851582a3f"}'></script>
 <!-- End Cloudflare Web Analytics -->
 </body>
-
 </html>

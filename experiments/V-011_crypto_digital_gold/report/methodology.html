@@ -1,310 +1,40 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>研究方法 | V-011</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>研究方法 | V-011</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <nav>
-        <ul>
-            <li><a href="../../../index.html"><span data-lang="zh">專案主頁</span><span data-lang="en">Project Home</span></a></li>
-            <li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li>
-            <li><a href="introduction.html"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li>
-            <li><a href="methodology.html"><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></a></li>
-            <li><a href="results.html"><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></a></li>
-            <li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li>
-            <li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li>
-            <li><a href="appendix.html"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li>
-        </ul><span class="nav-title"><span data-lang="zh">V-011：加密貨幣是數位黃金</span><span data-lang="en">V-011: Cryptocurrency Is Digital Gold</span></span><button id="lang-toggle" onclick="toggleLang()">Switch to EN</button>
-    </nav>
-    <div class="container">
+<nav><ul><li><a href="../../../index.html"><span data-lang="zh">專案主頁</span><span data-lang="en">Project Home</span></a></li><li><a href="index.html"><span data-lang="zh">首頁</span><span data-lang="en">Home</span></a></li><li><a href="introduction.html"><span data-lang="zh">緒論</span><span data-lang="en">Introduction</span></a></li><li><a href="methodology.html"><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></a></li><li><a href="results.html"><span data-lang="zh">實證結果</span><span data-lang="en">Results</span></a></li><li><a href="discussion.html"><span data-lang="zh">討論</span><span data-lang="en">Discussion</span></a></li><li><a href="conclusion.html"><span data-lang="zh">結論</span><span data-lang="en">Conclusion</span></a></li><li><a href="appendix.html"><span data-lang="zh">附錄</span><span data-lang="en">Appendix</span></a></li></ul><span class="nav-title"><span data-lang="zh">V-011: 加密貨幣是數位黃金</span><span data-lang="en">V-011: Cryptocurrency Is Digital Gold</span></span><button id="lang-toggle" onclick="toggleLang()">Switch to EN</button></nav>
+<div class="container">
 
-        <h1><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></h1>
+<h1><span data-lang="zh">研究方法</span><span data-lang="en">Methodology</span></h1>
 
-        <h2><span data-lang="zh">2.1 數據來源與品質</span><span data-lang="en">2.1 Data Sources & Quality</span></h2>
-        <div data-lang="zh">
-            <table>
-                <tr>
-                    <th>數據</th>
-                    <th>來源</th>
-                    <th>代碼</th>
-                    <th>期間</th>
-                    <th>頻率</th>
-                </tr>
-                <tr>
-                    <td>比特幣</td>
-                    <td>yfinance</td>
-                    <td>BTC-USD</td>
-                    <td>2014-10~2025-11</td>
-                    <td>日</td>
-                </tr>
-                <tr>
-                    <td>以太幣</td>
-                    <td>yfinance</td>
-                    <td>ETH-USD</td>
-                    <td>2017-11~2025-11</td>
-                    <td>日</td>
-                </tr>
-                <tr>
-                    <td>黃金 ETF</td>
-                    <td>yfinance</td>
-                    <td>GLD</td>
-                    <td>2014-10~2025-11</td>
-                    <td>日</td>
-                </tr>
-                <tr>
-                    <td>S&P 500 ETF</td>
-                    <td>yfinance</td>
-                    <td>SPY</td>
-                    <td>2014-10~2025-11</td>
-                    <td>日</td>
-                </tr>
-                <tr>
-                    <td>NASDAQ</td>
-                    <td>yfinance</td>
-                    <td>^IXIC</td>
-                    <td>2014-10~2025-11</td>
-                    <td>日</td>
-                </tr>
-                <tr>
-                    <td>美國長債 ETF</td>
-                    <td>yfinance</td>
-                    <td>TLT</td>
-                    <td>2014-10~2025-11</td>
-                    <td>日</td>
-                </tr>
-                <tr>
-                    <td>VIX</td>
-                    <td>yfinance</td>
-                    <td>^VIX</td>
-                    <td>2014-10~2025-11</td>
-                    <td>日</td>
-                </tr>
-                <tr>
-                    <td>美國 CPI</td>
-                    <td>FRED</td>
-                    <td>CPIAUCSL</td>
-                    <td>1947~2025</td>
-                    <td>月</td>
-                </tr>
-            </table>
-        </div>
-        <div data-lang="en">
-            <table>
-                <tr>
-                    <th>Data</th>
-                    <th>Source</th>
-                    <th>Symbol</th>
-                    <th>Period</th>
-                    <th>Frequency</th>
-                </tr>
-                <tr>
-                    <td>Bitcoin</td>
-                    <td>yfinance</td>
-                    <td>BTC-USD</td>
-                    <td>2014-10~2025-11</td>
-                    <td>Daily</td>
-                </tr>
-                <tr>
-                    <td>Ethereum</td>
-                    <td>yfinance</td>
-                    <td>ETH-USD</td>
-                    <td>2017-11~2025-11</td>
-                    <td>Daily</td>
-                </tr>
-                <tr>
-                    <td>Gold ETF</td>
-                    <td>yfinance</td>
-                    <td>GLD</td>
-                    <td>2014-10~2025-11</td>
-                    <td>Daily</td>
-                </tr>
-                <tr>
-                    <td>S&P 500 ETF</td>
-                    <td>yfinance</td>
-                    <td>SPY</td>
-                    <td>2014-10~2025-11</td>
-                    <td>Daily</td>
-                </tr>
-                <tr>
-                    <td>NASDAQ</td>
-                    <td>yfinance</td>
-                    <td>^IXIC</td>
-                    <td>2014-10~2025-11</td>
-                    <td>Daily</td>
-                </tr>
-                <tr>
-                    <td>US Long Bond ETF</td>
-                    <td>yfinance</td>
-                    <td>TLT</td>
-                    <td>2014-10~2025-11</td>
-                    <td>Daily</td>
-                </tr>
-                <tr>
-                    <td>VIX</td>
-                    <td>yfinance</td>
-                    <td>^VIX</td>
-                    <td>2014-10~2025-11</td>
-                    <td>Daily</td>
-                </tr>
-                <tr>
-                    <td>US CPI</td>
-                    <td>FRED</td>
-                    <td>CPIAUCSL</td>
-                    <td>1947~2025</td>
-                    <td>Monthly</td>
-                </tr>
-            </table>
-        </div>
+<h2><span data-lang="zh">2.1 數據來源與品質</span><span data-lang="en">2.1 Data Sources & Quality</span></h2>
+<div data-lang="zh"><table><tr><th>數據</th><th>來源</th><th>代碼</th><th>期間</th><th>頻率</th></tr><tr><td>比特幣</td><td>yfinance</td><td>BTC-USD</td><td>2014-10~2025-11</td><td>日</td></tr><tr><td>以太幣</td><td>yfinance</td><td>ETH-USD</td><td>2017-11~2025-11</td><td>日</td></tr><tr><td>黃金 ETF</td><td>yfinance</td><td>GLD</td><td>2014-10~2025-11</td><td>日</td></tr><tr><td>S&P 500 ETF</td><td>yfinance</td><td>SPY</td><td>2014-10~2025-11</td><td>日</td></tr><tr><td>NASDAQ</td><td>yfinance</td><td>^IXIC</td><td>2014-10~2025-11</td><td>日</td></tr><tr><td>美國長債 ETF</td><td>yfinance</td><td>TLT</td><td>2014-10~2025-11</td><td>日</td></tr><tr><td>VIX</td><td>yfinance</td><td>^VIX</td><td>2014-10~2025-11</td><td>日</td></tr><tr><td>美國 CPI</td><td>FRED</td><td>CPIAUCSL</td><td>1947~2025</td><td>月</td></tr></table></div><div data-lang="en"><table><tr><th>Data</th><th>Source</th><th>Symbol</th><th>Period</th><th>Frequency</th></tr><tr><td>Bitcoin</td><td>yfinance</td><td>BTC-USD</td><td>2014-10~2025-11</td><td>Daily</td></tr><tr><td>Ethereum</td><td>yfinance</td><td>ETH-USD</td><td>2017-11~2025-11</td><td>Daily</td></tr><tr><td>Gold ETF</td><td>yfinance</td><td>GLD</td><td>2014-10~2025-11</td><td>Daily</td></tr><tr><td>S&P 500 ETF</td><td>yfinance</td><td>SPY</td><td>2014-10~2025-11</td><td>Daily</td></tr><tr><td>NASDAQ</td><td>yfinance</td><td>^IXIC</td><td>2014-10~2025-11</td><td>Daily</td></tr><tr><td>US Long Bond ETF</td><td>yfinance</td><td>TLT</td><td>2014-10~2025-11</td><td>Daily</td></tr><tr><td>VIX</td><td>yfinance</td><td>^VIX</td><td>2014-10~2025-11</td><td>Daily</td></tr><tr><td>US CPI</td><td>FRED</td><td>CPIAUCSL</td><td>1947~2025</td><td>Monthly</td></tr></table></div>
 
-        <div data-lang="zh">
-            <p>加密貨幣全年無休交易（24/7），但本研究以 UTC 日收盤價為準，並與傳統金融市場交易日對齊。缺失值採前向填充（forward fill）處理。ETH 起始日期較晚（約 2017 年 11
-                月），因此部分分析僅涵蓋 BTC。</p>
-            <p><strong>數據品質控管：</strong>加密貨幣早期數據品質參差不齊——2014 年前各交易所價差可達數百美元，就像同一款球鞋在不同店面的標價相差三成。本研究選擇 2014 年 10
-                月作為起始點，因為此時 BTC 已有較成熟的交易所基礎設施（Coinbase、Bitstamp 等），價格數據的可靠性大幅提升。yfinance 提供的 BTC-USD
-                為多交易所加權平均價格，而非單一交易所報價。此外，我們對所有資產進行了缺失值檢查、異常報酬篩選（日報酬超過 50% 的極端值標記），以及前後資料源交叉驗證，確保分析基礎的穩固。</p>
-        </div>
-        <div data-lang="en">
-            <p>Cryptocurrencies trade 24/7, but this study uses UTC daily close prices aligned with traditional market
-                trading days. Missing values are forward-filled. ETH starts later (~Nov 2017), so some analyses cover
-                only BTC.</p>
-            <p><strong>Data Quality Control:</strong> Early crypto data quality varies significantly -- pre-2014 price
-                discrepancies between exchanges could reach hundreds of dollars, like the same sneakers being priced 30%
-                differently across stores. We chose October 2014 as the start date because BTC had developed more mature
-                exchange infrastructure (Coinbase, Bitstamp) by then, greatly improving data reliability. yfinance
-                provides BTC-USD as a multi-exchange weighted average, not a single exchange quote. We also performed
-                missing value checks, extreme return screening (daily returns exceeding 50%), and cross-source
-                validation for all assets.</p>
-        </div>
+<div data-lang="zh"><p>加密貨幣全年無休交易（24/7），但本研究以 UTC 日收盤價為準，並與傳統金融市場交易日對齊。缺失值採前向填充（forward fill）處理。ETH 起始日期較晚（約 2017 年 11 月），因此部分分析僅涵蓋 BTC。</p><p><strong>數據品質控管：</strong>加密貨幣早期數據品質參差不齊——2014 年前各交易所價差可達數百美元，就像同一款球鞋在不同店面的標價相差三成。本研究選擇 2014 年 10 月作為起始點，因為此時 BTC 已有較成熟的交易所基礎設施（Coinbase、Bitstamp 等），價格數據的可靠性大幅提升。yfinance 提供的 BTC-USD 為多交易所加權平均價格，而非單一交易所報價。此外，我們對所有資產進行了缺失值檢查、異常報酬篩選（日報酬超過 50% 的極端值標記），以及前後資料源交叉驗證，確保分析基礎的穩固。</p></div><div data-lang="en"><p>Cryptocurrencies trade 24/7, but this study uses UTC daily close prices aligned with traditional market trading days. Missing values are forward-filled. ETH starts later (~Nov 2017), so some analyses cover only BTC.</p><p><strong>Data Quality Control:</strong> Early crypto data quality varies significantly -- pre-2014 price discrepancies between exchanges could reach hundreds of dollars, like the same sneakers being priced 30% differently across stores. We chose October 2014 as the start date because BTC had developed more mature exchange infrastructure (Coinbase, Bitstamp) by then, greatly improving data reliability. yfinance provides BTC-USD as a multi-exchange weighted average, not a single exchange quote. We also performed missing value checks, extreme return screening (daily returns exceeding 50%), and cross-source validation for all assets.</p></div>
 
-        <h2><span data-lang="zh">2.2 時期劃分</span><span data-lang="en">2.2 Sub-Period Definition</span></h2>
-        <div data-lang="zh">
-            <p>加密貨幣市場在研究期間經歷了巨大的結構性變化，因此本研究將數據劃分為三個階段——就像研究一個人的成長，把幼年、青春期、成年分開來看，才能理解行為模式的演變：</p>
-            <ul>
-                <li><strong>早期（2014-2017）：</strong>散戶主導，交易所基礎設施不成熟，BTC 從 <$500 漲至近
-                        $20,000。這個階段像是「蠻荒西部」——缺乏監管、市場操縱常見、交易所安全事件頻傳（如 Mt.Gox 破產）。</li>
-                <li><strong>過渡期（2018-2020）：</strong>ICO 泡沫破裂、監管加強、COVID 崩盤、CME
-                    期貨上線。市場開始「成熟化」——泡沫清洗淘汰了不良項目，衍生品市場的建立為機構提供了對沖工具。</li>
-                <li><strong>機構化（2021-2025）：</strong>特斯拉、MicroStrategy 大舉買入 BTC，BTC 現貨 ETF 獲批，機構資金大量流入。BTC
-                    的持有者結構從散戶轉向機構，市場行為模式也隨之改變——波動度下降但與傳統資產的連動性上升。</li>
-            </ul>
-            <p><strong>為什麼需要分期：</strong>一個從「極客玩具」演變為「機構資產」的市場，其統計特性不可能保持不變。若只看全期平均數據，可能得出「BTC
-                與黃金無關」的結論，卻忽略了「機構化後兩者關係可能正在改變」的重要趨勢。分期分析讓我們捕捉到這些結構性轉變。</p>
-        </div>
-        <div data-lang="en">
-            <p>The crypto market underwent massive structural changes during the study period, so we divide the data
-                into three phases -- like studying a person's growth by separating childhood, adolescence, and adulthood
-                to understand behavioral evolution:</p>
-            <ul>
-                <li><strong>Early (2014-2017):</strong> Retail-dominated, immature exchange infrastructure, BTC rose
-                    from <$500 to ~$20,000. This phase was like the 'Wild West' -- minimal regulation, frequent market
-                        manipulation, and exchange security incidents (e.g., Mt.Gox bankruptcy).</li>
-                <li><strong>Transition (2018-2020):</strong> ICO bubble burst, regulatory tightening, COVID crash, CME
-                    futures launch. The market began 'maturing' -- bubble cleansing eliminated bad projects, and
-                    derivatives markets gave institutions hedging tools.</li>
-                <li><strong>Institutional (2021-2025):</strong> Tesla/MicroStrategy bought BTC heavily, spot BTC ETF
-                    approved, institutional capital inflows. BTC holder composition shifted from retail to
-                    institutional, changing market behavior -- volatility decreased but correlation with traditional
-                    assets increased.</li>
-            </ul>
-            <p><strong>Why sub-periods matter:</strong> A market that evolved from 'geek toy' to 'institutional asset'
-                cannot have constant statistical properties. Looking only at full-period averages might conclude 'BTC is
-                unrelated to gold' while missing the important trend that 'their relationship may be changing
-                post-institutionalization.' Sub-period analysis captures these structural shifts.</p>
-        </div>
+<h2><span data-lang="zh">2.2 時期劃分</span><span data-lang="en">2.2 Sub-Period Definition</span></h2>
+<div data-lang="zh"><p>加密貨幣市場在研究期間經歷了巨大的結構性變化，因此本研究將數據劃分為三個階段——就像研究一個人的成長，把幼年、青春期、成年分開來看，才能理解行為模式的演變：</p><ul><li><strong>早期（2014-2017）：</strong>散戶主導，交易所基礎設施不成熟，BTC 從 <$500 漲至近 $20,000。這個階段像是「蠻荒西部」——缺乏監管、市場操縱常見、交易所安全事件頻傳（如 Mt.Gox 破產）。</li><li><strong>過渡期（2018-2020）：</strong>ICO 泡沫破裂、監管加強、COVID 崩盤、CME 期貨上線。市場開始「成熟化」——泡沫清洗淘汰了不良項目，衍生品市場的建立為機構提供了對沖工具。</li><li><strong>機構化（2021-2025）：</strong>特斯拉、MicroStrategy 大舉買入 BTC，BTC 現貨 ETF 獲批，機構資金大量流入。BTC 的持有者結構從散戶轉向機構，市場行為模式也隨之改變——波動度下降但與傳統資產的連動性上升。</li></ul><p><strong>為什麼需要分期：</strong>一個從「極客玩具」演變為「機構資產」的市場，其統計特性不可能保持不變。若只看全期平均數據，可能得出「BTC 與黃金無關」的結論，卻忽略了「機構化後兩者關係可能正在改變」的重要趨勢。分期分析讓我們捕捉到這些結構性轉變。</p></div><div data-lang="en"><p>The crypto market underwent massive structural changes during the study period, so we divide the data into three phases -- like studying a person's growth by separating childhood, adolescence, and adulthood to understand behavioral evolution:</p><ul><li><strong>Early (2014-2017):</strong> Retail-dominated, immature exchange infrastructure, BTC rose from <$500 to ~$20,000. This phase was like the 'Wild West' -- minimal regulation, frequent market manipulation, and exchange security incidents (e.g., Mt.Gox bankruptcy).</li><li><strong>Transition (2018-2020):</strong> ICO bubble burst, regulatory tightening, COVID crash, CME futures launch. The market began 'maturing' -- bubble cleansing eliminated bad projects, and derivatives markets gave institutions hedging tools.</li><li><strong>Institutional (2021-2025):</strong> Tesla/MicroStrategy bought BTC heavily, spot BTC ETF approved, institutional capital inflows. BTC holder composition shifted from retail to institutional, changing market behavior -- volatility decreased but correlation with traditional assets increased.</li></ul><p><strong>Why sub-periods matter:</strong> A market that evolved from 'geek toy' to 'institutional asset' cannot have constant statistical properties. Looking only at full-period averages might conclude 'BTC is unrelated to gold' while missing the important trend that 'their relationship may be changing post-institutionalization.' Sub-period analysis captures these structural shifts.</p></div>
 
-        <h2><span data-lang="zh">2.3 分析方法</span><span data-lang="en">2.3 Analysis Methods</span></h2>
-        <div data-lang="zh">
-            <p><strong>為什麼需要多維度分析：</strong>僅看報酬率無法全面評估「數位黃金」論述——就像不能只看一個人的跑步速度就說他是「田徑選手」，還要看跳高、投擲等全能表現。真正的黃金替代品需要在避險、抗通膨、投組分散三個維度都表現良好。
-            </p>
-            <ul>
-                <li><strong>相關性分析：</strong>滾動相關係數（90 天窗口）+ Fisher z-transform
-                    檢定危機/正常期差異。相關性就像兩人的步調——黃金與股市「反向而行」（危機時黃金漲），BTC 是否也如此？90 天窗口讓我們觀察這個關係隨時間的變化。</li>
-                <li><strong>條件報酬分析：</strong>在 SPY 日跌幅超過 2% 的日子，比較各資產報酬（Baur & Lucey 2010
-                    框架）。這是「壓力測試」——像地震演練，看各資產在「最需要保護的時刻」表現如何。</li>
-                <li><strong>通膨迴歸：</strong>OLS 迴歸分析 BTC 月報酬與 CPI 年增率的關係。如果 BTC 真能抗通膨，通膨上升時 BTC 報酬應該也跟著上升，就像金價隨物價上漲一樣。
-                </li>
-                <li><strong>投組建構：</strong>在 60/40 基準上分別加入 1%/2%/5% BTC，以 Bootstrap 產生 Sharpe 與 MaxDD
-                    的信賴區間。這回答了最實際的問題：「到底該放多少 BTC 到投資組合裡？」</li>
-            </ul>
-        </div>
-        <div data-lang="en">
-            <p><strong>Why multi-dimensional analysis:</strong> Looking at returns alone cannot fully evaluate the
-                'digital gold' thesis -- just as you cannot call someone an 'athlete' based solely on running speed; you
-                also need to check jumping and throwing. A true gold substitute must perform well across hedging,
-                inflation protection, and portfolio diversification.</p>
-            <ul>
-                <li><strong>Correlation analysis:</strong> 90-day rolling correlation + Fisher z-transform to test
-                    crisis vs normal differences. Correlation is like two people's pace -- gold 'walks opposite' to
-                    stocks (rises during crises). Does BTC do the same? The 90-day window reveals how this relationship
-                    evolves over time.</li>
-                <li><strong>Conditional returns:</strong> Asset returns on SPY >2% down days (Baur & Lucey 2010
-                    framework). This is a 'stress test' -- like an earthquake drill, examining how each asset performs
-                    when protection is most needed.</li>
-                <li><strong>Inflation regression:</strong> OLS regression of BTC monthly returns on CPI YoY change. If
-                    BTC truly hedges inflation, BTC returns should rise with inflation, just as gold prices rise with
-                    the price level.</li>
-                <li><strong>Portfolio construction:</strong> Adding 1%/2%/5% BTC to 60/40 base, Bootstrap CI for Sharpe
-                    and MaxDD. This answers the most practical question: 'How much BTC should I actually put in my
-                    portfolio?'</li>
-            </ul>
-        </div>
+<h2><span data-lang="zh">2.3 分析方法</span><span data-lang="en">2.3 Analysis Methods</span></h2>
+<div data-lang="zh"><p><strong>為什麼需要多維度分析：</strong>僅看報酬率無法全面評估「數位黃金」論述——就像不能只看一個人的跑步速度就說他是「田徑選手」，還要看跳高、投擲等全能表現。真正的黃金替代品需要在避險、抗通膨、投組分散三個維度都表現良好。</p><ul><li><strong>相關性分析：</strong>滾動相關係數（90 天窗口）+ Fisher z-transform 檢定危機/正常期差異。相關性就像兩人的步調——黃金與股市「反向而行」（危機時黃金漲），BTC 是否也如此？90 天窗口讓我們觀察這個關係隨時間的變化。</li><li><strong>條件報酬分析：</strong>在 SPY 日跌幅超過 2% 的日子，比較各資產報酬（Baur & Lucey 2010 框架）。這是「壓力測試」——像地震演練，看各資產在「最需要保護的時刻」表現如何。</li><li><strong>通膨迴歸：</strong>OLS 迴歸分析 BTC 月報酬與 CPI 年增率的關係。如果 BTC 真能抗通膨，通膨上升時 BTC 報酬應該也跟著上升，就像金價隨物價上漲一樣。</li><li><strong>投組建構：</strong>在 60/40 基準上分別加入 1%/2%/5% BTC，以 Bootstrap 產生 Sharpe 與 MaxDD 的信賴區間。這回答了最實際的問題：「到底該放多少 BTC 到投資組合裡？」</li></ul></div><div data-lang="en"><p><strong>Why multi-dimensional analysis:</strong> Looking at returns alone cannot fully evaluate the 'digital gold' thesis -- just as you cannot call someone an 'athlete' based solely on running speed; you also need to check jumping and throwing. A true gold substitute must perform well across hedging, inflation protection, and portfolio diversification.</p><ul><li><strong>Correlation analysis:</strong> 90-day rolling correlation + Fisher z-transform to test crisis vs normal differences. Correlation is like two people's pace -- gold 'walks opposite' to stocks (rises during crises). Does BTC do the same? The 90-day window reveals how this relationship evolves over time.</li><li><strong>Conditional returns:</strong> Asset returns on SPY >2% down days (Baur & Lucey 2010 framework). This is a 'stress test' -- like an earthquake drill, examining how each asset performs when protection is most needed.</li><li><strong>Inflation regression:</strong> OLS regression of BTC monthly returns on CPI YoY change. If BTC truly hedges inflation, BTC returns should rise with inflation, just as gold prices rise with the price level.</li><li><strong>Portfolio construction:</strong> Adding 1%/2%/5% BTC to 60/40 base, Bootstrap CI for Sharpe and MaxDD. This answers the most practical question: 'How much BTC should I actually put in my portfolio?'</li></ul></div>
 
-        <h2><span data-lang="zh">2.4 統計方法</span><span data-lang="en">2.4 Statistical Methods</span></h2>
-        <div data-lang="zh">
-            <ul>
-                <li><strong>Fisher z-transform：</strong>將相關係數轉換為常態分布，以檢定兩組相關係數是否有顯著差異。適用於 H1 的危機/正常期相關性比較。</li>
-                <li><strong>One-sample t-test：</strong>檢定 BTC 在市場壓力日的平均報酬是否顯著不為零。</li>
-                <li><strong>OLS 迴歸：</strong>估計 BTC 報酬對通膨變化的敏感度（beta），並以 R-squared 衡量解釋力。</li>
-                <li><strong>Block Bootstrap：</strong>保留時間序列結構的重抽樣法（10,000 次），產生 Sharpe 與 MaxDD 的 95% 信賴區間。</li>
-                <li><strong>顯著水準：</strong>alpha = 0.05，所有檢定均報告效果量（Cohen's d 或 r）。</li>
-            </ul>
-        </div>
-        <div data-lang="en">
-            <ul>
-                <li><strong>Fisher z-transform:</strong> Converts correlations to normal distribution to test whether
-                    two correlations differ significantly.</li>
-                <li><strong>One-sample t-test:</strong> Tests whether BTC mean return on stress days is significantly
-                    different from zero.</li>
-                <li><strong>OLS Regression:</strong> Estimates BTC return sensitivity to inflation (beta), with
-                    R-squared for explanatory power.</li>
-                <li><strong>Block Bootstrap:</strong> Resampling (10,000 iterations) preserving time-series structure
-                    for Sharpe and MaxDD CIs.</li>
-                <li><strong>Significance level:</strong> alpha = 0.05, all tests report effect sizes (Cohen's d or r).
-                </li>
-            </ul>
-        </div>
+<h2><span data-lang="zh">2.4 統計方法</span><span data-lang="en">2.4 Statistical Methods</span></h2>
+<div data-lang="zh"><ul><li><strong>Fisher z-transform：</strong>將相關係數轉換為常態分布，以檢定兩組相關係數是否有顯著差異。適用於 H1 的危機/正常期相關性比較。</li><li><strong>One-sample t-test：</strong>檢定 BTC 在市場壓力日的平均報酬是否顯著不為零。</li><li><strong>OLS 迴歸：</strong>估計 BTC 報酬對通膨變化的敏感度（beta），並以 R-squared 衡量解釋力。</li><li><strong>Block Bootstrap：</strong>保留時間序列結構的重抽樣法（10,000 次），產生 Sharpe 與 MaxDD 的 95% 信賴區間。</li><li><strong>顯著水準：</strong>alpha = 0.05，所有檢定均報告效果量（Cohen's d 或 r）。</li></ul></div><div data-lang="en"><ul><li><strong>Fisher z-transform:</strong> Converts correlations to normal distribution to test whether two correlations differ significantly.</li><li><strong>One-sample t-test:</strong> Tests whether BTC mean return on stress days is significantly different from zero.</li><li><strong>OLS Regression:</strong> Estimates BTC return sensitivity to inflation (beta), with R-squared for explanatory power.</li><li><strong>Block Bootstrap:</strong> Resampling (10,000 iterations) preserving time-series structure for Sharpe and MaxDD CIs.</li><li><strong>Significance level:</strong> alpha = 0.05, all tests report effect sizes (Cohen's d or r).</li></ul></div>
 
-        <h2><span data-lang="zh">2.5 交易成本與再平衡假設</span><span data-lang="en">2.5 Transaction Cost & Rebalancing
-                Assumptions</span></h2>
-        <div data-lang="zh">
-            <p>投資組合分析採用以下交易成本假設：加密貨幣交易手續費 0.1%（主流交易所如 Binance 的 maker/taker 費率），傳統 ETF 交易手續費依美股券商標準（趨近零佣金）。再平衡頻率為年度（每年 1
-                月第一個交易日），偏離目標權重超過 5% 時觸發額外再平衡。</p>
-            <p>本研究<strong>未計入</strong>以下成本：(1) 加密貨幣出入金手續費（約 0.5-1%）；(2) 台幣兌美元匯兌成本；(3)
-                加密貨幣的資本利得稅（台灣目前尚無明確規範）。因此，實際執行成本可能高於模擬結果，特別是小額投資者。</p>
-        </div>
-        <div data-lang="en">
-            <p>Portfolio analysis assumes the following transaction costs: crypto trading fees of 0.1% (major exchange
-                maker/taker rates), traditional ETF fees per US brokerage standards (near-zero commission). Rebalancing
-                is annual (first trading day each January), with additional rebalancing triggered when weights deviate
-                more than 5% from targets.</p>
-            <p>This study does <strong>not include</strong>: (1) crypto on/off-ramp fees (~0.5-1%); (2) TWD/USD exchange
-                costs; (3) crypto capital gains tax (currently undefined in Taiwan). Actual execution costs may exceed
-                simulation results, especially for small investors.</p>
-        </div>
+<h2><span data-lang="zh">2.5 交易成本與再平衡假設</span><span data-lang="en">2.5 Transaction Cost & Rebalancing Assumptions</span></h2>
+<div data-lang="zh"><p>投資組合分析採用以下交易成本假設：加密貨幣交易手續費 0.1%（主流交易所如 Binance 的 maker/taker 費率），傳統 ETF 交易手續費依美股券商標準（趨近零佣金）。再平衡頻率為年度（每年 1 月第一個交易日），偏離目標權重超過 5% 時觸發額外再平衡。</p><p>本研究<strong>未計入</strong>以下成本：(1) 加密貨幣出入金手續費（約 0.5-1%）；(2) 台幣兌美元匯兌成本；(3) 加密貨幣的資本利得稅（台灣目前尚無明確規範）。因此，實際執行成本可能高於模擬結果，特別是小額投資者。</p></div><div data-lang="en"><p>Portfolio analysis assumes the following transaction costs: crypto trading fees of 0.1% (major exchange maker/taker rates), traditional ETF fees per US brokerage standards (near-zero commission). Rebalancing is annual (first trading day each January), with additional rebalancing triggered when weights deviate more than 5% from targets.</p><p>This study does <strong>not include</strong>: (1) crypto on/off-ramp fees (~0.5-1%); (2) TWD/USD exchange costs; (3) crypto capital gains tax (currently undefined in Taiwan). Actual execution costs may exceed simulation results, especially for small investors.</p></div>
 
-        <footer>V-011 <span data-lang="zh">加密貨幣是數位黃金</span><span data-lang="en">Cryptocurrency Is Digital Gold</span>
-            &copy; 2026</footer>
-    </div>
-    <script src="js/main.js"></script>
+<footer>V-011 <span data-lang="zh">加密貨幣是數位黃金</span><span data-lang="en">Cryptocurrency Is Digital Gold</span> &copy; 2026</footer>
+</div>
+<script src="js/main.js"></script>
 
 <!-- Cloudflare Web Analytics -->
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "a71d7e2545564ad9a7cb681851582a3f"}'></script>
 <!-- End Cloudflare Web Analytics -->
 </body>
-
 </html>
