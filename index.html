@@ -25,8 +25,8 @@
         <span data-lang="en">Let Data Speak: Investment Strategy Backtesting</span>
     </h1>
     <p class="subtitle">
-        <span data-lang="zh">以嚴謹的回測分析與統計檢定，針對「存股必勝」「定期定額一定賺」「技術分析能預測股價」等常見投資論點進行客觀、可重現的實證研究。</span>
-        <span data-lang="en">Rigorous backtesting and statistical analysis to objectively verify common investment claims such as &ldquo;buy-and-hold always wins,&rdquo; &ldquo;DCA never loses,&rdquo; and &ldquo;technical analysis predicts prices.&rdquo;</span>
+        <span data-lang="zh">本專案嘗試以較完整及多元角度的方式進行各項投資策略的回測分析與統計檢定，針對類似「存股必勝」「定期定額一定賺」「技術分析能預測股價」等常見投資論點進行客觀、可重現的實證研究，本專案目的在於透過接近學術及科學的研究方式來實證各項觀點，也嘗試補強各項觀點所提供的數據完整性及不同方向的解讀。</span>
+        <span data-lang="en">Rigorous backtesting and statistical analysis to objectively verify common investment claims such as &ldquo;buy-and-hold always wins,&rdquo; &ldquo;DCA never loses,&rdquo; and &ldquo; technical analysis predicts prices.&rdquo; This project conducts comprehensive, reproducible empirical research using scientific and academic methodologies to substantiate various investment perspectives, while enhancing data completeness and exploring different interpretations.</span>
     </p>
 </section>
 
@@ -445,15 +445,75 @@
 </div><!-- .container -->
 
 <footer>
-    <p style="margin-top:0.5rem;">
-        <span data-lang="zh">用數據說話：投資策略回測研究 &mdash; 以數據與科學方法檢驗常見投資觀點</span>
-        <span data-lang="en">Let Data Speak: Investment Strategy Backtesting &mdash; Evidence-based analysis of common investment beliefs</span>
-    </p>
-    <p style="margin-bottom:0.5rem;">
-        <span data-lang="zh">歡迎各方賢德不吝指教，有任何指正或建議歡迎mail至 </span>
-        <span data-lang="en">We welcome your feedback. Please send any corrections or suggestions to </span>
-        <a href="mailto:macklun@gmail.com">macklun@gmail.com</a>
-    </p>
+    <!-- 關於本研究 -->
+    <div class="footer-section">
+        <h4>
+            <span data-lang="zh">關於本研究</span>
+            <span data-lang="en">About This Research</span>
+        </h4>
+        <p>
+            <span data-lang="zh">本專案不預設立場，所有結論均來自數據與統計檢定。我們的目的不是告訴你「不要投資」或否定任何策略，而是呈現每種策略在歷史數據中的真實表現，包括風險與限制，幫助投資人做出更全面的判斷。每份報告均詳細說明研究方法、數據來源與統計過程，有興趣的讀者可依此自行重現所有分析。歡迎以數據和邏輯提出不同觀點或指正錯誤。</span>
+            <span data-lang="en">This project takes no predetermined stance. All conclusions are derived from data and statistical testing. Our goal is not to discourage investment or dismiss any strategy, but to present how each strategy has actually performed historically &mdash; including risks and limitations &mdash; so investors can make more informed decisions. Each report details the methodology, data sources, and statistical procedures, enabling interested readers to independently reproduce all analyses. We welcome alternative viewpoints backed by data and logic.</span>
+        </p>
+    </div>
+
+    <!-- 免責聲明 -->
+    <div class="footer-section disclaimer">
+        <h4>
+            <span data-lang="zh">免責聲明</span>
+            <span data-lang="en">Disclaimer</span>
+        </h4>
+        <ul>
+            <li>
+                <span data-lang="zh">本站所有內容僅為學術研究與資訊分享，不構成任何投資建議、推薦或招攬。</span>
+                <span data-lang="en">All content on this site is for academic research and informational purposes only, and does not constitute investment advice, recommendations, or solicitation.</span>
+            </li>
+            <li>
+                <span data-lang="zh">回測結果基於歷史數據，過去績效不代表、亦不保證未來表現。</span>
+                <span data-lang="en">Backtesting results are based on historical data. Past performance does not represent or guarantee future results.</span>
+            </li>
+            <li>
+                <span data-lang="zh">所有分析均有其假設條件與研究限制，已在各實驗報告中詳細說明。</span>
+                <span data-lang="en">All analyses have underlying assumptions and limitations, which are detailed in each experiment report.</span>
+            </li>
+            <li>
+                <span data-lang="zh">任何投資決策應基於個人財務狀況與專業判斷，作者不對因參考本研究所產生之任何損益負責。</span>
+                <span data-lang="en">Investment decisions should be based on individual financial circumstances and professional judgment. The author assumes no liability for any gains or losses resulting from reference to this research.</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 引用建議 -->
+    <div class="footer-section citation">
+        <h4>
+            <span data-lang="zh">引用建議</span>
+            <span data-lang="en">How to Cite</span>
+        </h4>
+        <p>
+            <span data-lang="zh">若您在研究、教學或文章中引用本專案內容，建議以下列格式註明出處：</span>
+            <span data-lang="en">If you reference this project in research, teaching, or publications, please use the following format:</span>
+        </p>
+        <div class="cite-block">
+            <span data-lang="zh">Mack Liu (2025).《用數據說話：投資策略回測研究》. https://mackliu.github.io/Investment_Strategy_Backtesting/</span>
+            <span data-lang="en">Mack Liu (2025). <em>Let Data Speak: Investment Strategy Backtesting</em>. https://mackliu.github.io/Investment_Strategy_Backtesting/</span>
+        </div>
+        <p class="license">
+            <span data-lang="zh">本專案內容採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hant" target="_blank">CC BY-NC-SA 4.0</a> 授權 &mdash; 歡迎非商業用途分享與改作，惟須註明出處並以相同方式分享。</span>
+            <span data-lang="en">This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> &mdash; free to share and adapt for non-commercial purposes with attribution and share-alike.</span>
+        </p>
+    </div>
+
+    <div class="footer-bottom">
+        <p>
+            <span data-lang="zh">用數據說話：投資策略回測研究 &mdash; 以數據與科學方法檢驗常見投資觀點</span>
+            <span data-lang="en">Let Data Speak: Investment Strategy Backtesting &mdash; Evidence-based analysis of common investment beliefs</span>
+        </p>
+        <p>
+            <span data-lang="zh">歡迎各方賢德不吝指教，有任何指正或建議歡迎 mail 至 </span>
+            <span data-lang="en">We welcome your feedback. Please send any corrections or suggestions to </span>
+            <a href="mailto:macklun@gmail.com">macklun@gmail.com</a>
+        </p>
+    </div>
 </footer>
 
 <script src="js/portal.js"></script>
